@@ -23,6 +23,7 @@ func NewSiteRenderer() (*SiteRenderer, error) {
 	t, err := template.New("pageTemplate.gohtml").Funcs(template.FuncMap{
 		"getPhaseSlotData": getPhaseSlotData,
 		"getSlotImage":     getSlotImage,
+		"getClassColor":    getClassColor,
 	}).ParseFS(pageTemplates, "templates/*.gohtml")
 
 	return &SiteRenderer{t}, err
@@ -56,4 +57,13 @@ func getPhaseSlotData(c shared.Character, phase int, slot shared.Slot) shared.Sl
 
 func getSlotImage(slot shared.Slot) string {
 	return shared.SLOT_IMAGE_URLS[slot]
+}
+
+func getClassColor(class string) string {
+	color, ok := shared.ClassColors[class]
+	if ok {
+		return color
+	} else {
+		return "white"
+	}
 }

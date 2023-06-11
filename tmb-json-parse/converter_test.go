@@ -44,6 +44,27 @@ func TestConvertTMBJson(t *testing.T) {
 		assertNoError(t, err)
 		assertInTierInPhase(t, 2, shared.TwoHander, got[0])
 	})
+
+	t.Run("In P2, no in-tier for trinket when 1 bought", func(t *testing.T) {
+		input := buildTestDataWithLoot("Warrior", "Fury", shared.Trinket, shared.Ulduar)
+
+		got, err := convertToExportData(input)
+		assertNoError(t, err)
+		assertNotInTierInPhase(t, 2, shared.Ring, got[0])
+	})
+
+	t.Run("In P2, in-tier for rings when 2 bought", func(t *testing.T) {
+		input := buildTestDataWithLoot("Warrior", "Fury", shared.Ring, shared.Ulduar)
+
+		input[0].ReceivedLoot = append(input[0].ReceivedLoot, loot{
+			InventoryType: int(shared.Ring),
+			InstanceID:    int(shared.Ulduar),
+		})
+
+		got, err := convertToExportData(input)
+		assertNoError(t, err)
+		assertInTierInPhase(t, 2, shared.Ring, got[0])
+	})
 }
 
 func assertInTierInPhase(t *testing.T, phase int, slot shared.Slot, c shared.Character) {

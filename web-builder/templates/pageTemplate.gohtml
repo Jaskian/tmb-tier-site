@@ -56,8 +56,8 @@
         {{range $character := .Data }}
             <tr>
                 <td class="playername">
-                    <p>{{.Name}}</p>
-                    <p class="spec">{{.Spec}} {{.Class}}</p>
+                    <p style="color: {{getClassColor .Class}}">{{.Name}}</p>
+                    <p class="spec">{{.Spec}}</p>
                 </td>
                 {{- range $slot := $.Slots}} 
                     {{$psd := getPhaseSlotData $character $.Phase $slot}} 

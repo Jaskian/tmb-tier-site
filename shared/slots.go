@@ -6,7 +6,7 @@ const (
 	Head Slot = iota + 1
 	Neck
 	Shoulder
-	//Shirt
+	Shirt
 	Chest
 	Belt
 	Legs
