@@ -23,6 +23,12 @@
         .playername .spec {
             font-size : 0.5em
         }
+
+        th {
+            position: sticky;
+            top: 0;
+            background-color: #202b38;
+        }
         </style>
 </head>
 
@@ -30,9 +36,9 @@
     <nav role=" navigation">
         <div>
             <ul>
-                <li><a href="/p1.html">Phase 1</a></li>
-                <li><a href="/p2.html">Phase 2</a></li>
-                <li><a href="/p3.html">Phase 3</a></li>
+                <li><a href="p1.html">Phase 1</a></li>
+                <li><a href="p2.html">Phase 2</a></li>
+                <li><a href="p3.html">Phase 3</a></li>
             </ul>
         </div>
     </nav>
@@ -53,13 +59,10 @@
                     <p>{{.Name}}</p>
                     <p class="spec">{{.Spec}} {{.Class}}</p>
                 </td>
-                {{range $slot := $.Slots}} 
+                {{- range $slot := $.Slots}} 
                     {{$psd := getPhaseSlotData $character $.Phase $slot}} 
-                    <td>{{- if $psd.InTier}}<span class="material-symbols-outlined">
-                        done
-                        </span>{{- end}}</td>
-
-                {{end}}
+                    <td>{{- if $psd.InTier}}<span class="material-symbols-outlined">done</span>{{- end}}</td>
+                {{- end}}
             </tr>
         {{end}}            
         </tbody>   
