@@ -28,7 +28,7 @@ func main() {
 	webPages, err := r.BuildWebsite(data)
 
 	for name, page := range webPages {
-		fileName := fmt.Sprintf("./publish/%s", name)
+		fileName := fmt.Sprintf("../docs/%s", name)
 		file, err := os.Create(fileName)
 		if err != nil {
 			panic(err)
