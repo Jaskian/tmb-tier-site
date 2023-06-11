@@ -1,4 +1,4 @@
-package tmbjsonparse
+package shared
 
 import "time"
 
@@ -24,22 +24,4 @@ type Loot struct {
 	Phase    int
 	Slot     int
 	Date     time.Time
-}
-
-func NewLoot(i loot, phase int, slot int) Loot {
-	t := time.Unix(0, 0)
-
-	if i.Pivot.Date != "" {
-		t, _ = time.Parse(TMB_TIME_FORMAT, i.Pivot.Date)
-	}
-
-	result := Loot{
-		ItemID:   i.ItemID,
-		ItemName: i.ItemName,
-		Phase:    phase,
-		Slot:     slot,
-		Date:     t,
-	}
-
-	return result
 }

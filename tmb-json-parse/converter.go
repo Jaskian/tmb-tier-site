@@ -6,8 +6,8 @@ import (
 
 const TMB_TIME_FORMAT = "2006-01-02 15:04:05"
 
-func ConvertTMBData(jsonData []byte) (TMBData, error) {
-	result := TMBData{}
+func ConvertTMBData(jsonData []byte) (shared.TMBData, error) {
+	result := shared.TMBData{}
 
 	d, err := unmarshalTMBJson(jsonData)
 	if err != nil {
@@ -17,15 +17,15 @@ func ConvertTMBData(jsonData []byte) (TMBData, error) {
 	return convertToExportData(d)
 }
 
-func convertToExportData(d tmbData) (TMBData, error) {
-	result := TMBData{}
+func convertToExportData(d tmbData) (shared.TMBData, error) {
+	result := shared.TMBData{}
 
 	for _, c := range d {
 		phaseData, err := getPhaseDataFromLoot(c)
 		if err != nil {
 			return result, err
 		}
-		outputChar := Character{
+		outputChar := shared.Character{
 			Name:   c.Name,
 			Class:  c.Class,
 			Spec:   c.Spec,
@@ -39,10 +39,10 @@ func convertToExportData(d tmbData) (TMBData, error) {
 
 type lootKey struct{ phase, slot int }
 
-func getPhaseDataFromLoot(c character) (map[int]PhaseData, error) {
+func getPhaseDataFromLoot(c character) (map[int]shared.PhaseData, error) {
 	// storing loot two ways to make calcs easier
-	phaseSlotLoot := map[lootKey][]Loot{}
-	phaseLoot := map[int][]*Loot{}
+	phaseSlotLoot := map[lootKey][]shared.Loot{}
+	phaseLoot := map[int][]*shared.Loot{}
 
 	for _, i := range c.ReceivedLoot {
 		phaseNum := shared.PhaseMappingInstance[i.InstanceID]
@@ -65,14 +65,14 @@ func getPhaseDataFromLoot(c character) (map[int]PhaseData, error) {
 			slotNum := int(slot)
 			key := lootKey{phase, slotNum}
 			inTier := calculateInTier(c, slotNum, phaseSlotLoot[key], phaseLoot[phase])
-			result[key.phase][key.slot] = SlotData{InTier: inTier, Items: phaseSlotLoot[key]}
+			result[key.phase][key.slot] = shared.SlotData{InTier: inTier, Items: phaseSlotLoot[key]}
 		}
 	}
 
 	return result, nil
 }
 
-func calculateInTier(c character, slot int, slotItems []Loot, allPhaseItems []*Loot) bool {
+func calculateInTier(c character, slot int, slotItems []shared.Loot, allPhaseItems []*shared.Loot) bool {
 
 	inTier := len(slotItems) > 0
 
@@ -103,18 +103,18 @@ func calculateInTier(c character, slot int, slotItems []Loot, allPhaseItems []*L
 	return inTier
 }
 
-func newPhasesData() map[int]PhaseData {
-	phasesData := map[int]PhaseData{}
+func newPhasesData() map[int]shared.PhaseData {
+	phasesData := map[int]shared.PhaseData{}
 
 	for _, p := range shared.PHASES {
-		phasesData[p] = PhaseData{}
+		phasesData[p] = shared.PhaseData{}
 	}
 
 	return phasesData
 }
 
-func isLootForSlotFunc(slot shared.Slot) func(*Loot) bool {
-	return func(l *Loot) bool {
+func isLootForSlotFunc(slot shared.Slot) func(*shared.Loot) bool {
+	return func(l *shared.Loot) bool {
 		return l.Slot == int(slot)
 	}
 }

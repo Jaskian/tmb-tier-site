@@ -46,13 +46,13 @@ func TestConvertTMBJson(t *testing.T) {
 	})
 }
 
-func assertInTierInPhase(t *testing.T, phase int, slot shared.Slot, c Character) {
+func assertInTierInPhase(t *testing.T, phase int, slot shared.Slot, c shared.Character) {
 	t.Helper()
 	if !c.Phases[phase][int(slot)].InTier {
 		t.Errorf("P%d %v should be In-Tier", phase, slot)
 	}
 }
-func assertNotInTierInPhase(t *testing.T, phase int, slot shared.Slot, c Character) {
+func assertNotInTierInPhase(t *testing.T, phase int, slot shared.Slot, c shared.Character) {
 	t.Helper()
 	if c.Phases[phase][int(slot)].InTier {
 		t.Errorf("P%d %v should not be In-Tier", phase, slot)

@@ -2,6 +2,9 @@ package tmbjsonparse
 
 import (
 	"encoding/json"
+	"time"
+
+	"github.com/jaskian/tmb-tier-site/shared"
 )
 
 func unmarshalTMBJson(jsonData []byte) (tmbData, error) {
@@ -34,4 +37,22 @@ type loot struct {
 
 type pivot struct {
 	Date string `json:"received_at"`
+}
+
+func NewLoot(i loot, phase int, slot int) shared.Loot {
+	t := time.Unix(0, 0)
+
+	if i.Pivot.Date != "" {
+		t, _ = time.Parse(TMB_TIME_FORMAT, i.Pivot.Date)
+	}
+
+	result := shared.Loot{
+		ItemID:   i.ItemID,
+		ItemName: i.ItemName,
+		Phase:    phase,
+		Slot:     slot,
+		Date:     t,
+	}
+
+	return result
 }
