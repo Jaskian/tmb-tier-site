@@ -26,18 +26,14 @@ type Loot struct {
 	Date     time.Time
 }
 
-func NewLoot(i loot, phase int, slot int) (result Loot, err error) {
-
+func NewLoot(i loot, phase int, slot int) Loot {
 	t := time.Unix(0, 0)
 
 	if i.Pivot.Date != "" {
-		t, err = time.Parse(TMB_TIME_FORMAT, i.Pivot.Date)
-		if err != nil {
-			return result, err
-		}
+		t, _ = time.Parse(TMB_TIME_FORMAT, i.Pivot.Date)
 	}
 
-	result = Loot{
+	result := Loot{
 		ItemID:   i.ItemID,
 		ItemName: i.ItemName,
 		Phase:    phase,
@@ -45,5 +41,5 @@ func NewLoot(i loot, phase int, slot int) (result Loot, err error) {
 		Date:     t,
 	}
 
-	return
+	return result
 }

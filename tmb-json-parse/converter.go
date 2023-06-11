@@ -40,14 +40,11 @@ func convertToExportData(d tmbData) (TMBData, error) {
 type lootKey struct{ phase, slot int }
 
 func getPhaseDataFromLoot(c character) (map[int]PhaseData, error) {
-	result := newPhasesData()
-
 	// storing loot two ways to make calcs easier
 	phaseSlotLoot := map[lootKey][]Loot{}
 	phaseLoot := map[int][]*Loot{}
 
 	for _, i := range c.ReceivedLoot {
-
 		phaseNum := shared.PhaseMappingInstance[i.InstanceID]
 
 		slotNum := i.InventoryType
@@ -55,16 +52,13 @@ func getPhaseDataFromLoot(c character) (map[int]PhaseData, error) {
 			slotNum = int(slot)
 		}
 
-		loot, err := NewLoot(i, phaseNum, slotNum)
-		if err != nil {
-			return result, err
-		}
-
+		loot := NewLoot(i, phaseNum, slotNum)
 		key := lootKey{phaseNum, slotNum}
 		phaseSlotLoot[key] = append(phaseSlotLoot[key], loot)
 		phaseLoot[key.phase] = append(phaseLoot[key.phase], &loot)
 	}
 
+	result := newPhasesData()
 	for _, phase := range shared.PHASES {
 		for _, slot := range shared.SLOTS {
 			// we need all the phase loot to calculate in-tier, not just items for that slot
@@ -110,14 +104,9 @@ func calculateInTier(c character, slot int, slotItems []Loot, allPhaseItems []*L
 }
 
 func newPhasesData() map[int]PhaseData {
-
 	phasesData := map[int]PhaseData{}
 
 	for _, p := range shared.PHASES {
-		// pd := PhaseData{}
-		// for _, s := range shared.SLOTS {
-		// 	pd[int(s)] = SlotData{Items: []Loot{}}
-		// }
 		phasesData[p] = PhaseData{}
 	}
 

@@ -49,33 +49,4 @@ func TestUnmarshalTMBJson(t *testing.T) {
 	if !reflect.DeepEqual(got[0], want) {
 		t.Errorf("got %v, want %v", got[0], want)
 	}
-	// var sortedLoot = map[int][]Loot{}
-
-	// for _, c := range tmbdata {
-	// 	for _, l := range c.ReceivedLoot {
-	// 		sortedLoot[l.InventoryType] = append(sortedLoot[l.InventoryType], l)
-	// 	}
-	// }
-
-	// for i, l := range sortedLoot {
-	// 	fmt.Printf("=== Slot %d ===", i)
-	// 	for _, li := range l {
-	// 		fmt.Println(li.ItemName)
-	// 	}
-	// }
-
-	// var sortedLootInstance = map[int][]loot{}
-
-	// for _, c := range tmbdata {
-	// 	for _, l := range c.ReceivedLoot {
-	// 		sortedLootInstance[l.InstanceID] = append(sortedLootInstance[l.InstanceID], l)
-	// 	}
-	// }
-
-	// for i, l := range sortedLootInstance {
-	// 	fmt.Printf("=== Instance %d ===", i)
-	// 	for _, li := range l {
-	// 		fmt.Println(li.ItemName)
-	// 	}
-	// }
 }

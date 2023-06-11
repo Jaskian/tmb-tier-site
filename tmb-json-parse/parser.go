@@ -5,7 +5,6 @@ import (
 )
 
 func unmarshalTMBJson(jsonData []byte) (tmbData, error) {
-
 	tmbdata := tmbData{}
 	err := json.Unmarshal(jsonData, &tmbdata)
 
