@@ -1,4 +1,0 @@
-type,raid_group_name,member_name,character_name,character_class,character_is_alt,character_inactive_at,character_note,sort_order,item_name,item_id,is_offspec,note,received_at,import_id,item_note,item_prio_note,item_tier,item_tier_label,created_at,updated_at
-received,"Main raid",Kralik,Skyquila,Druid,0,,rawr,0,"Flamewrought Cinch",45185,1,,"2023-03-09 00:00:00",1678390402-5-Skyquil,,,,3,,"2023-03-09 22:02:12",
-received,"Main raid",Kralik,Skyquila,Druid,0,,rawr,0,"Idol of the Flourishing Life",46138,0,,"2023-03-16 22:15:13",1678992518-16-Skyqui,,,,,,"2023-03-16 22:15:13",
-received,"Main raid",Zigsim,Zigsim,Paladin,0,,,15,"Mantle of the Lost Conqueror",40637,0,,"2022-10-20 00:00:00",166629495640637-Zigs,,,,,,"2022-10-21 08:22:41","2023-01-12 16:53:33"

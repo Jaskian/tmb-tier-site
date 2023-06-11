@@ -1,0 +1,14 @@
+github.com/FuzzyStatic/blizzard v1.3.3 h1:iDas1qXGY0ayaLfku0ycUgFi6vLRmZtviUu92vyqog0=
+github.com/FuzzyStatic/blizzard v1.3.3/go.mod h1:5YLwHw0/LJAigrPSmOttWR/yk7KirIJdJLHjK7LHATg=
+github.com/francis-schiavo/blizzard-api-go v0.1.36 h1:nseODPhqOSREvKqAiThOxbm2AuMyGb/d5KT6nDSC2bI=
+github.com/francis-schiavo/blizzard-api-go v0.1.36/go.mod h1:Xa0JWPWVKPC05Bk7mvJj5ht1JwfYcWstU6SAB2Nd15M=
+github.com/go-playground/locales v0.14.0 h1:u50s323jtVGugKlcYeyzC0etD1HifMjqmJqb8WugfUU=
+github.com/go-playground/universal-translator v0.18.0 h1:82dyy6p4OuJq4/CByFNOn/jYrnRPArHwAcmLoJZxyho=
+github.com/go-playground/validator/v10 v10.11.1 h1:prmOlTVv+YjZjmRmNSF3VmspqJIxJWXmqUsHwfTRRkQ=
+github.com/go-redis/redis v6.15.7+incompatible h1:3skhDh95XQMpnqeqNftPkQD9jL9e5e36z/1SUm6dy1U=
+github.com/go-redis/redis v6.15.7+incompatible/go.mod h1:NAIEuMOZ/fxfXJIrKDQDz8wamY7mA7PouImQ2Jvg6kA=
+github.com/leodido/go-urn v1.2.1 h1:BqpAaACuzVSgi/VLzGZIobT2z4v53pjosyNd9Yv6n/w=
+golang.org/x/crypto v0.0.0-20211215153901-e495a2d5b3d3 h1:0es+/5331RGQPcXlMfP+WrnIIS6dNnNRe0WB02W0F4M=
+golang.org/x/net v0.0.0-20220624214902-1bab6f366d9e h1:TsQ7F31D3bUCLeqPT0u+yjp1guoArKaNKmCr22PYgTQ=
+golang.org/x/oauth2 v0.0.0-20221006150949-b44042a4b9c1 h1:3VPzK7eqH25j7GYw5w6g/GzNRc0/fYtrxz27z1gD4W0=
+golang.org/x/text v0.3.7 h1:olpwvP2KacW1ZWvsR7uQhoyTYvKAupfQrRGBFM352Gk=
