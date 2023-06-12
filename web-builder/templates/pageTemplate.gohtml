@@ -78,7 +78,7 @@
                 </td>
                 {{- range $slot := $.Slots}} 
                     {{$psd := getPhaseSlotData $character $.Phase $slot}} 
-                    <td class="itemCell">{{- if $psd.InTier}}<span class="material-symbols-outlined">done</span>{{- end}}
+                    <td class="itemCell">{{- if $psd.InTier}}<span class="material-symbols-outlined">done</span>{{- else if $psd.Items}}<span class="material-symbols-outlined">battery_horiz_050</span>{{end}}
                         {{if $psd.Items}}
                             <div class="items">
                                 {{- range $psd.Items}}
