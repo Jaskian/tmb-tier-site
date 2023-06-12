@@ -7,7 +7,9 @@
     <meta name="description" content="Wow, like and subscribe, it really helps the channel" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-    <style>
+    <script>const whTooltips = {colorLinks: true, iconizeLinks: true, renameLinks: true};</script>
+    <script src="https://wow.zamimg.com/js/tooltips.js"></script>
+   <style>
         .material-symbols-outlined {
           font-variation-settings:
           'FILL' 0,
@@ -29,6 +31,22 @@
             top: 0;
             background-color: #202b38;
         }
+
+        .itemCell .items {
+            visibility: hidden;
+            width: 120px;
+            background-color: black;
+            color: #fff;
+            text-align: center;
+            padding: 5px 0;
+            border-radius: 6px;
+            position: absolute;
+            z-index: 1;
+        }
+
+        .itemCell:hover > .items {
+            visibility: visible;
+        } 
         </style>
 </head>
 
@@ -61,7 +79,16 @@
                 </td>
                 {{- range $slot := $.Slots}} 
                     {{$psd := getPhaseSlotData $character $.Phase $slot}} 
-                    <td>{{- if $psd.InTier}}<span class="material-symbols-outlined">done</span>{{- end}}</td>
+                    <td class="itemCell">{{- if $psd.InTier}}<span class="material-symbols-outlined">done</span>{{- end}}
+                        {{if $psd.Items}}
+                            <div class="items">
+                                {{- range $psd.Items}}
+                                <a href="#" data-wowhead="item={{.ItemID}}&domain=wotlk">{{.ItemName}}</a><br />
+                                {{end}}
+                            </div>                           
+                        {{end}}</td>
+
+                  
                 {{- end}}
             </tr>
         {{end}}            

@@ -7,7 +7,9 @@
     <meta name="description" content="Wow, like and subscribe, it really helps the channel" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-    <style>
+    <script>const whTooltips = {colorLinks: true, iconizeLinks: true, renameLinks: true};</script>
+    <script src="https://wow.zamimg.com/js/tooltips.js"></script>
+   <style>
         .material-symbols-outlined {
           font-variation-settings:
           'FILL' 0,
@@ -29,6 +31,22 @@
             top: 0;
             background-color: #202b38;
         }
+
+        .itemCell .items {
+            visibility: hidden;
+            width: 120px;
+            background-color: black;
+            color: #fff;
+            text-align: center;
+            padding: 5px 0;
+            border-radius: 6px;
+            position: absolute;
+            z-index: 1;
+        }
+
+        .itemCell:hover > .items {
+            visibility: visible;
+        } 
         </style>
 </head>
 
@@ -48,37 +66,37 @@
             <tr>
                 <th width="100px">Player</th>
                 
-                <th width="32px"><img src="https://static.wikia.nocookie.net/wowpedia/images/c/c3/Ui-paperdoll-slot-head.png/revision/latest?cb=20070607015044" /></th>
+                <th width="32px"><img src="https://wow.zamimg.com/images/wow/icons/large/inv_helmet_37.jpg" /></th>
                 
-                <th width="32px"><img src="https://static.wikia.nocookie.net/wowpedia/images/d/d4/Ui-paperdoll-slot-neck.png/revision/latest?cb=20070607015138" /></th>
+                <th width="32px"><img src="https://wow.zamimg.com/images/wow/icons/large/inv_jewelry_necklace_15.jpg" /></th>
                 
-                <th width="32px"><img src="https://static.wikia.nocookie.net/wowpedia/images/f/fa/Ui-paperdoll-slot-shoulder.png/revision/latest?cb=20070607015347" /></th>
+                <th width="32px"><img src="https://wow.zamimg.com/images/wow/icons/large/inv_shoulder_14.jpg" /></th>
                 
-                <th width="32px"><img src="https://static.wikia.nocookie.net/wowpedia/images/b/b7/Ui-paperdoll-slot-chest.png/revision/latest?cb=20070606225854" /></th>
+                <th width="32px"><img src="https://wow.zamimg.com/images/wow/icons/large/inv_chest_chain_15.jpg" /></th>
                 
-                <th width="32px"><img src="https://static.wikia.nocookie.net/wowpedia/images/c/cd/Ui-paperdoll-slot-waist.png/revision/latest?cb=20070607015409" /></th>
+                <th width="32px"><img src="https://wow.zamimg.com/images/wow/icons/large/inv_belt_15.jpg" /></th>
                 
-                <th width="32px"><img src="https://static.wikia.nocookie.net/wowpedia/images/1/14/Ui-paperdoll-slot-legs.png/revision/latest?cb=20070607015103" /></th>
+                <th width="32px"><img src="https://wow.zamimg.com/images/wow/icons/large/inv_pants_03.jpg" /></th>
                 
-                <th width="32px"><img src="https://static.wikia.nocookie.net/wowpedia/images/a/a5/Ui-paperdoll-slot-feet.png/revision/latest?cb=20070607015023" /></th>
+                <th width="32px"><img src="https://wow.zamimg.com/images/wow/icons/large/inv_boots_07.jpg" /></th>
                 
-                <th width="32px"><img src="https://static.wikia.nocookie.net/wowpedia/images/1/1d/Ui-paperdoll-slot-wrists.png/revision/latest?cb=20070607015415" /></th>
+                <th width="32px"><img src="https://wow.zamimg.com/images/wow/icons/large/inv_bracer_05.jpg" /></th>
                 
-                <th width="32px"><img src="https://static.wikia.nocookie.net/wowpedia/images/2/22/Ui-paperdoll-slot-hands.png/revision/latest?cb=20070607015036" /></th>
+                <th width="32px"><img src="https://wow.zamimg.com/images/wow/icons/large/inv_gauntlets_27.jpg" /></th>
                 
-                <th width="32px"><img src="https://static.wikia.nocookie.net/wowpedia/images/c/c2/Ui-paperdoll-slot-finger.png/revision/latest?cb=20070607015031" /></th>
+                <th width="32px"><img src="https://wow.zamimg.com/images/wow/icons/large/inv_jewelry_ring_03.jpg" /></th>
                 
-                <th width="32px"><img src="https://static.wikia.nocookie.net/wowpedia/images/2/26/Ui-paperdoll-slot-trinket.png/revision/latest?cb=20070607015403" /></th>
+                <th width="32px"><img src="https://wow.zamimg.com/images/wow/icons/large/inv_jewelry_talisman_10.jpg" /></th>
                 
-                <th width="32px"><img src="https://wow.zamimg.com/images/wow/icons/large/inv_misc_cape_03.jpg" /></th>
+                <th width="32px"><img src="https://wow.zamimg.com/images/wow/icons/large/inv_misc_cape_05.jpg" /></th>
                 
-                <th width="32px"><img src="https://static.wikia.nocookie.net/wowpedia/images/f/f5/Ui-paperdoll-slot-mainhand.png/revision/latest?cb=20070607015117" /></th>
+                <th width="32px"><img src="https://wow.zamimg.com/images/wow/icons/large/inv_sword_50.jpg" /></th>
                 
-                <th width="32px"><img src="https://static.wikia.nocookie.net/wowpedia/images/f/f5/Ui-paperdoll-slot-mainhand.png/revision/latest?cb=20070607015117" /></th>
+                <th width="32px"><img src="https://wow.zamimg.com/images/wow/icons/large/inv_sword_39.jpg" /></th>
                 
-                <th width="32px"><img src="https://static.wikia.nocookie.net/wowpedia/images/3/30/Ui-paperdoll-slot-secondaryhand.png/revision/latest?cb=20070607015335" /></th>
+                <th width="32px"><img src="https://wow.zamimg.com/images/wow/icons/large/inv_misc_book_07.jpg" /></th>
                 
-                <th width="32px"><img src="https://static.wikia.nocookie.net/wowpedia/images/9/9f/Ui-paperdoll-slot-ranged.png/revision/latest?cb=20070607015146" /></th>
+                <th width="32px"><img src="https://wow.zamimg.com/images/wow/icons/large/inv_weapon_bow_01.jpg" /></th>
                 
             </tr>
         </thead>
@@ -90,37 +108,53 @@
                     <p class="spec">Combat</p>
                 </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td>
+                    <td class="itemCell">
+                        </td>
             </tr>
         
             <tr>
@@ -129,37 +163,53 @@
                     <p class="spec"></p>
                 </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td>
+                    <td class="itemCell">
+                        </td>
             </tr>
         
             <tr>
@@ -168,37 +218,53 @@
                     <p class="spec">Resto (Druid)</p>
                 </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td>
+                    <td class="itemCell">
+                        </td>
             </tr>
         
             <tr>
@@ -207,37 +273,53 @@
                     <p class="spec">Demonology</p>
                 </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td>
+                    <td class="itemCell">
+                        </td>
             </tr>
         
             <tr>
@@ -246,37 +328,53 @@
                     <p class="spec">Discipline</p>
                 </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td>
+                    <td class="itemCell">
+                        </td>
             </tr>
         
             <tr>
@@ -285,37 +383,53 @@
                     <p class="spec">Prot (Pally)</p>
                 </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td>
+                    <td class="itemCell">
+                        </td>
             </tr>
         
             <tr>
@@ -324,37 +438,53 @@
                     <p class="spec">Holy (Pally)</p>
                 </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td>
+                    <td class="itemCell">
+                        </td>
             </tr>
         
             <tr>
@@ -363,37 +493,53 @@
                     <p class="spec">Fury</p>
                 </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td>
+                    <td class="itemCell">
+                        </td>
             </tr>
         
             <tr>
@@ -402,37 +548,53 @@
                     <p class="spec">Frost (DK)</p>
                 </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td>
+                    <td class="itemCell">
+                        </td>
             </tr>
         
             <tr>
@@ -441,37 +603,53 @@
                     <p class="spec">Arms</p>
                 </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td>
+                    <td class="itemCell">
+                        </td>
             </tr>
         
             <tr>
@@ -480,37 +658,53 @@
                     <p class="spec">Retribution</p>
                 </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td>
+                    <td class="itemCell">
+                        </td>
             </tr>
         
             <tr>
@@ -519,37 +713,53 @@
                     <p class="spec">Combat</p>
                 </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td>
+                    <td class="itemCell">
+                        </td>
             </tr>
         
             <tr>
@@ -558,37 +768,53 @@
                     <p class="spec">Affliction</p>
                 </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td>
+                    <td class="itemCell">
+                        </td>
             </tr>
         
             <tr>
@@ -597,37 +823,53 @@
                     <p class="spec">Affliction</p>
                 </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td>
+                    <td class="itemCell">
+                        </td>
             </tr>
         
             <tr>
@@ -636,37 +878,53 @@
                     <p class="spec">Assassination</p>
                 </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td>
+                    <td class="itemCell">
+                        </td>
             </tr>
         
             <tr>
@@ -675,37 +933,53 @@
                     <p class="spec">Arms</p>
                 </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td>
+                    <td class="itemCell">
+                        </td>
             </tr>
         
             <tr>
@@ -714,37 +988,53 @@
                     <p class="spec">Survival</p>
                 </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td>
+                    <td class="itemCell">
+                        </td>
             </tr>
         
             <tr>
@@ -753,37 +1043,53 @@
                     <p class="spec">Balance</p>
                 </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td>
+                    <td class="itemCell">
+                        </td>
             </tr>
         
             <tr>
@@ -792,37 +1098,53 @@
                     <p class="spec">Elemental</p>
                 </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td>
+                    <td class="itemCell">
+                        </td>
             </tr>
         
             <tr>
@@ -831,37 +1153,53 @@
                     <p class="spec">Enhancement</p>
                 </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td>
+                    <td class="itemCell">
+                        </td>
             </tr>
         
             <tr>
@@ -870,37 +1208,53 @@
                     <p class="spec">Arcane</p>
                 </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td>
+                    <td class="itemCell">
+                        </td>
             </tr>
         
             <tr>
@@ -909,37 +1263,53 @@
                     <p class="spec">Resto (Druid)</p>
                 </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td>
+                    <td class="itemCell">
+                        </td>
             </tr>
         
             <tr>
@@ -948,37 +1318,53 @@
                     <p class="spec">Shadow</p>
                 </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td>
+                    <td class="itemCell">
+                        </td>
             </tr>
         
             <tr>
@@ -987,37 +1373,53 @@
                     <p class="spec">Frost (DK)</p>
                 </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td>
+                    <td class="itemCell">
+                        </td>
             </tr>
         
             <tr>
@@ -1026,37 +1428,53 @@
                     <p class="spec">Fury</p>
                 </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td>
+                    <td class="itemCell">
+                        </td>
             </tr>
         
             <tr>
@@ -1065,37 +1483,53 @@
                     <p class="spec">Resto (Shammy)</p>
                 </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td>
+                    <td class="itemCell">
+                        </td>
             </tr>
         
             <tr>
@@ -1104,37 +1538,53 @@
                     <p class="spec">Resto (Druid)</p>
                 </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td>
+                    <td class="itemCell">
+                        </td>
             </tr>
         
             <tr>
@@ -1143,37 +1593,53 @@
                     <p class="spec">Holy (Priest)</p>
                 </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td>
+                    <td class="itemCell">
+                        </td>
             </tr>
         
             <tr>
@@ -1182,37 +1648,53 @@
                     <p class="spec">Discipline</p>
                 </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td>
+                    <td class="itemCell">
+                        </td>
             </tr>
         
             <tr>
@@ -1221,37 +1703,53 @@
                     <p class="spec">Enhancement</p>
                 </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td>
+                    <td class="itemCell">
+                        </td>
             </tr>
         
             <tr>
@@ -1260,37 +1758,53 @@
                     <p class="spec">Prot (Pally)</p>
                 </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td>
+                    <td class="itemCell">
+                        </td>
             </tr>
         
             <tr>
@@ -1299,37 +1813,53 @@
                     <p class="spec">Feral</p>
                 </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td>
+                    <td class="itemCell">
+                        </td>
             </tr>
         
             <tr>
@@ -1338,37 +1868,53 @@
                     <p class="spec">Retribution</p>
                 </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td>
+                    <td class="itemCell">
+                        </td>
             </tr>
         
             <tr>
@@ -1377,37 +1923,53 @@
                     <p class="spec">Arcane</p>
                 </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td>
+                    <td class="itemCell">
+                        </td>
             </tr>
         
             <tr>
@@ -1416,37 +1978,53 @@
                     <p class="spec">Destruction</p>
                 </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td>
+                    <td class="itemCell">
+                        </td>
             </tr>
         
             <tr>
@@ -1455,37 +2033,53 @@
                     <p class="spec">Prot (Pally)</p>
                 </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td>
+                    <td class="itemCell">
+                        </td>
             </tr>
         
             <tr>
@@ -1494,37 +2088,53 @@
                     <p class="spec">Affliction</p>
                 </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td>
+                    <td class="itemCell">
+                        </td>
             </tr>
         
             <tr>
@@ -1533,37 +2143,53 @@
                     <p class="spec">Survival</p>
                 </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td>
+                    <td class="itemCell">
+                        </td>
             </tr>
         
             <tr>
@@ -1572,37 +2198,53 @@
                     <p class="spec">Retribution</p>
                 </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td> 
+                    <td class="itemCell">
+                        </td> 
                      
-                    <td></td>
+                    <td class="itemCell">
+                        </td>
             </tr>
                     
         </tbody>   

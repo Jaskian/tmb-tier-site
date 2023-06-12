@@ -69,6 +69,15 @@ func TestConvertTMBJson(t *testing.T) {
 	t.Run("Offspec items excluded", func(t *testing.T) {
 		input := buildTestDataWithLoot("Warrior", "Fury", shared.Belt, shared.Ulduar, 1)
 
+		offspecTexts := []string{"~Off-Spec~", "~Banking~", "~Free~"}
+		for _, t := range offspecTexts {
+			input[0].ReceivedLoot = append(input[0].ReceivedLoot, loot{
+				InventoryType: int(shared.Belt),
+				InstanceID:    int(shared.Ulduar),
+				Pivot:         pivot{OfficerNote: t},
+			})
+		}
+
 		got, err := convertToExportData(input)
 		assertNoError(t, err)
 		assertNotInTierInPhase(t, 2, shared.Belt, got[0])

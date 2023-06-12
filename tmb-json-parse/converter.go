@@ -1,6 +1,8 @@
 package tmbjsonparse
 
 import (
+	"strings"
+
 	"github.com/jaskian/tmb-tier-site/shared"
 )
 
@@ -52,10 +54,7 @@ func getPhaseDataFromLoot(c character) (map[int]shared.PhaseData, error) {
 
 		phaseNum := shared.PhaseMappingInstance[i.InstanceID]
 
-		slotNum := i.InventoryType
-		if slot, ok := shared.InventoryTypeMappings[slotNum]; ok {
-			slotNum = int(slot)
-		}
+		slotNum := i.GetSlot()
 
 		loot := NewLoot(i, phaseNum, slotNum)
 		key := lootKey{phaseNum, slotNum}
@@ -137,5 +136,26 @@ func Any[T any](ts []T, pred func(T) bool) bool {
 }
 
 func (l loot) ExcludedFromResults() bool {
-	return l.Pivot.Offspec == 1
+	if l.Pivot.Offspec == 1 ||
+		strings.Contains(l.Pivot.OfficerNote, "Off-Spec") ||
+		strings.Contains(l.Pivot.OfficerNote, "Banking") ||
+		strings.Contains(l.Pivot.OfficerNote, "Free") {
+		return true
+	}
+	return false
+}
+
+func (l loot) GetSlot() int {
+	slotNum := l.InventoryType
+
+	if slotNum == 0 {
+		firstWord := strings.Split(l.ItemName, " ")[0]
+		if slot, ok := shared.TokenMapping[firstWord]; ok {
+			slotNum = int(slot)
+		}
+	} else if slot, ok := shared.InventoryTypeMappings[slotNum]; ok {
+		slotNum = int(slot)
+	}
+
+	return slotNum
 }
