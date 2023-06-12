@@ -34,7 +34,8 @@ func TestUnmarshalTMBJson(t *testing.T) {
 				InventoryType: 16,
 				InstanceID:    20,
 				Pivot: pivot{
-					Date: "2022-11-03 00:00:00",
+					Date:    "2022-11-03 00:00:00",
+					Offspec: 1,
 				},
 			},
 		},

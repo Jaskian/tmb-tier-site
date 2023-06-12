@@ -10,7 +10,7 @@ import (
 )
 
 var (
-	//go:embed data/tmbdata.json
+	//go:embed data/character-json.json
 	example      []byte
 	importKeeper embed.FS
 )

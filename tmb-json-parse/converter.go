@@ -45,6 +45,11 @@ func getPhaseDataFromLoot(c character) (map[int]shared.PhaseData, error) {
 	phaseLoot := map[int][]*shared.Loot{}
 
 	for _, i := range c.ReceivedLoot {
+
+		if i.ExcludedFromResults() {
+			continue
+		}
+
 		phaseNum := shared.PhaseMappingInstance[i.InstanceID]
 
 		slotNum := i.InventoryType
@@ -129,4 +134,8 @@ func Any[T any](ts []T, pred func(T) bool) bool {
 		}
 	}
 	return false
+}
+
+func (l loot) ExcludedFromResults() bool {
+	return l.Pivot.Offspec == 1
 }

@@ -36,7 +36,8 @@ type loot struct {
 }
 
 type pivot struct {
-	Date string `json:"received_at"`
+	Date    string `json:"received_at"`
+	Offspec int    `json:"is_offspec"`
 }
 
 func NewLoot(i loot, phase int, slot int) shared.Loot {
