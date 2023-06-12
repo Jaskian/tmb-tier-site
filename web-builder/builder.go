@@ -30,15 +30,16 @@ func NewSiteRenderer() (*SiteRenderer, error) {
 	return &SiteRenderer{t}, err
 }
 
-func (s *SiteRenderer) BuildWebsite(data shared.TMBData) (map[string]string, error) {
+func (s *SiteRenderer) BuildWebsite(data shared.TMBData, currentPhase int) (map[string]string, error) {
 	pages := map[string]string{}
 
 	for _, phase := range shared.PHASES {
 		renderData := struct {
-			Phase int
-			Data  shared.TMBData
-			Slots []shared.Slot
-		}{phase, data, shared.SLOTS}
+			Phase        int
+			Data         shared.TMBData
+			Slots        []shared.Slot
+			ShowWishlist bool
+		}{phase, data, shared.SLOTS, phase == currentPhase}
 
 		b := bytes.Buffer{}
 		pageName := fmt.Sprintf("p%d.html", phase)

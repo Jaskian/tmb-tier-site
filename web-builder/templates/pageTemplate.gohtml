@@ -68,7 +68,9 @@
         <thead>
             <tr>
                 <th width="100px">Player</th>
+                {{if $.ShowWishlist}}
                 <th width="75px">Wishlist</th>
+                {{end}}
                 {{range $.Slots}}
                 <th width="32px"><img src="{{ getSlotImage . }}" /></th>
                 {{end}}
@@ -81,6 +83,7 @@
                     <p style="color: {{getClassColor .Class}}">{{.Name}}</p>
                     <p class="spec">{{.Spec}}</p>                    
                 </td>
+                {{if $.ShowWishlist}}
                 <td class="tooltipContainer">
                     {{if .Wishlist.Total}}
                         {{.Wishlist.Received}} / {{.Wishlist.Total}}
@@ -91,7 +94,7 @@
                         </div>
                     {{end}}
                 </td>       
-            
+                {{end}}
                 {{- range $slot := $.Slots}} 
                     {{$psd := getPhaseSlotData $character $.Phase $slot}} 
                     <td class="tooltipContainer">{{- if $psd.InTier}}<span class="material-symbols-outlined">done</span>{{- else if $psd.Items}}<span class="material-symbols-outlined">battery_horiz_050</span>{{end}}

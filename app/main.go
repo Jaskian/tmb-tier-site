@@ -9,6 +9,8 @@ import (
 	webbuilder "github.com/jaskian/tmb-tier-site/web-builder"
 )
 
+const CURRENT_PHASE = 2
+
 var (
 	//go:embed data/character-json.json
 	example      []byte
@@ -25,7 +27,7 @@ func main() {
 		panic(err)
 	}
 
-	webPages, err := r.BuildWebsite(data)
+	webPages, err := r.BuildWebsite(data, CURRENT_PHASE)
 	if err != nil {
 		panic(err)
 	}
