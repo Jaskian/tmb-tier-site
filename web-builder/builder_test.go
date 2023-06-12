@@ -34,7 +34,7 @@ func TestBuildWebsite(t *testing.T) {
 	r, err := NewSiteRenderer()
 	assertNoError(t, err)
 
-	pages, err := r.BuildWebsite(data)
+	pages, err := r.BuildWebsite(data, 2)
 	assertNoError(t, err)
 
 	approvals.VerifyMap(t, pages)
