@@ -5,10 +5,11 @@ import "time"
 type TMBData []Character
 
 type Character struct {
-	Name   string
-	Class  string
-	Spec   string
-	Phases map[int]PhaseData
+	Name     string
+	Class    string
+	Spec     string
+	Phases   map[int]PhaseData
+	Wishlist Wishlist
 }
 
 type PhaseData map[int]SlotData
@@ -24,4 +25,13 @@ type Loot struct {
 	Phase    int
 	Slot     int
 	Date     time.Time
+}
+type Wishlist struct {
+	Received     int
+	Total        int
+	WishlistLoot []WishlistLoot
+}
+type WishlistLoot struct {
+	Loot
+	Received bool
 }

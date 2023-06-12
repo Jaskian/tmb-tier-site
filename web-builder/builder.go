@@ -21,9 +21,10 @@ type SiteRenderer struct {
 func NewSiteRenderer() (*SiteRenderer, error) {
 
 	t, err := template.New("pageTemplate.gohtml").Funcs(template.FuncMap{
-		"getPhaseSlotData": getPhaseSlotData,
-		"getSlotImage":     getSlotImage,
-		"getClassColor":    getClassColor,
+		"getPhaseSlotData":   getPhaseSlotData,
+		"getSlotImage":       getSlotImage,
+		"getClassColor":      getClassColor,
+		"getLootStatusClass": getLootStatusClass,
 	}).ParseFS(pageTemplates, "templates/*.gohtml")
 
 	return &SiteRenderer{t}, err
@@ -66,4 +67,11 @@ func getClassColor(class string) string {
 	} else {
 		return "white"
 	}
+}
+
+func getLootStatusClass(item shared.WishlistLoot) string {
+	if item.Received {
+		return "receivedLoot"
+	}
+	return ""
 }

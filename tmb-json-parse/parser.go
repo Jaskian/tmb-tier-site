@@ -25,6 +25,7 @@ type character struct {
 	Class        string `json:"class"`
 	Spec         string `json:"spec"`
 	ReceivedLoot []loot `json:"received"`
+	Wishlisted   []loot `json:"wishlist"`
 }
 
 type loot struct {
@@ -36,9 +37,10 @@ type loot struct {
 }
 
 type pivot struct {
-	Date        string `json:"received_at"`
-	Offspec     int    `json:"is_offspec"`
-	OfficerNote string `json:"officer_note"`
+	Date           string `json:"received_at"`
+	Offspec        int    `json:"is_offspec"`
+	OfficerNote    string `json:"officer_note"`
+	ReceivedWLItem int    `json:"is_received"`
 }
 
 func NewLoot(i loot, phase int, slot int) shared.Loot {

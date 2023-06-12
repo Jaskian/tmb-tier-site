@@ -39,6 +39,17 @@ func TestUnmarshalTMBJson(t *testing.T) {
 				},
 			},
 		},
+		Wishlisted: []loot{
+			{
+				ItemID:        45224,
+				ItemName:      "Drape of the Lithe",
+				InventoryType: 16,
+				InstanceID:    20,
+				Pivot: pivot{
+					ReceivedWLItem: 1,
+				},
+			},
+		},
 	}
 
 	got, err := unmarshalTMBJson(example)

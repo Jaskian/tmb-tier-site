@@ -31,7 +31,7 @@
             background-color: #202b38;
         }
 
-        .itemCell .items {
+        .tooltipContainer .tooltip {
             visibility: hidden;
             width: 120px;
             background-color: black;
@@ -43,9 +43,13 @@
             z-index: 1;
         }
 
-        .itemCell:hover > .items {
+        .tooltipContainer:hover > .tooltip {
             visibility: visible;
         } 
+
+        .receivedLoot {
+            text-decoration: line-through !important;
+        }
         </style>
 </head>
 
@@ -72,15 +76,23 @@
         <tbody>        
         {{range $character := .Data }}
             <tr>
-                <td class="playername">
+                <td class="playername tooltipContainer">
                     <p style="color: {{getClassColor .Class}}">{{.Name}}</p>
                     <p class="spec">{{.Spec}}</p>
+                    {{if .Wishlist.Total}}
+                        <div class="tooltip">
+                            <h4>{{.Wishlist.Received}} / {{.Wishlist.Total}}</h4>
+                            {{- range .Wishlist.WishlistLoot}}                                
+                            <a href="#" class="{{getLootStatusClass .}}" data-wowhead="item={{.ItemID}}&domain=wotlk">{{.ItemName}}</a><br />
+                            {{end}}
+                        </div>
+                    {{end}}
                 </td>
                 {{- range $slot := $.Slots}} 
                     {{$psd := getPhaseSlotData $character $.Phase $slot}} 
-                    <td class="itemCell">{{- if $psd.InTier}}<span class="material-symbols-outlined">done</span>{{- else if $psd.Items}}<span class="material-symbols-outlined">battery_horiz_050</span>{{end}}
+                    <td class="tooltipContainer">{{- if $psd.InTier}}<span class="material-symbols-outlined">done</span>{{- else if $psd.Items}}<span class="material-symbols-outlined">battery_horiz_050</span>{{end}}
                         {{if $psd.Items}}
-                            <div class="items">
+                            <div class="tooltip">
                                 {{- range $psd.Items}}
                                 <a href="#" data-wowhead="item={{.ItemID}}&domain=wotlk">{{.ItemName}}</a><br />
                                 {{end}}

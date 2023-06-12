@@ -27,16 +27,44 @@ func convertToExportData(d tmbData) (shared.TMBData, error) {
 		if err != nil {
 			return result, err
 		}
+		wlItems := getWishlistDataFromCharacter(c)
+
 		outputChar := shared.Character{
-			Name:   c.Name,
-			Class:  c.Class,
-			Spec:   c.Spec,
-			Phases: phaseData,
+			Name:     c.Name,
+			Class:    c.Class,
+			Spec:     c.Spec,
+			Phases:   phaseData,
+			Wishlist: wlItems,
 		}
 		result = append(result, outputChar)
 	}
 
 	return result, nil
+}
+
+func getWishlistDataFromCharacter(c character) shared.Wishlist {
+
+	loot := []shared.WishlistLoot{}
+	received := 0
+
+	for _, i := range c.Wishlisted {
+		li := shared.WishlistLoot{
+			Loot:     NewLoot(i, 0, 0),
+			Received: i.Pivot.ReceivedWLItem == 1,
+		}
+		if li.Received {
+			received++
+		}
+		loot = append(loot, li)
+	}
+
+	wl := shared.Wishlist{
+		Total:        len(loot),
+		Received:     received,
+		WishlistLoot: loot,
+	}
+
+	return wl
 }
 
 type lootKey struct{ phase, slot int }
