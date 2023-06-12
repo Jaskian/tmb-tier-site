@@ -68,6 +68,7 @@
         <thead>
             <tr>
                 <th width="100px">Player</th>
+                <th width="75px">Wishlist</th>
                 {{range $.Slots}}
                 <th width="32px"><img src="{{ getSlotImage . }}" /></th>
                 {{end}}
@@ -76,18 +77,21 @@
         <tbody>        
         {{range $character := .Data }}
             <tr>
-                <td class="playername tooltipContainer">
+                <td class="playername">
                     <p style="color: {{getClassColor .Class}}">{{.Name}}</p>
-                    <p class="spec">{{.Spec}}</p>
+                    <p class="spec">{{.Spec}}</p>                    
+                </td>
+                <td class="tooltipContainer">
                     {{if .Wishlist.Total}}
+                        {{.Wishlist.Received}} / {{.Wishlist.Total}}
                         <div class="tooltip">
-                            <h4>{{.Wishlist.Received}} / {{.Wishlist.Total}}</h4>
                             {{- range .Wishlist.WishlistLoot}}                                
                             <a href="#" class="{{getLootStatusClass .}}" data-wowhead="item={{.ItemID}}&domain=wotlk">{{.ItemName}}</a><br />
                             {{end}}
                         </div>
                     {{end}}
-                </td>
+                </td>       
+            
                 {{- range $slot := $.Slots}} 
                     {{$psd := getPhaseSlotData $character $.Phase $slot}} 
                     <td class="tooltipContainer">{{- if $psd.InTier}}<span class="material-symbols-outlined">done</span>{{- else if $psd.Items}}<span class="material-symbols-outlined">battery_horiz_050</span>{{end}}
