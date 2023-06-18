@@ -3,6 +3,7 @@ package main
 import (
 	"fmt"
 	"io/fs"
+	"log"
 	"os"
 	"path/filepath"
 	"time"
@@ -20,6 +21,7 @@ type config struct {
 }
 
 func main() {
+	log.Print("Starting run")
 	// load env
 	cfg := config{}
 	if err := env.Parse(&cfg); err != nil {
