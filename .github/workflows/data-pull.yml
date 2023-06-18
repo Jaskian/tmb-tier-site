@@ -32,6 +32,9 @@ jobs:
       - name: Run Puller
         run: go run .
         working-directory : ./tmb-puller
+        env:
+          DISCORD_USERNAME: ${{ secrets.DISCORD_USERNAME }}
+          DISCORD_PASSWORD: ${{ secrets.DISCORD_PASSWORD }}
 
       # Commit all changed files back to the repository
       - uses: stefanzweifel/git-auto-commit-action@v4
