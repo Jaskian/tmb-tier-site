@@ -9,7 +9,6 @@ import (
 
 	"github.com/caarlos0/env"
 	"github.com/go-rod/rod"
-	"github.com/go-rod/rod/lib/launcher"
 	"github.com/go-rod/rod/lib/proto"
 )
 
@@ -27,16 +26,15 @@ func main() {
 		fmt.Printf("%+v\n", err)
 	}
 
-	// create go-rod launcher
-	l := launcher.New().
-		Headless(true).
-		Devtools(false)
-	defer l.Cleanup()
+	// // create go-rod launcher
+	// l := launcher.New().
+	// 	Headless(true).
+	// 	Devtools(false)
+	// defer l.Cleanup()
 
-	// create browser
-	url := l.MustLaunch()
+	// // create browser
+	// url := l.MustLaunch()
 	browser := rod.New().
-		ControlURL(url).
 		SlowMotion(time.Millisecond * 45).
 		MustConnect()
 	defer browser.MustClose()
