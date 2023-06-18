@@ -55,12 +55,21 @@ func main() {
 	page.MustElement("input[name=\"email\"]").MustInput(cfg.DiscordUsername)
 	page.MustElement("input[name=\"password\"]").MustInput(cfg.DiscordPassword)
 	page.MustElement("button[type=\"submit\"]").Click(proto.InputMouseButtonLeft, 1)
-	time.Sleep(time.Second * 10)
+	time.Sleep(time.Second * 5)
 
 	pInfo, _ := page.Info()
+	if pInfo.URL != "https://thatsmybis.com/" {
+		// we hit the authorize page
+		fmt.Printf("Current URL: %v", pInfo.URL)
+		buttons, _ := page.Elements("button")
+		buttons[len(buttons)-1].MustClick()
+		time.Sleep(time.Second * 5)
+		pInfo, _ = page.Info()
+	}
 	fmt.Printf("Current URL: %v", pInfo.URL)
 
 	page.Navigate(Guild_Slug + "export")
+	page.WaitLoad()
 
 	// create temp dir and set as download location
 	wd, _ := os.Getwd()
