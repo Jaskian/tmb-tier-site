@@ -29,7 +29,7 @@ func main() {
 
 	// create go-rod launcher
 	l := launcher.New().
-		Headless(false).
+		Headless(true).
 		Devtools(false)
 	defer l.Cleanup()
 
