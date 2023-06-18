@@ -37,8 +37,7 @@ func main() {
 	// // create browser
 	// url := l.MustLaunch()
 	browser := rod.New().
-		//	ControlURL(url).
-		SlowMotion(time.Millisecond * 45)
+		Trace(true)
 	err := browser.Connect()
 	if err != nil {
 		fmt.Printf("%+v\n", err)
