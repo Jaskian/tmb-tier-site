@@ -38,8 +38,12 @@ func main() {
 	// url := l.MustLaunch()
 	browser := rod.New().
 		//	ControlURL(url).
-		SlowMotion(time.Millisecond * 45).
-		MustConnect()
+		SlowMotion(time.Millisecond * 45)
+	err := browser.Connect()
+	if err != nil {
+		fmt.Printf("%+v\n", err)
+		panic(err)
+	}
 	defer browser.MustClose()
 
 	// login
