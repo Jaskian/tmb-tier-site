@@ -25,6 +25,8 @@ jobs:
           go-version: '1.20'
           
       - name: Build
+        run: go env -w GO111MODULE=off
+      -
         run: go run -v tmb-puller
 
       # Commit all changed files back to the repository
