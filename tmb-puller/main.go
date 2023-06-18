@@ -69,7 +69,7 @@ func main() {
 	page.Activate()
 
 	pInfo, _ := page.Info()
-	for i := 1; i <= 120; i++ {
+	for i := 1; i <= 30; i++ {
 		time.Sleep(time.Second)
 		pInfo, _ = page.Info()
 		if pInfo.URL == "https://thatsmybis.com/" {
