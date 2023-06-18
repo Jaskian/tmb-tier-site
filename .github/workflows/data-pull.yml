@@ -1,4 +1,4 @@
-name: Format
+name: TMB Data Pull
 
 on:
   schedule:
