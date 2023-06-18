@@ -41,6 +41,7 @@ func main() {
 
 	// login
 	page := browser.MustPage("https://thatsmybis.com/auth/discord")
+	defer page.Close()
 	page.MustElement("input[name=\"email\"]").MustInput(cfg.DiscordUsername)
 	page.MustElement("input[name=\"password\"]").MustInput(cfg.DiscordPassword)
 	page.MustElement("button[type=\"submit\"]").Click(proto.InputMouseButtonLeft, 1)
