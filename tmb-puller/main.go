@@ -61,8 +61,7 @@ func main() {
 	if pInfo.URL != "https://thatsmybis.com/" {
 		// we hit the authorize page
 		fmt.Printf("Current URL: %v", pInfo.URL)
-		buttons, _ := page.Elements("button")
-		buttons[len(buttons)-1].MustClick()
+		page.MustElement(".colorBrand-2M3O3N").MustClick()
 		time.Sleep(time.Second * 5)
 		pInfo, _ = page.Info()
 	}
