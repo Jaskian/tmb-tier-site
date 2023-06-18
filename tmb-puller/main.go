@@ -3,14 +3,12 @@ package main
 import (
 	"fmt"
 	"io/fs"
-	"log"
 	"os"
 	"path/filepath"
 	"time"
 
 	"github.com/caarlos0/env"
 	"github.com/go-rod/rod"
-	"github.com/go-rod/rod/lib/launcher"
 	"github.com/go-rod/rod/lib/proto"
 )
 
@@ -22,24 +20,24 @@ type config struct {
 }
 
 func main() {
-	log.Print("Starting run")
+	fmt.Print("Starting run")
 	// load env
 	cfg := config{}
 	if err := env.Parse(&cfg); err != nil {
 		fmt.Printf("%+v\n", err)
 	}
 
-	// create go-rod launcher
-	l := launcher.New().
-		Headless(true).
-		Devtools(false).
-		Leakless(false)
-	defer l.Cleanup()
+	// // create go-rod launcher
+	// l := launcher.New().
+	// 	Headless(true).
+	// 	Devtools(false).
+	// 	Leakless(true)
+	// defer l.Cleanup()
 
-	// create browser
-	url := l.MustLaunch()
+	// // create browser
+	// url := l.MustLaunch()
 	browser := rod.New().
-		ControlURL(url).
+		//	ControlURL(url).
 		SlowMotion(time.Millisecond * 45).
 		MustConnect()
 	defer browser.MustClose()
