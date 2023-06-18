@@ -31,8 +31,9 @@ func main() {
 
 	// create go-rod launcher
 	l := launcher.New().
-		Headless(false).
-		Devtools(false)
+		Headless(true).
+		Devtools(false).
+		Leakless(false)
 	defer l.Cleanup()
 
 	// create browser
