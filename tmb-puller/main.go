@@ -25,6 +25,8 @@ func main() {
 	cfg := config{}
 	if err := env.Parse(&cfg); err != nil {
 		fmt.Printf("%+v\n", err)
+	} else if cfg.DiscordUsername == "" || cfg.DiscordPassword == "" {
+		panic("env variables missing")
 	}
 
 	// // create go-rod launcher
@@ -54,6 +56,7 @@ func main() {
 	page.MustElement("input[name=\"password\"]").MustInput(cfg.DiscordPassword)
 	page.MustElement("button[type=\"submit\"]").Click(proto.InputMouseButtonLeft, 1)
 	time.Sleep(time.Second * 5)
+	page.Navigate(Guild_Slug + "export")
 
 	// create temp dir and set as download location
 	wd, _ := os.Getwd()
@@ -64,8 +67,6 @@ func main() {
 	// only using this to set the download location, the wait wont work
 	browser.WaitDownload(tempDir)
 
-	// download big json blob
-	page.Navigate(Guild_Slug + "export")
 	downloadUrl := Guild_Slug + "export/characters-with-items/json"
 	selector := fmt.Sprintf("a[href=\"%s\"]", downloadUrl)
 	page.MustElement(selector).MustClick()
