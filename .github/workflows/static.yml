@@ -24,22 +24,32 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
-  # Single deploy job since we're just deploying
-  deploy:
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
+  format-code:
     runs-on: ubuntu-latest
+
+    permissions:
+      contents: write
+
     steps:
-      - name: Checkout
-        uses: actions/checkout@v3
-      - name: Setup Pages
-        uses: actions/configure-pages@v3
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v1
+      - uses: actions/checkout@v3
+
+      - uses: actions/setup-go@v4
         with:
-          # Upload entire repository
-          path: 'docs'
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v2
+          go-version: 1.20.1
+                
+      - run: go get -d .
+        working-directory : ./tmb-puller
+      - name: Run Puller
+        run: go run .
+        working-directory : ./tmb-puller
+        env:
+          DISCORD_USERNAME: ${{ secrets.DISCORD_USERNAME }}
+          DISCORD_PASSWORD: ${{ secrets.DISCORD_PASSWORD }}
+      - name: Archive Failure Screenshots
+        if: failure()
+        uses: actions/upload-artifact@v1
+        with:
+          name: screenshots
+          path: ./tmb-puller/screenshots/failure.jpg
+      # Commit all changed files back to the repository
+      - uses: stefanzweifel/git-auto-commit-action@v4
