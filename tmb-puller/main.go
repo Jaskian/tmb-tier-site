@@ -4,6 +4,7 @@ import (
 	"fmt"
 	"io/fs"
 	"os"
+	"path"
 	"path/filepath"
 	"time"
 
@@ -49,30 +50,6 @@ func main() {
 	}
 	defer browser.MustClose()
 
-	// login
-	page := browser.MustPage("https://thatsmybis.com/auth/discord")
-	defer page.Close()
-	page.MustElement("input[name=\"email\"]").MustInput(cfg.DiscordUsername)
-	page.MustElement("input[name=\"password\"]").MustInput(cfg.DiscordPassword)
-	page.MustElement("button[type=\"submit\"]").Click(proto.InputMouseButtonLeft, 1)
-	time.Sleep(time.Second * 20)
-
-	pInfo, _ := page.Info()
-	for i := 1; i <= 120; i++ {
-		time.Sleep(time.Second)
-		pInfo, _ = page.Info()
-		if pInfo.URL == "https://thatsmybis.com/" {
-			break
-		}
-		fmt.Printf("%d - Current URL: %v", i, pInfo.URL)
-	}
-	if pInfo.URL != "https://thatsmybis.com/" {
-		panic("not on the homepage after 2 mins")
-	}
-
-	page.Navigate(Guild_Slug + "export")
-	page.WaitLoad()
-
 	// create temp dir and set as download location
 	wd, _ := os.Getwd()
 	tempDir, _ := os.MkdirTemp(wd, "tmp")
@@ -81,6 +58,32 @@ func main() {
 	}()
 	// only using this to set the download location, the wait wont work
 	browser.WaitDownload(tempDir)
+
+	// login
+	page := browser.MustPage("https://thatsmybis.com/auth/discord")
+	defer page.Close()
+	page.MustElement("input[name=\"email\"]").MustInput(cfg.DiscordUsername)
+	page.MustElement("input[name=\"password\"]").MustInput(cfg.DiscordPassword)
+	page.MustElement("button[type=\"submit\"]").Click(proto.InputMouseButtonLeft, 1)
+	time.Sleep(time.Second * 5)
+	page.Activate()
+
+	pInfo, _ := page.Info()
+	for i := 1; i <= 120; i++ {
+		time.Sleep(time.Second)
+		pInfo, _ = page.Info()
+		if pInfo.URL == "https://thatsmybis.com/" {
+			break
+		} else {
+			page.MustScreenshot(path.Join(wd, "screenshots", "failure.jpg"))
+		}
+	}
+	if pInfo.URL != "https://thatsmybis.com/" {
+		panic("not on the homepage after 2 mins")
+	}
+
+	page.Navigate(Guild_Slug + "export")
+	page.WaitLoad()
 
 	downloadUrl := Guild_Slug + "export/characters-with-items/json"
 	selector := fmt.Sprintf("a[href=\"%s\"]", downloadUrl)

@@ -35,6 +35,11 @@ jobs:
         env:
           DISCORD_USERNAME: ${{ secrets.DISCORD_USERNAME }}
           DISCORD_PASSWORD: ${{ secrets.DISCORD_PASSWORD }}
-
+      - name: Archive Failure Screenshots
+        if: failure()
+        uses: actions/upload-artifact@v1
+        with:
+          name: screenshots
+          path: ./tmb-puller/screenshots/failure.jpg
       # Commit all changed files back to the repository
       - uses: stefanzweifel/git-auto-commit-action@v4
