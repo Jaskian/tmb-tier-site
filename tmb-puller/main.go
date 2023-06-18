@@ -58,14 +58,17 @@ func main() {
 	time.Sleep(time.Second * 20)
 
 	pInfo, _ := page.Info()
-	if pInfo.URL != "https://thatsmybis.com/" {
-		// we hit the authorize page
-		fmt.Printf("Current URL: %v", pInfo.URL)
-		page.MustElement(".colorBrand-2M3O3N").MustClick()
-		time.Sleep(time.Second * 5)
+	for i := 1; i <= 120; i++ {
+		time.Sleep(time.Second)
 		pInfo, _ = page.Info()
+		if pInfo.URL == "https://thatsmybis.com/" {
+			break
+		}
+		fmt.Printf("%d - Current URL: %v", i, pInfo.URL)
 	}
-	fmt.Printf("Current URL: %v", pInfo.URL)
+	if pInfo.URL != "https://thatsmybis.com/" {
+		panic("not on the homepage after 2 mins")
+	}
 
 	page.Navigate(Guild_Slug + "export")
 	page.WaitLoad()
