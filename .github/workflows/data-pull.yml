@@ -7,7 +7,7 @@ on:
 
 jobs:
   format-code:
-    runs-on: windows-latest
+    runs-on: ubuntu-latest
 
     permissions:
       # Give the default GITHUB_TOKEN write permission to commit and push the
