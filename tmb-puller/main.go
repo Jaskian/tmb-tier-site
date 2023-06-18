@@ -55,7 +55,7 @@ func main() {
 	page.MustElement("input[name=\"email\"]").MustInput(cfg.DiscordUsername)
 	page.MustElement("input[name=\"password\"]").MustInput(cfg.DiscordPassword)
 	page.MustElement("button[type=\"submit\"]").Click(proto.InputMouseButtonLeft, 1)
-	time.Sleep(time.Second * 5)
+	time.Sleep(time.Second * 10)
 
 	pInfo, _ := page.Info()
 	fmt.Printf("Current URL: %v", pInfo.URL)
