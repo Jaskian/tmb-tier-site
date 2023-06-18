@@ -43,6 +43,8 @@ func main() {
 	if err != nil {
 		fmt.Printf("%+v\n", err)
 		panic(err)
+	} else {
+		fmt.Print("Connected browser")
 	}
 	defer browser.MustClose()
 
