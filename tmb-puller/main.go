@@ -56,6 +56,10 @@ func main() {
 	page.MustElement("input[name=\"password\"]").MustInput(cfg.DiscordPassword)
 	page.MustElement("button[type=\"submit\"]").Click(proto.InputMouseButtonLeft, 1)
 	time.Sleep(time.Second * 5)
+
+	pInfo, _ := page.Info()
+	fmt.Printf("Current URL: %v", pInfo.URL)
+
 	page.Navigate(Guild_Slug + "export")
 
 	// create temp dir and set as download location
