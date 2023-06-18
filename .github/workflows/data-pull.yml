@@ -1,0 +1,30 @@
+name: Format
+
+on:
+  schedule:
+    - cron: "0 0 * * 1,5"
+
+jobs:
+  format-code:
+    runs-on: ubuntu-latest
+
+    permissions:
+      # Give the default GITHUB_TOKEN write permission to commit and push the
+      # added or changed files to the repository.
+      contents: write
+
+    steps:
+      - uses: actions/checkout@v3
+
+      # Other steps that change files in the repository
+      
+      - name: Set up Go
+        uses: actions/setup-go@v4
+        with:
+          go-version: '1.20'
+          
+      - name: Build
+        run: go run -v ./tmb-puller/.
+
+      # Commit all changed files back to the repository
+      - uses: stefanzweifel/git-auto-commit-action@v4
