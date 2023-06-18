@@ -27,7 +27,7 @@ jobs:
       - name: Build
         run: go env -w GO111MODULE=off
       -
-        run: go run -v tmb-puller
+        run: go run -v tmb-tier-site/tmb-puller
 
       # Commit all changed files back to the repository
       - uses: stefanzweifel/git-auto-commit-action@v4
