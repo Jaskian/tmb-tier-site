@@ -11,6 +11,7 @@ import (
 	"github.com/caarlos0/env"
 	"github.com/go-rod/rod"
 	"github.com/go-rod/rod/lib/proto"
+	"github.com/go-rod/stealth"
 )
 
 const Guild_Slug = "https://thatsmybis.com/9044/reset/"
@@ -60,7 +61,9 @@ func main() {
 	browser.WaitDownload(tempDir)
 
 	// login
-	page := browser.MustPage("https://thatsmybis.com/auth/discord")
+	page := stealth.MustPage(browser)
+	page.MustNavigate("https://thatsmybis.com/auth/discord")
+
 	defer page.Close()
 	page.MustElement("input[name=\"email\"]").MustInput(cfg.DiscordUsername)
 	page.MustElement("input[name=\"password\"]").MustInput(cfg.DiscordPassword)
