@@ -1,0 +1,811 @@
+[p1.html]=<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Reset Loot!</title>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <script>const whTooltips = { colorLinks: true, iconizeLinks: true, renameLinks: true };</script>
+    <script src="https://wow.zamimg.com/js/tooltips.js"></script>
+    <style>
+        .material-symbols-outlined {
+            font-variation-settings:
+                'FILL' 0,
+                'wght' 400,
+                'GRAD' 0,
+                'opsz' 48
+        }
+
+        .playername p {
+            margin: 0
+        }
+
+        .playername .spec {
+            font-size: 0.5em
+        }
+
+        body {
+            max-width : 1200px !important
+        }
+
+        th {
+            position: sticky;
+            top: 0;
+            background-color: #202b38;
+        }
+
+        .tooltipContainer .tooltip {
+            visibility: hidden;
+            width: 120px;
+            background-color: black;
+            color: #fff;
+            text-align: center;
+            padding: 5px 0;
+            border-radius: 6px;
+            position: absolute;
+            z-index: 1;
+        }
+
+        .tooltipContainer:hover>.tooltip {
+            visibility: visible;
+        }
+
+        .receivedLoot {
+            text-decoration: line-through !important;
+        }
+    </style>
+</head>
+
+<body>
+    <nav role=" navigation">
+        <div>
+            <ul>
+                <li><a href="p1.html">Phase 1</a></li>
+                <li><a href="p2.html">Phase 2</a></li>
+                <li><a href="p3.html">Phase 3</a></li>
+            </ul>
+        </div>
+    </nav>
+    <main>
+        <table>
+            <thead>
+                <tr>
+                    <th width="100px">Player</th>
+                    
+                    
+                    <th width="32px"><img src="https://wow.zamimg.com/images/wow/icons/large/inv_helmet_37.jpg" /></th>
+                    
+                    <th width="32px"><img src="https://wow.zamimg.com/images/wow/icons/large/inv_jewelry_necklace_15.jpg" /></th>
+                    
+                    <th width="32px"><img src="https://wow.zamimg.com/images/wow/icons/large/inv_shoulder_14.jpg" /></th>
+                    
+                    <th width="32px"><img src="https://wow.zamimg.com/images/wow/icons/large/inv_chest_chain_15.jpg" /></th>
+                    
+                    <th width="32px"><img src="https://wow.zamimg.com/images/wow/icons/large/inv_belt_15.jpg" /></th>
+                    
+                    <th width="32px"><img src="https://wow.zamimg.com/images/wow/icons/large/inv_pants_03.jpg" /></th>
+                    
+                    <th width="32px"><img src="https://wow.zamimg.com/images/wow/icons/large/inv_boots_07.jpg" /></th>
+                    
+                    <th width="32px"><img src="https://wow.zamimg.com/images/wow/icons/large/inv_bracer_05.jpg" /></th>
+                    
+                    <th width="32px"><img src="https://wow.zamimg.com/images/wow/icons/large/inv_gauntlets_27.jpg" /></th>
+                    
+                    <th width="32px"><img src="https://wow.zamimg.com/images/wow/icons/large/inv_jewelry_ring_03.jpg" /></th>
+                    
+                    <th width="32px"><img src="https://wow.zamimg.com/images/wow/icons/large/inv_jewelry_talisman_10.jpg" /></th>
+                    
+                    <th width="32px"><img src="https://wow.zamimg.com/images/wow/icons/large/inv_misc_cape_05.jpg" /></th>
+                    
+                    <th width="32px"><img src="https://wow.zamimg.com/images/wow/icons/large/inv_sword_50.jpg" /></th>
+                    
+                    <th width="32px"><img src="https://wow.zamimg.com/images/wow/icons/large/inv_sword_39.jpg" /></th>
+                    
+                    <th width="32px"><img src="https://wow.zamimg.com/images/wow/icons/large/inv_misc_book_07.jpg" /></th>
+                    
+                    <th width="32px"><img src="https://wow.zamimg.com/images/wow/icons/large/inv_weapon_bow_01.jpg" /></th>
+                    
+                </tr>
+            </thead>
+            <tbody>
+                
+                <tr>
+                    <td class="playername">
+                        <p style="color:#AAD372">Jaskia</p>
+                        <p class="spec">Survival</p>
+                    </td>
+                    
+                    
+                    <td class="tooltipContainer">
+                        
+                    </td>
+                    
+                    <td class="tooltipContainer">
+                        
+                    </td>
+                    
+                    <td class="tooltipContainer">
+                        
+                    </td>
+                    
+                    <td class="tooltipContainer">
+                        
+                    </td>
+                    
+                    <td class="tooltipContainer">
+                        
+                    </td>
+                    
+                    <td class="tooltipContainer">
+                        
+                    </td>
+                    
+                    <td class="tooltipContainer">
+                        
+                    </td>
+                    
+                    <td class="tooltipContainer">
+                        
+                    </td>
+                    
+                    <td class="tooltipContainer">
+                        
+                    </td>
+                    
+                    <td class="tooltipContainer">
+                        
+                    </td>
+                    
+                    <td class="tooltipContainer">
+                        
+                    </td>
+                    
+                    <td class="tooltipContainer">
+                        
+                    </td>
+                    
+                    <td class="tooltipContainer">
+                        
+                    </td>
+                    
+                    <td class="tooltipContainer">
+                        
+                    </td>
+                    
+                    <td class="tooltipContainer">
+                        
+                    </td>
+                    
+                    <td class="tooltipContainer">
+                        
+                    </td>
+                </tr>
+                
+                <tr>
+                    <td class="playername">
+                        <p style="color:#AAD372">Youngart</p>
+                        <p class="spec">Survival</p>
+                    </td>
+                    
+                    
+                    <td class="tooltipContainer">
+                        
+                    </td>
+                    
+                    <td class="tooltipContainer">
+                        
+                    </td>
+                    
+                    <td class="tooltipContainer">
+                        
+                    </td>
+                    
+                    <td class="tooltipContainer">
+                        
+                    </td>
+                    
+                    <td class="tooltipContainer">
+                        
+                    </td>
+                    
+                    <td class="tooltipContainer">
+                        
+                    </td>
+                    
+                    <td class="tooltipContainer">
+                        
+                    </td>
+                    
+                    <td class="tooltipContainer">
+                        
+                    </td>
+                    
+                    <td class="tooltipContainer">
+                        
+                    </td>
+                    
+                    <td class="tooltipContainer">
+                        
+                    </td>
+                    
+                    <td class="tooltipContainer">
+                        
+                    </td>
+                    
+                    <td class="tooltipContainer">
+                        
+                    </td>
+                    
+                    <td class="tooltipContainer">
+                        
+                    </td>
+                    
+                    <td class="tooltipContainer">
+                        
+                    </td>
+                    
+                    <td class="tooltipContainer">
+                        
+                    </td>
+                    
+                    <td class="tooltipContainer">
+                        
+                    </td>
+                </tr>
+                
+            </tbody>
+        </table>
+    </main>
+</body>
+
+</html>
+[p2.html]=<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Reset Loot!</title>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <script>const whTooltips = { colorLinks: true, iconizeLinks: true, renameLinks: true };</script>
+    <script src="https://wow.zamimg.com/js/tooltips.js"></script>
+    <style>
+        .material-symbols-outlined {
+            font-variation-settings:
+                'FILL' 0,
+                'wght' 400,
+                'GRAD' 0,
+                'opsz' 48
+        }
+
+        .playername p {
+            margin: 0
+        }
+
+        .playername .spec {
+            font-size: 0.5em
+        }
+
+        body {
+            max-width : 1200px !important
+        }
+
+        th {
+            position: sticky;
+            top: 0;
+            background-color: #202b38;
+        }
+
+        .tooltipContainer .tooltip {
+            visibility: hidden;
+            width: 120px;
+            background-color: black;
+            color: #fff;
+            text-align: center;
+            padding: 5px 0;
+            border-radius: 6px;
+            position: absolute;
+            z-index: 1;
+        }
+
+        .tooltipContainer:hover>.tooltip {
+            visibility: visible;
+        }
+
+        .receivedLoot {
+            text-decoration: line-through !important;
+        }
+    </style>
+</head>
+
+<body>
+    <nav role=" navigation">
+        <div>
+            <ul>
+                <li><a href="p1.html">Phase 1</a></li>
+                <li><a href="p2.html">Phase 2</a></li>
+                <li><a href="p3.html">Phase 3</a></li>
+            </ul>
+        </div>
+    </nav>
+    <main>
+        <table>
+            <thead>
+                <tr>
+                    <th width="100px">Player</th>
+                    
+                    <th width="75px">Wishlist</th>
+                    
+                    
+                    <th width="32px"><img src="https://wow.zamimg.com/images/wow/icons/large/inv_helmet_37.jpg" /></th>
+                    
+                    <th width="32px"><img src="https://wow.zamimg.com/images/wow/icons/large/inv_jewelry_necklace_15.jpg" /></th>
+                    
+                    <th width="32px"><img src="https://wow.zamimg.com/images/wow/icons/large/inv_shoulder_14.jpg" /></th>
+                    
+                    <th width="32px"><img src="https://wow.zamimg.com/images/wow/icons/large/inv_chest_chain_15.jpg" /></th>
+                    
+                    <th width="32px"><img src="https://wow.zamimg.com/images/wow/icons/large/inv_belt_15.jpg" /></th>
+                    
+                    <th width="32px"><img src="https://wow.zamimg.com/images/wow/icons/large/inv_pants_03.jpg" /></th>
+                    
+                    <th width="32px"><img src="https://wow.zamimg.com/images/wow/icons/large/inv_boots_07.jpg" /></th>
+                    
+                    <th width="32px"><img src="https://wow.zamimg.com/images/wow/icons/large/inv_bracer_05.jpg" /></th>
+                    
+                    <th width="32px"><img src="https://wow.zamimg.com/images/wow/icons/large/inv_gauntlets_27.jpg" /></th>
+                    
+                    <th width="32px"><img src="https://wow.zamimg.com/images/wow/icons/large/inv_jewelry_ring_03.jpg" /></th>
+                    
+                    <th width="32px"><img src="https://wow.zamimg.com/images/wow/icons/large/inv_jewelry_talisman_10.jpg" /></th>
+                    
+                    <th width="32px"><img src="https://wow.zamimg.com/images/wow/icons/large/inv_misc_cape_05.jpg" /></th>
+                    
+                    <th width="32px"><img src="https://wow.zamimg.com/images/wow/icons/large/inv_sword_50.jpg" /></th>
+                    
+                    <th width="32px"><img src="https://wow.zamimg.com/images/wow/icons/large/inv_sword_39.jpg" /></th>
+                    
+                    <th width="32px"><img src="https://wow.zamimg.com/images/wow/icons/large/inv_misc_book_07.jpg" /></th>
+                    
+                    <th width="32px"><img src="https://wow.zamimg.com/images/wow/icons/large/inv_weapon_bow_01.jpg" /></th>
+                    
+                </tr>
+            </thead>
+            <tbody>
+                
+                <tr>
+                    <td class="playername">
+                        <p style="color:#AAD372">Jaskia</p>
+                        <p class="spec">Survival</p>
+                    </td>
+                    
+                    <td class="tooltipContainer">
+                        
+                    </td>
+                    
+                    
+                    <td class="tooltipContainer">
+                        
+                    </td>
+                    
+                    <td class="tooltipContainer">
+                        
+                    </td>
+                    
+                    <td class="tooltipContainer">
+                        
+                    </td>
+                    
+                    <td class="tooltipContainer">
+                        
+                    </td>
+                    
+                    <td class="tooltipContainer">
+                        
+                    </td>
+                    
+                    <td class="tooltipContainer">
+                        
+                    </td>
+                    
+                    <td class="tooltipContainer">
+                        
+                    </td>
+                    
+                    <td class="tooltipContainer">
+                        
+                    </td>
+                    
+                    <td class="tooltipContainer">
+                        
+                    </td>
+                    
+                    <td class="tooltipContainer">
+                        
+                    </td>
+                    
+                    <td class="tooltipContainer">
+                        
+                    </td>
+                    
+                    <td class="tooltipContainer">
+                        
+                    </td>
+                    
+                    <td class="tooltipContainer"><span
+                            class="material-symbols-outlined">done</span>
+                        
+                        <div class="tooltip">
+                            <a href="https://www.wowhead.com/wotlk/item=0" data-wowhead="item=0&domain=wotlk">Thunderfury</a><br />
+                            
+                        </div>
+                        
+                    </td>
+                    
+                    <td class="tooltipContainer">
+                        
+                    </td>
+                    
+                    <td class="tooltipContainer">
+                        
+                    </td>
+                    
+                    <td class="tooltipContainer">
+                        
+                    </td>
+                </tr>
+                
+                <tr>
+                    <td class="playername">
+                        <p style="color:#AAD372">Youngart</p>
+                        <p class="spec">Survival</p>
+                    </td>
+                    
+                    <td class="tooltipContainer">
+                        
+                    </td>
+                    
+                    
+                    <td class="tooltipContainer">
+                        
+                    </td>
+                    
+                    <td class="tooltipContainer">
+                        
+                    </td>
+                    
+                    <td class="tooltipContainer">
+                        
+                    </td>
+                    
+                    <td class="tooltipContainer">
+                        
+                    </td>
+                    
+                    <td class="tooltipContainer">
+                        
+                    </td>
+                    
+                    <td class="tooltipContainer">
+                        
+                    </td>
+                    
+                    <td class="tooltipContainer">
+                        
+                    </td>
+                    
+                    <td class="tooltipContainer">
+                        
+                    </td>
+                    
+                    <td class="tooltipContainer">
+                        
+                    </td>
+                    
+                    <td class="tooltipContainer">
+                        
+                    </td>
+                    
+                    <td class="tooltipContainer">
+                        
+                    </td>
+                    
+                    <td class="tooltipContainer">
+                        
+                    </td>
+                    
+                    <td class="tooltipContainer"><span
+                            class="material-symbols-outlined">done</span>
+                        
+                        <div class="tooltip">
+                            <a href="https://www.wowhead.com/wotlk/item=0" data-wowhead="item=0&domain=wotlk">Thunderfury</a><br />
+                            
+                        </div>
+                        
+                    </td>
+                    
+                    <td class="tooltipContainer">
+                        
+                    </td>
+                    
+                    <td class="tooltipContainer">
+                        
+                    </td>
+                    
+                    <td class="tooltipContainer">
+                        
+                    </td>
+                </tr>
+                
+            </tbody>
+        </table>
+    </main>
+</body>
+
+</html>
+[p3.html]=<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Reset Loot!</title>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <script>const whTooltips = { colorLinks: true, iconizeLinks: true, renameLinks: true };</script>
+    <script src="https://wow.zamimg.com/js/tooltips.js"></script>
+    <style>
+        .material-symbols-outlined {
+            font-variation-settings:
+                'FILL' 0,
+                'wght' 400,
+                'GRAD' 0,
+                'opsz' 48
+        }
+
+        .playername p {
+            margin: 0
+        }
+
+        .playername .spec {
+            font-size: 0.5em
+        }
+
+        body {
+            max-width : 1200px !important
+        }
+
+        th {
+            position: sticky;
+            top: 0;
+            background-color: #202b38;
+        }
+
+        .tooltipContainer .tooltip {
+            visibility: hidden;
+            width: 120px;
+            background-color: black;
+            color: #fff;
+            text-align: center;
+            padding: 5px 0;
+            border-radius: 6px;
+            position: absolute;
+            z-index: 1;
+        }
+
+        .tooltipContainer:hover>.tooltip {
+            visibility: visible;
+        }
+
+        .receivedLoot {
+            text-decoration: line-through !important;
+        }
+    </style>
+</head>
+
+<body>
+    <nav role=" navigation">
+        <div>
+            <ul>
+                <li><a href="p1.html">Phase 1</a></li>
+                <li><a href="p2.html">Phase 2</a></li>
+                <li><a href="p3.html">Phase 3</a></li>
+            </ul>
+        </div>
+    </nav>
+    <main>
+        <table>
+            <thead>
+                <tr>
+                    <th width="100px">Player</th>
+                    
+                    
+                    <th width="32px"><img src="https://wow.zamimg.com/images/wow/icons/large/inv_helmet_37.jpg" /></th>
+                    
+                    <th width="32px"><img src="https://wow.zamimg.com/images/wow/icons/large/inv_jewelry_necklace_15.jpg" /></th>
+                    
+                    <th width="32px"><img src="https://wow.zamimg.com/images/wow/icons/large/inv_shoulder_14.jpg" /></th>
+                    
+                    <th width="32px"><img src="https://wow.zamimg.com/images/wow/icons/large/inv_chest_chain_15.jpg" /></th>
+                    
+                    <th width="32px"><img src="https://wow.zamimg.com/images/wow/icons/large/inv_belt_15.jpg" /></th>
+                    
+                    <th width="32px"><img src="https://wow.zamimg.com/images/wow/icons/large/inv_pants_03.jpg" /></th>
+                    
+                    <th width="32px"><img src="https://wow.zamimg.com/images/wow/icons/large/inv_boots_07.jpg" /></th>
+                    
+                    <th width="32px"><img src="https://wow.zamimg.com/images/wow/icons/large/inv_bracer_05.jpg" /></th>
+                    
+                    <th width="32px"><img src="https://wow.zamimg.com/images/wow/icons/large/inv_gauntlets_27.jpg" /></th>
+                    
+                    <th width="32px"><img src="https://wow.zamimg.com/images/wow/icons/large/inv_jewelry_ring_03.jpg" /></th>
+                    
+                    <th width="32px"><img src="https://wow.zamimg.com/images/wow/icons/large/inv_jewelry_talisman_10.jpg" /></th>
+                    
+                    <th width="32px"><img src="https://wow.zamimg.com/images/wow/icons/large/inv_misc_cape_05.jpg" /></th>
+                    
+                    <th width="32px"><img src="https://wow.zamimg.com/images/wow/icons/large/inv_sword_50.jpg" /></th>
+                    
+                    <th width="32px"><img src="https://wow.zamimg.com/images/wow/icons/large/inv_sword_39.jpg" /></th>
+                    
+                    <th width="32px"><img src="https://wow.zamimg.com/images/wow/icons/large/inv_misc_book_07.jpg" /></th>
+                    
+                    <th width="32px"><img src="https://wow.zamimg.com/images/wow/icons/large/inv_weapon_bow_01.jpg" /></th>
+                    
+                </tr>
+            </thead>
+            <tbody>
+                
+                <tr>
+                    <td class="playername">
+                        <p style="color:#AAD372">Jaskia</p>
+                        <p class="spec">Survival</p>
+                    </td>
+                    
+                    
+                    <td class="tooltipContainer">
+                        
+                    </td>
+                    
+                    <td class="tooltipContainer">
+                        
+                    </td>
+                    
+                    <td class="tooltipContainer">
+                        
+                    </td>
+                    
+                    <td class="tooltipContainer">
+                        
+                    </td>
+                    
+                    <td class="tooltipContainer">
+                        
+                    </td>
+                    
+                    <td class="tooltipContainer">
+                        
+                    </td>
+                    
+                    <td class="tooltipContainer">
+                        
+                    </td>
+                    
+                    <td class="tooltipContainer">
+                        
+                    </td>
+                    
+                    <td class="tooltipContainer">
+                        
+                    </td>
+                    
+                    <td class="tooltipContainer">
+                        
+                    </td>
+                    
+                    <td class="tooltipContainer">
+                        
+                    </td>
+                    
+                    <td class="tooltipContainer">
+                        
+                    </td>
+                    
+                    <td class="tooltipContainer">
+                        
+                    </td>
+                    
+                    <td class="tooltipContainer">
+                        
+                    </td>
+                    
+                    <td class="tooltipContainer">
+                        
+                    </td>
+                    
+                    <td class="tooltipContainer">
+                        
+                    </td>
+                </tr>
+                
+                <tr>
+                    <td class="playername">
+                        <p style="color:#AAD372">Youngart</p>
+                        <p class="spec">Survival</p>
+                    </td>
+                    
+                    
+                    <td class="tooltipContainer">
+                        
+                    </td>
+                    
+                    <td class="tooltipContainer">
+                        
+                    </td>
+                    
+                    <td class="tooltipContainer">
+                        
+                    </td>
+                    
+                    <td class="tooltipContainer">
+                        
+                    </td>
+                    
+                    <td class="tooltipContainer">
+                        
+                    </td>
+                    
+                    <td class="tooltipContainer">
+                        
+                    </td>
+                    
+                    <td class="tooltipContainer">
+                        
+                    </td>
+                    
+                    <td class="tooltipContainer">
+                        
+                    </td>
+                    
+                    <td class="tooltipContainer">
+                        
+                    </td>
+                    
+                    <td class="tooltipContainer">
+                        
+                    </td>
+                    
+                    <td class="tooltipContainer">
+                        
+                    </td>
+                    
+                    <td class="tooltipContainer">
+                        
+                    </td>
+                    
+                    <td class="tooltipContainer">
+                        
+                    </td>
+                    
+                    <td class="tooltipContainer">
+                        
+                    </td>
+                    
+                    <td class="tooltipContainer">
+                        
+                    </td>
+                    
+                    <td class="tooltipContainer">
+                        
+                    </td>
+                </tr>
+                
+            </tbody>
+        </table>
+    </main>
+</body>
+
+</html>

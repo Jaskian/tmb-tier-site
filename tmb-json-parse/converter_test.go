@@ -9,7 +9,7 @@ import (
 func TestConvertTMBJson(t *testing.T) {
 
 	t.Run("In P1, in-tier for 1h/2h/OH after buying 2h weapons", func(t *testing.T) {
-		input := buildTestDataWithLoot("Druid", "Feral", shared.TwoHander, shared.Naxx, 0)
+		input := buildTestDataWithLoot("Druid", "Feral", shared.TwoHander, shared.Naxx, 0, "")
 
 		got, err := convertToExportData(input)
 		assertNoError(t, err)
@@ -23,7 +23,7 @@ func TestConvertTMBJson(t *testing.T) {
 	})
 
 	t.Run("In P2, Warrior no in-tier for 2h with only 1 bought", func(t *testing.T) {
-		input := buildTestDataWithLoot("Warrior", "Fury", shared.TwoHander, shared.Ulduar, 0)
+		input := buildTestDataWithLoot("Warrior", "Fury", shared.TwoHander, shared.Ulduar, 0, "")
 
 		got, err := convertToExportData(input)
 		assertNoError(t, err)
@@ -33,7 +33,7 @@ func TestConvertTMBJson(t *testing.T) {
 	})
 
 	t.Run("In P2, Warrior in-tier for 2h after 2 bought", func(t *testing.T) {
-		input := buildTestDataWithLoot("Warrior", "Fury", shared.TwoHander, shared.Ulduar, 0)
+		input := buildTestDataWithLoot("Warrior", "Fury", shared.TwoHander, shared.Ulduar, 0, "")
 
 		input[0].ReceivedLoot = append(input[0].ReceivedLoot, loot{
 			InventoryType: int(shared.TwoHander),
@@ -46,7 +46,7 @@ func TestConvertTMBJson(t *testing.T) {
 	})
 
 	t.Run("In P2, no in-tier for trinket when 1 bought", func(t *testing.T) {
-		input := buildTestDataWithLoot("Warrior", "Fury", shared.Trinket, shared.Ulduar, 0)
+		input := buildTestDataWithLoot("Warrior", "Fury", shared.Trinket, shared.Ulduar, 0, "")
 
 		got, err := convertToExportData(input)
 		assertNoError(t, err)
@@ -54,7 +54,7 @@ func TestConvertTMBJson(t *testing.T) {
 	})
 
 	t.Run("In P2, in-tier for rings when 2 bought", func(t *testing.T) {
-		input := buildTestDataWithLoot("Warrior", "Fury", shared.Ring, shared.Ulduar, 0)
+		input := buildTestDataWithLoot("Warrior", "Fury", shared.Ring, shared.Ulduar, 0, "")
 
 		input[0].ReceivedLoot = append(input[0].ReceivedLoot, loot{
 			InventoryType: int(shared.Ring),
@@ -66,8 +66,44 @@ func TestConvertTMBJson(t *testing.T) {
 		assertInTierInPhase(t, 2, shared.Ring, got[0])
 	})
 
+	t.Run("In P3, P2 252 items contribute to in-tier when bought in P3", func(t *testing.T) {
+
+		p2Date := "2023-05-24 15:04:05"
+		p3Date := "2023-06-24 15:04:05"
+
+		input := tmbData{character{
+			Class: "Warrior",
+			Spec:  "Fury",
+			ReceivedLoot: []loot{
+				{
+					ItemID:        45132, // 252
+					InventoryType: int(shared.Belt),
+					InstanceID:    int(shared.Ulduar),
+					Pivot:         pivot{Date: p2Date},
+				},
+				{
+					ItemID:        45132, // 252
+					InventoryType: int(shared.Wrist),
+					InstanceID:    int(shared.Ulduar),
+					Pivot:         pivot{Date: p3Date},
+				},
+			},
+		},
+		}
+
+		got, err := convertToExportData(input)
+		assertNoError(t, err)
+
+		// in p2 but not p3 for old loot
+		assertInTierInPhase(t, 2, shared.Belt, got[0])
+		assertNotInTierInPhase(t, 3, shared.Belt, got[0])
+		// in both for new loot
+		assertInTierInPhase(t, 2, shared.Wrist, got[0])
+		assertInTierInPhase(t, 3, shared.Wrist, got[0])
+	})
+
 	t.Run("Offspec items excluded", func(t *testing.T) {
-		input := buildTestDataWithLoot("Warrior", "Fury", shared.Belt, shared.Ulduar, 1)
+		input := buildTestDataWithLoot("Warrior", "Fury", shared.Belt, shared.Ulduar, 1, "")
 
 		offspecTexts := []string{"~Off-Spec~", "~Banking~", "~Free~"}
 		for _, t := range offspecTexts {
@@ -110,7 +146,7 @@ func assertNoError(t *testing.T, err error) {
 	}
 }
 
-func buildTestDataWithLoot(class, spec string, slot shared.Slot, instance shared.Instance, offspec int) tmbData {
+func buildTestDataWithLoot(class, spec string, slot shared.Slot, instance shared.Instance, offspec int, time string) tmbData {
 
 	return tmbData{character{
 		Class: class,
@@ -119,7 +155,7 @@ func buildTestDataWithLoot(class, spec string, slot shared.Slot, instance shared
 			{
 				InventoryType: int(slot),
 				InstanceID:    int(instance),
-				Pivot:         pivot{Offspec: offspec},
+				Pivot:         pivot{Offspec: offspec, Date: time},
 			},
 		},
 	},

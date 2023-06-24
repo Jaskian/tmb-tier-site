@@ -72,7 +72,7 @@ type lootKey struct{ phase, slot int }
 func getPhaseDataFromLoot(c character) (map[int]shared.PhaseData, error) {
 	// storing loot two ways to make calcs easier
 	phaseSlotLoot := map[lootKey][]shared.Loot{}
-	phaseLoot := map[int][]*shared.Loot{}
+	phaseLoot := keyedLoot{}
 
 	for _, i := range c.ReceivedLoot {
 
@@ -87,7 +87,7 @@ func getPhaseDataFromLoot(c character) (map[int]shared.PhaseData, error) {
 		loot := NewLoot(i, phaseNum, slotNum)
 		key := lootKey{phaseNum, slotNum}
 		phaseSlotLoot[key] = append(phaseSlotLoot[key], loot)
-		phaseLoot[key.phase] = append(phaseLoot[key.phase], &loot)
+		phaseLoot.AddItem(key.phase, key.slot, &loot)
 	}
 
 	result := newPhasesData()
@@ -96,7 +96,7 @@ func getPhaseDataFromLoot(c character) (map[int]shared.PhaseData, error) {
 			// we need all the phase loot to calculate in-tier, not just items for that slot
 			slotNum := int(slot)
 			key := lootKey{phase, slotNum}
-			inTier := calculateInTier(c, slotNum, phaseSlotLoot[key], phaseLoot[phase])
+			inTier := calculateInTier(c, slotNum, phase, phaseSlotLoot[key], phaseLoot)
 			result[key.phase][key.slot] = shared.SlotData{InTier: inTier, Items: phaseSlotLoot[key]}
 		}
 	}
@@ -104,38 +104,17 @@ func getPhaseDataFromLoot(c character) (map[int]shared.PhaseData, error) {
 	return result, nil
 }
 
-func calculateInTier(c character, slot int, slotItems []shared.Loot, allPhaseItems []*shared.Loot) bool {
+type keyedLoot map[int]map[int][]*shared.Loot
 
-	inTier := len(slotItems) > 0
-
-	// extra approve logic
-	if !inTier {
-		if slot == int(shared.TwoHander) {
-			// discount on 2h when you've bought a 1h + OH
-			has1h := Any(allPhaseItems, isLootForSlotFunc(shared.OneHander))
-			hasOH := Any(allPhaseItems, isLootForSlotFunc(shared.Offhand))
-			inTier = has1h && hasOH
-		} else if slot == int(shared.OneHander) || slot == int(shared.Offhand) {
-			// discount on 1h/OH when you've bought a 2h
-			inTier = Any(allPhaseItems, isLootForSlotFunc(shared.TwoHander))
-		}
+func (k keyedLoot) AddItem(phase int, slot int, loot *shared.Loot) {
+	if k[phase] == nil {
+		k[phase] = map[int][]*shared.Loot{}
 	}
+	k[phase][slot] = append(k[phase][slot], loot)
+}
 
-	// deny logic
-	if inTier {
-		if slot == int(shared.TwoHander) {
-			// fury warriors have to buy 2x 2h to get in-tier on 2h
-			if c.Class == shared.Warrior && c.Spec == "Fury" {
-				inTier = len(slotItems) >= 2
-			}
-		} else if slot == int(shared.Ring) || slot == int(shared.Trinket) {
-			// gotta have 2 rings/trinkets to be eligible
-			inTier = len(slotItems) > 1
-		}
-	}
-
-	// by default, we have items for the slot so it in in-tier
-	return inTier
+func (k keyedLoot) GetItems(phase int, slot int) []*shared.Loot {
+	return k[phase][slot]
 }
 
 func newPhasesData() map[int]shared.PhaseData {
@@ -146,21 +125,6 @@ func newPhasesData() map[int]shared.PhaseData {
 	}
 
 	return phasesData
-}
-
-func isLootForSlotFunc(slot shared.Slot) func(*shared.Loot) bool {
-	return func(l *shared.Loot) bool {
-		return l.Slot == int(slot)
-	}
-}
-
-func Any[T any](ts []T, pred func(T) bool) bool {
-	for _, t := range ts {
-		if pred(t) {
-			return true
-		}
-	}
-	return false
 }
 
 func (l loot) ExcludedFromResults() bool {
