@@ -18,7 +18,7 @@ permissions:
   id-token: write
 
 jobs:
-  format-code:
+  generate-pages:
     runs-on: ubuntu-latest
 
     permissions:
@@ -43,7 +43,6 @@ jobs:
         
       # Commit all changed files back to the repository
       - uses: stefanzweifel/git-auto-commit-action@v4
-      
       - name: Setup Pages
         uses: actions/configure-pages@v3
       - name: Upload artifact
@@ -54,3 +53,26 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v2
+  deploy:
+    needs: generate-pages
+    permissions:
+      pages: write      # to deploy to Pages
+      id-token: write   # to verify the deployment originates from an appropriate source
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Setup Pages
+        uses: actions/configure-pages@v3
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v1
+        with:
+          # Upload entire repository
+          path: 'docs'
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v2
+    
