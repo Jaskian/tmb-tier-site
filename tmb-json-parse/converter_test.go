@@ -103,10 +103,33 @@ func TestConvertTMBJson(t *testing.T) {
 	})
 
 	t.Run("In P3, TOTC items affect P3 WL", func(t *testing.T) {
-		input := buildTestDataWithLoot("Warrior", "Fury", shared.Belt, shared.Totc, 0, "")
+		input := buildTestDataWithLoot("Warrior", "Fury", shared.Belt, shared.Totc25, 0, "")
 		got, err := convertToExportData(input)
 		assertNoError(t, err)
 		assertInTierInPhase(t, 3, shared.Belt, got[0])
+	})
+
+	t.Run("Trophies are counted for TOTC25", func(t *testing.T) {
+		input := tmbData{character{
+			ReceivedLoot: []loot{
+				{
+					ItemID:     47242,
+					InstanceID: int(shared.Totc10),
+					Pivot:      pivot{Offspec: 0},
+				},
+			},
+		},
+		}
+
+		export, err := convertToExportData(input)
+		assertNoError(t, err)
+
+		want := 1
+		got := export[0].KeyItems.Trophies
+		if got != want {
+			t.Errorf("Expected %d, got %d", want, got)
+		}
+
 	})
 
 	t.Run("Offspec items excluded", func(t *testing.T) {

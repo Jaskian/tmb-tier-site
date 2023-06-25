@@ -36,6 +36,9 @@ func convertToExportData(d tmbData) (shared.TMBData, error) {
 			Phases:   phaseData,
 			Wishlist: wlItems,
 		}
+
+		populateKeyItems(&outputChar)
+
 		result = append(result, outputChar)
 	}
 
@@ -72,7 +75,7 @@ type lootKey struct{ phase, slot int }
 func getPhaseDataFromLoot(c character) (map[int]shared.PhaseData, error) {
 	// storing loot two ways to make calcs easier
 	phaseSlotLoot := map[lootKey][]shared.Loot{}
-	phaseLoot := keyedLoot{}
+	phaseLoot := keyedLootCollection{}
 
 	for _, i := range c.ReceivedLoot {
 
@@ -104,16 +107,16 @@ func getPhaseDataFromLoot(c character) (map[int]shared.PhaseData, error) {
 	return result, nil
 }
 
-type keyedLoot map[int]map[int][]*shared.Loot
+type keyedLootCollection map[int]map[int][]*shared.Loot
 
-func (k keyedLoot) AddItem(phase int, slot int, loot *shared.Loot) {
+func (k keyedLootCollection) AddItem(phase int, slot int, loot *shared.Loot) {
 	if k[phase] == nil {
 		k[phase] = map[int][]*shared.Loot{}
 	}
 	k[phase][slot] = append(k[phase][slot], loot)
 }
 
-func (k keyedLoot) GetItems(phase int, slot int) []*shared.Loot {
+func (k keyedLootCollection) GetItems(phase int, slot int) []*shared.Loot {
 	return k[phase][slot]
 }
 
@@ -150,4 +153,12 @@ func (l loot) GetSlot() int {
 	}
 
 	return slotNum
+}
+
+func populateKeyItems(c *shared.Character) {
+	for _, i := range c.Phases[3][0].Items {
+		if i.ItemID == 47242 {
+			c.KeyItems.Trophies++
+		}
+	}
 }

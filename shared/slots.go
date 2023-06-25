@@ -3,7 +3,8 @@ package shared
 type Slot int
 
 const (
-	Head Slot = iota + 1
+	Misc      = 0
+	Head Slot = iota
 	Neck
 	Shoulder
 	Shirt
@@ -23,6 +24,7 @@ const (
 )
 
 var SLOT_IMAGE_URLS = map[Slot]string{
+	Misc:     "https://wow.zamimg.com/images/wow/icons/large/inv_misc_questionmark.jpg",
 	Head:     "https://wow.zamimg.com/images/wow/icons/large/inv_helmet_37.jpg",
 	Neck:     "https://wow.zamimg.com/images/wow/icons/large/inv_jewelry_necklace_15.jpg",
 	Shoulder: "https://wow.zamimg.com/images/wow/icons/large/inv_shoulder_14.jpg",
@@ -43,6 +45,7 @@ var SLOT_IMAGE_URLS = map[Slot]string{
 }
 
 var SLOTS = []Slot{
+	Misc,
 	Head,
 	Neck,
 	Shoulder,
@@ -84,13 +87,19 @@ var InventoryTypeMappings = map[int]Slot{
 var TokenMapping = map[string]Slot{
 	"Crown":       Head,
 	"Helm":        Head,
+	"Head":        Head,
+	"Shoulder":    Shoulder,
+	"Shoulders":   Shoulder,
 	"Mantle":      Shoulder,
 	"Spaulders":   Shoulder,
+	"Chest":       Chest,
 	"Chestguard":  Chest,
 	"Regalia":     Chest,
 	"Breastplate": Chest,
+	"Hands":       Gloves,
 	"Gauntlets":   Gloves,
 	"Gloves":      Gloves,
+	"Legs":        Legs,
 	"Legplates":   Legs,
 	"Leggings":    Legs,
 }

@@ -10,6 +10,7 @@ type Character struct {
 	Spec     string
 	Phases   map[int]PhaseData
 	Wishlist Wishlist
+	KeyItems KeyItems
 }
 
 type PhaseData map[int]SlotData
@@ -34,4 +35,8 @@ type Wishlist struct {
 type WishlistLoot struct {
 	Loot
 	Received bool
+}
+
+type KeyItems struct {
+	Trophies int
 }

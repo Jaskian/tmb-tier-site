@@ -8,7 +8,7 @@ import (
 
 var CutOffDate = time.Date(2023, 06, 22, 0, 0, 0, 0, time.Local)
 
-func calculateInTier(c character, slot int, phase int, slotItems []shared.Loot, allItemsByPhase keyedLoot) bool {
+func calculateInTier(c character, slot int, phase int, slotItems []shared.Loot, allItemsByPhase keyedLootCollection) bool {
 
 	inTier := len(slotItems) > 0
 
@@ -45,7 +45,7 @@ func calculateInTier(c character, slot int, phase int, slotItems []shared.Loot, 
 	return inTier
 }
 
-func getEligibleLoot(phase int, slotItems []shared.Loot, itemsByPhase keyedLoot) []*shared.Loot {
+func getEligibleLoot(phase int, slotItems []shared.Loot, itemsByPhase keyedLootCollection) []*shared.Loot {
 	items := []*shared.Loot{}
 
 	for _, i := range slotItems {
