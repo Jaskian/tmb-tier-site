@@ -8,41 +8,46 @@ import (
 
 var CutOffDate = time.Date(2023, 06, 22, 0, 0, 0, 0, time.Local)
 
-func calculateInTier(c character, slot int, phase int, slotItems []shared.Loot, allItemsByPhase keyedLootCollection) bool {
+func calculateInTier(c character, slot int, phase int, slotItems []shared.Loot, allItemsByPhase keyedLootCollection) shared.SlotData {
 
-	inTier := len(slotItems) > 0
+	slotData := shared.SlotData{
+		InTier: len(slotItems) > 0,
+		Items:  slotItems,
+	}
 
 	// extra approve logic
-	if !inTier {
+	if !slotData.InTier {
 		allEligibleItems := getEligibleLoot(phase, slotItems, allItemsByPhase)
 		if slot == int(shared.TwoHander) {
 			// discount on 2h when you've bought a 1h + OH
-			has1h := Any(allEligibleItems, isLootForSlotFunc(int(shared.OneHander)))
-			hasOH := Any(allEligibleItems, isLootForSlotFunc(int(shared.Offhand)))
-			inTier = has1h && hasOH
+			oneHand := CollectInto(allEligibleItems, &slotData.Items, isLootForSlotFunc(int(shared.OneHander)))
+			offHand := CollectInto(allEligibleItems, &slotData.Items, isLootForSlotFunc(int(shared.Offhand)))
+			slotData.InTier = len(oneHand) > 0 && len(offHand) > 0
 		} else if slot == int(shared.OneHander) || slot == int(shared.Offhand) {
 			// discount on 1h/OH when you've bought a 2h
-			inTier = Any(allEligibleItems, isLootForSlotFunc(int(shared.TwoHander)))
+			found := CollectInto(allEligibleItems, &slotData.Items, isLootForSlotFunc(int(shared.TwoHander)))
+			slotData.InTier = len(found) > 0
 		} else if len(allEligibleItems) > 0 {
-			inTier = Any(allEligibleItems, isLootForSlotFunc(slot))
+			found := CollectInto(allEligibleItems, &slotData.Items, isLootForSlotFunc(slot))
+			slotData.InTier = len(found) > 0
 		}
 	}
 
 	// deny logic
-	if inTier {
+	if slotData.InTier {
 		if slot == int(shared.TwoHander) {
 			// fury warriors have to buy 2x 2h to get in-tier on 2h
 			if c.Class == shared.Warrior && c.Spec == "Fury" {
-				inTier = len(slotItems) >= 2
+				slotData.InTier = len(slotItems) >= 2
 			}
 		} else if slot == int(shared.Ring) || slot == int(shared.Trinket) {
 			// gotta have 2 rings/trinkets to be eligible
-			inTier = len(slotItems) > 1
+			slotData.InTier = len(slotItems) > 1
 		}
 	}
 
 	// by default, we have items for the slot so it in in-tier
-	return inTier
+	return slotData
 }
 
 func getEligibleLoot(phase int, slotItems []shared.Loot, itemsByPhase keyedLootCollection) []*shared.Loot {
@@ -75,6 +80,16 @@ func isLootForSlotFunc(slot int) func(*shared.Loot) bool {
 	return func(l *shared.Loot) bool {
 		return l.Slot == slot
 	}
+}
+
+func CollectInto[T any](ts []*T, r *[]T, pred func(*T) bool) (result []*T) {
+	for _, t := range ts {
+		if pred(t) {
+			result = append(result, t)
+			*r = append(*r, *t)
+		}
+	}
+	return
 }
 
 func Any[T any](ts []T, pred func(T) bool) bool {

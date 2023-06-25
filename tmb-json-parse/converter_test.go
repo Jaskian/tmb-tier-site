@@ -101,6 +101,11 @@ func TestConvertTMBJson(t *testing.T) {
 		// in both for new loot
 		assertInTierInPhase(t, 2, shared.Wrist, got[0])
 		assertInTierInPhase(t, 3, shared.Wrist, got[0])
+
+		p3WristItemCount := len(got[0].Phases[3][int(shared.Wrist)].Items)
+		if p3WristItemCount != 1 {
+			t.Errorf("Expected 1, got %d", p3WristItemCount)
+		}
 	})
 
 	t.Run("In P3, TOTC items affect P3 WL", func(t *testing.T) {

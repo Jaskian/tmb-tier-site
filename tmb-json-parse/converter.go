@@ -99,8 +99,7 @@ func getPhaseDataFromLoot(c character) (map[int]shared.PhaseData, error) {
 			// we need all the phase loot to calculate in-tier, not just items for that slot
 			slotNum := int(slot)
 			key := lootKey{phase, slotNum}
-			inTier := calculateInTier(c, slotNum, phase, phaseSlotLoot[key], phaseLoot)
-			result[key.phase][key.slot] = shared.SlotData{InTier: inTier, Items: phaseSlotLoot[key]}
+			result[key.phase][key.slot] = calculateInTier(c, slotNum, phase, phaseSlotLoot[key], phaseLoot)
 		}
 	}
 
