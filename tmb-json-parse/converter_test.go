@@ -1,6 +1,7 @@
 package tmbjsonparse
 
 import (
+	"embed"
 	"testing"
 
 	"github.com/jaskian/tmb-tier-site/shared"
@@ -173,6 +174,18 @@ func assertNoError(t *testing.T, err error) {
 	t.Helper()
 	if err != nil {
 		t.Fatal(err)
+	}
+}
+
+var (
+	//go:embed data/character-json.json
+	characterJson []byte
+	embedKeeper   embed.FS
+)
+
+func BenchmarkConvertTMBData(b *testing.B) {
+	for n := 0; n < b.N; n++ {
+		ConvertTMBData(characterJson)
 	}
 }
 
