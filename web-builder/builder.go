@@ -5,6 +5,7 @@ import (
 	"embed"
 	"fmt"
 	"text/template"
+	"time"
 
 	"github.com/jaskian/tmb-tier-site/shared"
 )
@@ -39,7 +40,8 @@ func (s *SiteRenderer) BuildWebsite(data shared.TMBData, currentPhase int) (map[
 			Data         shared.TMBData
 			Slots        []shared.Slot
 			ShowWishlist bool
-		}{phase, data, shared.SLOTS, phase == currentPhase}
+			UpdateDate   string
+		}{phase, data, shared.SLOTS, phase == currentPhase, time.Now().Format("2006-01-02 15:04")}
 
 		b := bytes.Buffer{}
 		pageName := fmt.Sprintf("p%d.html", phase)
