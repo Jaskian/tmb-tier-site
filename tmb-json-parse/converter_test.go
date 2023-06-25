@@ -102,6 +102,13 @@ func TestConvertTMBJson(t *testing.T) {
 		assertInTierInPhase(t, 3, shared.Wrist, got[0])
 	})
 
+	t.Run("In P3, TOTC items affect P3 WL", func(t *testing.T) {
+		input := buildTestDataWithLoot("Warrior", "Fury", shared.Belt, shared.Totc, 0, "")
+		got, err := convertToExportData(input)
+		assertNoError(t, err)
+		assertInTierInPhase(t, 3, shared.Belt, got[0])
+	})
+
 	t.Run("Offspec items excluded", func(t *testing.T) {
 		input := buildTestDataWithLoot("Warrior", "Fury", shared.Belt, shared.Ulduar, 1, "")
 

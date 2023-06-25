@@ -19,4 +19,5 @@ var PhaseMappingInstance = map[int]int{
 	Sarth:          1,
 	Ulduar:         2,
 	UlduarPatterns: 2,
+	Totc:           3,
 }

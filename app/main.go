@@ -9,7 +9,7 @@ import (
 	webbuilder "github.com/jaskian/tmb-tier-site/web-builder"
 )
 
-const CURRENT_PHASE = 2
+const CURRENT_PHASE = 3
 
 var (
 	//go:embed data/character-json.json
