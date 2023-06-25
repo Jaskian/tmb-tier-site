@@ -1,6 +1,1 @@
-github.com/jaskian/tmb-tier-site/shared v0.0.0-20230618151336-769456695be9 h1:Vx/Sx2tpBMESJdj7Ql3pe3ESQRoxJPo7Vyw9dLlNQio=
-github.com/jaskian/tmb-tier-site/shared v0.0.0-20230618151336-769456695be9/go.mod h1:DAoV8PuQDM5gGTFBJ9TAGs3fYfRFYm/3oKYGdxsxl1E=
-github.com/jaskian/tmb-tier-site/tmb-json-parse v0.0.0-20230618151336-769456695be9 h1:DFggvEvNWhNtC/Gocf5+0jENRBaXMwTxRXiipBatRGo=
-github.com/jaskian/tmb-tier-site/tmb-json-parse v0.0.0-20230618151336-769456695be9/go.mod h1:NEsl/XfXxUgA2NHUugMuj00ZVh+h9ycqVymJaYpLtaE=
-github.com/jaskian/tmb-tier-site/web-builder v0.0.0-20230618151336-769456695be9 h1:bDaxcTyEsDLc9SrMwBXROI1tYxfLiQZgyF0lr2sOOnc=
-github.com/jaskian/tmb-tier-site/web-builder v0.0.0-20230618151336-769456695be9/go.mod h1:gcyy21a63KX2XMjzdt7lFXjWy9xzv7HW4qyR5VaQL4k=
+github.com/approvals/go-approval-tests v0.0.0-20220530063708-32d5677069bd h1:8j7sBEy0h6+Bvr0AeKHIHCsmzCzWGXAQweA7k+uiRYk=
