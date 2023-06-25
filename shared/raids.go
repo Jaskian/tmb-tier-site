@@ -10,6 +10,7 @@ const (
 	Sarth          = 24
 	UlduarPatterns = 27
 	Ulduar         = 28
+	Totc           = 32
 )
 
 var PhaseMappingInstance = map[int]int{
