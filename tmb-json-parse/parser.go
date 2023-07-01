@@ -18,6 +18,18 @@ func unmarshalTMBJson(jsonData []byte) (tmbData, error) {
 	return tmbdata, nil
 }
 
+func (primaryExport *tmbData) mergeTMBData(oldPhases map[int]tmbData) {
+	for _, data := range oldPhases {
+		for _, oChar := range data {
+			for i, pChar := range *primaryExport {
+				if pChar.Name == oChar.Name {
+					(*primaryExport)[i].Wishlisted = append((*primaryExport)[i].Wishlisted, oChar.Wishlisted...)
+				}
+			}
+		}
+	}
+}
+
 type tmbData []character
 
 type character struct {

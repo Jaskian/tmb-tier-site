@@ -22,6 +22,7 @@ type SiteRenderer struct {
 func NewSiteRenderer() (*SiteRenderer, error) {
 
 	t, err := template.New("pageTemplate.gohtml").Funcs(template.FuncMap{
+		"getPhaseData":       getPhaseData,
 		"getPhaseSlotData":   getPhaseSlotData,
 		"getSlotImage":       getSlotImage,
 		"getClassColor":      getClassColor,
@@ -55,8 +56,12 @@ func (s *SiteRenderer) BuildWebsite(data shared.TMBData, currentPhase int) (map[
 	return pages, nil
 }
 
-func getPhaseSlotData(c shared.Character, phase int, slot shared.Slot) shared.SlotData {
-	return c.Phases[phase][int(slot)]
+func getPhaseData(c shared.Character, phase int) shared.PhaseData {
+	return c.Phases[phase]
+}
+
+func getPhaseSlotData(pd shared.PhaseData, slot shared.Slot) shared.SlotData {
+	return pd.Slots[int(slot)]
 }
 
 func getSlotImage(slot shared.Slot) string {

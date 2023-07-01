@@ -41,10 +41,10 @@ func TestBuildWebsite(t *testing.T) {
 }
 
 func insertSlotData(phaseData *map[int]shared.PhaseData, inTier bool, loot shared.Loot) {
-	entry := (*phaseData)[loot.Phase][loot.Slot]
+	entry := (*phaseData)[loot.Phase].Slots[loot.Slot]
 	entry.InTier = true
 	entry.Items = append(entry.Items, loot)
-	(*phaseData)[loot.Phase][loot.Slot] = entry
+	(*phaseData)[loot.Phase].Slots[loot.Slot] = entry
 }
 
 func assertNoError(t *testing.T, err error) {
@@ -61,7 +61,7 @@ func createPhaseData() map[int]shared.PhaseData {
 	for _, phase := range shared.PHASES {
 		data[phase] = shared.PhaseData{}
 		for _, slot := range shared.SLOTS {
-			data[phase][int(slot)] = shared.SlotData{Items: []shared.Loot{}}
+			data[phase].Slots[int(slot)] = shared.SlotData{Items: []shared.Loot{}}
 		}
 	}
 

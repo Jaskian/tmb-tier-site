@@ -13,15 +13,27 @@ const CURRENT_PHASE = 3
 
 var (
 	//go:embed data/character-json.json
-	example      []byte
+	example []byte
+	//go:embed data/p1.json
+	p1 []byte
+	//go:embed data/p2.json
+	p2 []byte
+
 	importKeeper embed.FS
 )
 
 func main() {
-	data, err := tmbjsonparse.ConvertTMBData(example)
+
+	previousPhaseFiles := []tmbjsonparse.PhaseFile{
+		{Phase: 1, File: p1},
+		{Phase: 2, File: p2},
+	}
+
+	data, err := tmbjsonparse.ConvertTMBData(example, previousPhaseFiles...)
 	if err != nil {
 		panic(err)
 	}
+
 	r, err := webbuilder.NewSiteRenderer()
 	if err != nil {
 		panic(err)

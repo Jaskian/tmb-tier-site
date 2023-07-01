@@ -84,9 +84,7 @@
             <thead>
                 <tr>
                     <th width="100px">Player</th>
-                    {{if $.ShowWishlist}}
                     <th width="50px">Wishlist</th>
-                    {{end}}
                     {{if eq $.Phase 3}}
                     <th width="32px"><img src="https://wow.zamimg.com/images/wow/icons/large/inv_misc_trophy_argent.jpg" /></th>
                     {{end}}
@@ -98,23 +96,22 @@
             <tbody>
                 {{range $character := .Data }}
                 <tr>
+                    {{$pd := getPhaseData $character $.Phase}}
                     <td class="playername">
                         <p style="color:{{getClassColor .Class}}">{{.Name}}</p>
                         <p class="spec">{{.Spec}}</p>
                     </td>
-                    {{if $.ShowWishlist}}
                     <td class="tooltipContainer">
-                        {{if .Wishlist.Total}}
-                        <sl>{{.Wishlist.Received}} / {{.Wishlist.Total}}</sl>
+                        {{if $pd.Wishlist.Total}}
+                        <sl>{{$pd.Wishlist.Received}} / {{$pd.Wishlist.Total}}</sl>
                         <div class="tooltip">
-                            {{- range .Wishlist.WishlistLoot}}
+                            {{- range $pd.Wishlist.WishlistLoot}}
                             <a href="https://www.wowhead.com/wotlk/item={{.ItemID}}" class="{{getLootStatusClass .}}"
                                 data-wowhead="item={{.ItemID}}&domain=wotlk">{{.ItemName}}</a><br />
                             {{end}}
                         </div>
                         {{end}}
                     </td>
-                    {{end}}
                     {{if eq $.Phase 3}}
                     <td>
                         {{if $character.KeyItems.Trophies}}
@@ -123,7 +120,7 @@
                     </td>
                     {{end}}
                     {{- range $slot := $.Slots}}
-                    {{$psd := getPhaseSlotData $character $.Phase $slot}}
+                    {{$psd := getPhaseSlotData $pd $slot}}
                     <td class="tooltipContainer">{{- if $psd.InTier}}<sl
                             class="material-symbols-outlined">done</sl>{{- else if $psd.Items}}<sl
                             class="material-symbols-outlined">battery_horiz_050</sl>{{end}}

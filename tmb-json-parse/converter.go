@@ -8,13 +8,29 @@ import (
 
 const TMB_TIME_FORMAT = "2006-01-02 15:04:05"
 
-func ConvertTMBData(jsonData []byte) (shared.TMBData, error) {
+type PhaseFile struct {
+	Phase int
+	File  []byte
+}
+
+func ConvertTMBData(jsonData []byte, previousPhaseFiles ...PhaseFile) (shared.TMBData, error) {
 	result := shared.TMBData{}
 
 	d, err := unmarshalTMBJson(jsonData)
 	if err != nil {
 		return result, err
 	}
+
+	oldPhaseData := map[int]tmbData{}
+	for _, oldPhaseFile := range previousPhaseFiles {
+		d, err := unmarshalTMBJson(oldPhaseFile.File)
+		if err != nil {
+			panic(err)
+		}
+		oldPhaseData[oldPhaseFile.Phase] = d
+	}
+
+	d.mergeTMBData(oldPhaseData)
 
 	return convertToExportData(d)
 }
@@ -27,14 +43,11 @@ func convertToExportData(d tmbData) (shared.TMBData, error) {
 		if err != nil {
 			return result, err
 		}
-		wlItems := getWishlistDataFromCharacter(c)
-
 		outputChar := shared.Character{
-			Name:     c.Name,
-			Class:    c.Class,
-			Spec:     c.Spec,
-			Phases:   phaseData,
-			Wishlist: wlItems,
+			Name:   c.Name,
+			Class:  c.Class,
+			Spec:   c.Spec,
+			Phases: phaseData,
 		}
 
 		populateKeyItems(&outputChar)
@@ -45,37 +58,12 @@ func convertToExportData(d tmbData) (shared.TMBData, error) {
 	return result, nil
 }
 
-func getWishlistDataFromCharacter(c character) shared.Wishlist {
-
-	loot := []shared.WishlistLoot{}
-	received := 0
-
-	for _, i := range c.Wishlisted {
-		li := shared.WishlistLoot{
-			Loot:     NewLoot(i, 0, 0),
-			Received: i.Pivot.ReceivedWLItem == 1,
-		}
-		if li.Received {
-			received++
-		}
-		loot = append(loot, li)
-	}
-
-	wl := shared.Wishlist{
-		Total:        len(loot),
-		Received:     received,
-		WishlistLoot: loot,
-	}
-
-	return wl
-}
-
 type lootKey struct{ phase, slot int }
 
 func getPhaseDataFromLoot(c character) (map[int]shared.PhaseData, error) {
 	// storing loot two ways to make calcs easier
 	phaseSlotLoot := map[lootKey][]shared.Loot{}
-	phaseLoot := keyedLootCollection{}
+	phaseLoot := phaseSlotLootColl{}
 
 	for _, i := range c.ReceivedLoot {
 
@@ -93,40 +81,70 @@ func getPhaseDataFromLoot(c character) (map[int]shared.PhaseData, error) {
 		phaseLoot.AddItem(key.phase, key.slot, &loot)
 	}
 
-	result := newPhasesData()
+	compiledWishlists := compileWishLists(c.Wishlisted)
+
+	result := map[int]shared.PhaseData{}
+
 	for _, phase := range shared.PHASES {
+		result[phase] = shared.PhaseData{
+			Wishlist: compiledWishlists[phase],
+			Slots:    map[int]shared.SlotData{},
+		}
 		for _, slot := range shared.SLOTS {
 			// we need all the phase loot to calculate in-tier, not just items for that slot
-			slotNum := int(slot)
-			key := lootKey{phase, slotNum}
-			result[key.phase][key.slot] = calculateInTier(c, slotNum, phase, phaseSlotLoot[key], phaseLoot)
+			key := lootKey{phase, int(slot)}
+			result[key.phase].Slots[key.slot] = calculateInTier(c, key.slot, phase, phaseSlotLoot[key], phaseLoot)
 		}
 	}
 
 	return result, nil
 }
 
-type keyedLootCollection map[int]map[int][]*shared.Loot
+func compileWishLists(loot []loot) map[int]shared.Wishlist {
 
-func (k keyedLootCollection) AddItem(phase int, slot int, loot *shared.Loot) {
+	result := map[int]shared.Wishlist{}
+	lootByPhase := map[int][]shared.WishlistLoot{}
+
+	for _, i := range loot {
+		phaseNum := shared.PhaseMappingInstance[i.InstanceID]
+
+		wlLoot := shared.WishlistLoot{
+			Loot:     NewLoot(i, 0, 0),
+			Received: i.Pivot.ReceivedWLItem == 1,
+		}
+
+		lootByPhase[phaseNum] = append(lootByPhase[phaseNum], wlLoot)
+	}
+
+	for phase, wlLoots := range lootByPhase {
+		received := 0
+		for _, i := range wlLoots {
+			if i.Received {
+				received++
+			}
+		}
+
+		result[phase] = shared.Wishlist{
+			Received:     received,
+			Total:        len(wlLoots),
+			WishlistLoot: wlLoots,
+		}
+	}
+
+	return result
+}
+
+type phaseSlotLootColl map[int]map[int][]*shared.Loot
+
+func (k phaseSlotLootColl) AddItem(phase int, slot int, loot *shared.Loot) {
 	if k[phase] == nil {
 		k[phase] = map[int][]*shared.Loot{}
 	}
 	k[phase][slot] = append(k[phase][slot], loot)
 }
 
-func (k keyedLootCollection) GetItems(phase int, slot int) []*shared.Loot {
+func (k phaseSlotLootColl) GetItems(phase int, slot int) []*shared.Loot {
 	return k[phase][slot]
-}
-
-func newPhasesData() map[int]shared.PhaseData {
-	phasesData := map[int]shared.PhaseData{}
-
-	for _, p := range shared.PHASES {
-		phasesData[p] = shared.PhaseData{}
-	}
-
-	return phasesData
 }
 
 func (l loot) ExcludedFromResults() bool {
@@ -155,7 +173,7 @@ func (l loot) GetSlot() int {
 }
 
 func populateKeyItems(c *shared.Character) {
-	for _, i := range c.Phases[3][0].Items {
+	for _, i := range c.Phases[3].Slots[0].Items {
 		if i.ItemID == 47242 {
 			c.KeyItems.Trophies++
 		}

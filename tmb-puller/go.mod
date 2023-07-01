@@ -5,10 +5,10 @@ go 1.20
 require (
 	github.com/caarlos0/env v3.5.0+incompatible
 	github.com/go-rod/rod v0.113.3
+	github.com/go-rod/stealth v0.4.9
 )
 
 require (
-	github.com/go-rod/stealth v0.4.9 // indirect
 	github.com/stretchr/testify v1.8.4 // indirect
 	github.com/ysmood/fetchup v0.2.3 // indirect
 	github.com/ysmood/goob v0.4.0 // indirect

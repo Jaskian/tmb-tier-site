@@ -30,6 +30,16 @@
             max-width : 1200px !important
         }
 
+        td {
+            border: 1px solid #444;
+        }
+
+        sl {
+            display:inline-block;
+            text-align: center;
+            width: 100%;
+        }
+
         th {
             position: sticky;
             top: 0;
@@ -38,7 +48,7 @@
 
         .tooltipContainer .tooltip {
             visibility: hidden;
-            width: 120px;
+            width: 150px;
             background-color: black;
             color: #fff;
             text-align: center;
@@ -60,6 +70,7 @@
 
 <body>
     <nav role=" navigation">
+    <h4>Updated 2023-06-25 23:11</h4>
         <div>
             <ul>
                 <li><a href="p1.html">Phase 1</a></li>
@@ -74,6 +85,9 @@
                 <tr>
                     <th width="100px">Player</th>
                     
+                    
+                    
+                    <th width="32px"><img src="https://wow.zamimg.com/images/wow/icons/large/inv_misc_questionmark.jpg" /></th>
                     
                     <th width="32px"><img src="https://wow.zamimg.com/images/wow/icons/large/inv_helmet_37.jpg" /></th>
                     
@@ -117,6 +131,11 @@
                         <p class="spec">Survival</p>
                     </td>
                     
+                    
+                    
+                    <td class="tooltipContainer">
+                        
+                    </td>
                     
                     <td class="tooltipContainer">
                         
@@ -189,6 +208,11 @@
                         <p class="spec">Survival</p>
                     </td>
                     
+                    
+                    
+                    <td class="tooltipContainer">
+                        
+                    </td>
                     
                     <td class="tooltipContainer">
                         
@@ -293,6 +317,16 @@
             max-width : 1200px !important
         }
 
+        td {
+            border: 1px solid #444;
+        }
+
+        sl {
+            display:inline-block;
+            text-align: center;
+            width: 100%;
+        }
+
         th {
             position: sticky;
             top: 0;
@@ -301,7 +335,7 @@
 
         .tooltipContainer .tooltip {
             visibility: hidden;
-            width: 120px;
+            width: 150px;
             background-color: black;
             color: #fff;
             text-align: center;
@@ -323,6 +357,7 @@
 
 <body>
     <nav role=" navigation">
+    <h4>Updated 2023-06-25 23:11</h4>
         <div>
             <ul>
                 <li><a href="p1.html">Phase 1</a></li>
@@ -337,8 +372,11 @@
                 <tr>
                     <th width="100px">Player</th>
                     
-                    <th width="75px">Wishlist</th>
+                    <th width="50px">Wishlist</th>
                     
+                    
+                    
+                    <th width="32px"><img src="https://wow.zamimg.com/images/wow/icons/large/inv_misc_questionmark.jpg" /></th>
                     
                     <th width="32px"><img src="https://wow.zamimg.com/images/wow/icons/large/inv_helmet_37.jpg" /></th>
                     
@@ -387,9 +425,6 @@
                     </td>
                     
                     
-                    <td class="tooltipContainer">
-                        
-                    </td>
                     
                     <td class="tooltipContainer">
                         
@@ -435,8 +470,16 @@
                         
                     </td>
                     
-                    <td class="tooltipContainer"><span
-                            class="material-symbols-outlined">done</span>
+                    <td class="tooltipContainer">
+                        
+                    </td>
+                    
+                    <td class="tooltipContainer">
+                        
+                    </td>
+                    
+                    <td class="tooltipContainer"><sl
+                            class="material-symbols-outlined">done</sl>
                         
                         <div class="tooltip">
                             <a href="https://www.wowhead.com/wotlk/item=0" data-wowhead="item=0&domain=wotlk">Thunderfury</a><br />
@@ -469,9 +512,6 @@
                     </td>
                     
                     
-                    <td class="tooltipContainer">
-                        
-                    </td>
                     
                     <td class="tooltipContainer">
                         
@@ -517,8 +557,16 @@
                         
                     </td>
                     
-                    <td class="tooltipContainer"><span
-                            class="material-symbols-outlined">done</span>
+                    <td class="tooltipContainer">
+                        
+                    </td>
+                    
+                    <td class="tooltipContainer">
+                        
+                    </td>
+                    
+                    <td class="tooltipContainer"><sl
+                            class="material-symbols-outlined">done</sl>
                         
                         <div class="tooltip">
                             <a href="https://www.wowhead.com/wotlk/item=0" data-wowhead="item=0&domain=wotlk">Thunderfury</a><br />
@@ -578,6 +626,16 @@
             max-width : 1200px !important
         }
 
+        td {
+            border: 1px solid #444;
+        }
+
+        sl {
+            display:inline-block;
+            text-align: center;
+            width: 100%;
+        }
+
         th {
             position: sticky;
             top: 0;
@@ -586,7 +644,7 @@
 
         .tooltipContainer .tooltip {
             visibility: hidden;
-            width: 120px;
+            width: 150px;
             background-color: black;
             color: #fff;
             text-align: center;
@@ -608,6 +666,7 @@
 
 <body>
     <nav role=" navigation">
+    <h4>Updated 2023-06-25 23:11</h4>
         <div>
             <ul>
                 <li><a href="p1.html">Phase 1</a></li>
@@ -622,6 +681,11 @@
                 <tr>
                     <th width="100px">Player</th>
                     
+                    
+                    <th width="32px"><img src="https://wow.zamimg.com/images/wow/icons/large/inv_misc_trophy_argent.jpg" /></th>
+                    
+                    
+                    <th width="32px"><img src="https://wow.zamimg.com/images/wow/icons/large/inv_misc_questionmark.jpg" /></th>
                     
                     <th width="32px"><img src="https://wow.zamimg.com/images/wow/icons/large/inv_helmet_37.jpg" /></th>
                     
@@ -665,6 +729,15 @@
                         <p class="spec">Survival</p>
                     </td>
                     
+                    
+                    <td>
+                                
+                    </td>
+                    
+                    
+                    <td class="tooltipContainer">
+                        
+                    </td>
                     
                     <td class="tooltipContainer">
                         
@@ -737,6 +810,15 @@
                         <p class="spec">Survival</p>
                     </td>
                     
+                    
+                    <td>
+                                
+                    </td>
+                    
+                    
+                    <td class="tooltipContainer">
+                        
+                    </td>
                     
                     <td class="tooltipContainer">
                         

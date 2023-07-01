@@ -9,11 +9,13 @@ type Character struct {
 	Class    string
 	Spec     string
 	Phases   map[int]PhaseData
-	Wishlist Wishlist
 	KeyItems KeyItems
 }
 
-type PhaseData map[int]SlotData
+type PhaseData struct {
+	Slots    map[int]SlotData
+	Wishlist Wishlist
+}
 
 type SlotData struct {
 	InTier bool

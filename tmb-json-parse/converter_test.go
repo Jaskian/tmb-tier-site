@@ -102,7 +102,7 @@ func TestConvertTMBJson(t *testing.T) {
 		assertInTierInPhase(t, 2, shared.Wrist, got[0])
 		assertInTierInPhase(t, 3, shared.Wrist, got[0])
 
-		p3WristItemCount := len(got[0].Phases[3][int(shared.Wrist)].Items)
+		p3WristItemCount := len(got[0].Phases[3].Slots[int(shared.Wrist)].Items)
 		if p3WristItemCount != 1 {
 			t.Errorf("Expected 1, got %d", p3WristItemCount)
 		}
@@ -154,23 +154,43 @@ func TestConvertTMBJson(t *testing.T) {
 		assertNoError(t, err)
 		assertNotInTierInPhase(t, 2, shared.Belt, got[0])
 
-		count := len(got[0].Phases[2][int(shared.Belt)].Items)
+		count := len(got[0].Phases[2].Slots[int(shared.Belt)].Items)
 
 		if count > 0 {
 			t.Errorf("Expected 0 items, got %d", count)
+		}
+	})
+
+	t.Run("Wishlist items are sorted into the right phase", func(t *testing.T) {
+		data := tmbData{character{
+			Wishlisted: []loot{
+				loot{InstanceID: 20},
+				loot{InstanceID: 28},
+				loot{InstanceID: 32},
+			},
+		},
+		}
+
+		got, err := convertToExportData(data)
+		assertNoError(t, err)
+		for _, phase := range got[0].Phases {
+			len := len(phase.Wishlist.WishlistLoot)
+			if len != 1 {
+				t.Errorf("Expected 1 item, got %d", len)
+			}
 		}
 	})
 }
 
 func assertInTierInPhase(t *testing.T, phase int, slot shared.Slot, c shared.Character) {
 	t.Helper()
-	if !c.Phases[phase][int(slot)].InTier {
+	if !c.Phases[phase].Slots[int(slot)].InTier {
 		t.Errorf("P%d %v should be In-Tier", phase, slot)
 	}
 }
 func assertNotInTierInPhase(t *testing.T, phase int, slot shared.Slot, c shared.Character) {
 	t.Helper()
-	if c.Phases[phase][int(slot)].InTier {
+	if c.Phases[phase].Slots[int(slot)].InTier {
 		t.Errorf("P%d %v should not be In-Tier", phase, slot)
 	}
 }
