@@ -64,7 +64,8 @@ func getEligibleLoot(phase int, slotItems []shared.Loot, itemsByPhase phaseSlotL
 			for _, item := range is {
 				if item.Date.After(CutOffDate) &&
 					shared.ULDUAR_ITEMLEVELS[item.ItemID] >= 252 &&
-					!strings.Contains(item.OfficerNote, "In-tier Upgrade") {
+					!strings.Contains(item.OfficerNote, "In-tier Upgrade") &&
+					!strings.Contains(item.OfficerNote, "In tier Upgrade") {
 
 					items = append(items, item)
 				}

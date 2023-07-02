@@ -122,6 +122,12 @@ func TestConvertTMBJson(t *testing.T) {
 					InstanceID:    int(shared.Ulduar),
 					Pivot:         pivot{Date: p3Date, OfficerNote: "~In-tier Upgrade~"},
 				},
+				{
+					ItemID:        45132, // 252
+					InventoryType: int(shared.Belt),
+					InstanceID:    int(shared.Ulduar),
+					Pivot:         pivot{Date: p3Date, OfficerNote: "~In tier Upgrade~"},
+				},
 			},
 		},
 		}
