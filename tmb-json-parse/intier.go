@@ -1,6 +1,7 @@
 package tmbjsonparse
 
 import (
+	"strings"
 	"time"
 
 	"github.com/jaskian/tmb-tier-site/shared"
@@ -61,7 +62,10 @@ func getEligibleLoot(phase int, slotItems []shared.Loot, itemsByPhase phaseSlotL
 	if phase == 3 {
 		for _, is := range itemsByPhase[2] {
 			for _, item := range is {
-				if item.Date.After(CutOffDate) && shared.ULDUAR_ITEMLEVELS[item.ItemID] >= 252 {
+				if item.Date.After(CutOffDate) &&
+					shared.ULDUAR_ITEMLEVELS[item.ItemID] >= 252 &&
+					!strings.Contains(item.OfficerNote, "In-tier Upgrade") {
+
 					items = append(items, item)
 				}
 			}

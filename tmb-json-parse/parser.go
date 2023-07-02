@@ -63,11 +63,12 @@ func NewLoot(i loot, phase int, slot int) shared.Loot {
 	}
 
 	result := shared.Loot{
-		ItemID:   i.ItemID,
-		ItemName: i.ItemName,
-		Phase:    phase,
-		Slot:     slot,
-		Date:     t,
+		ItemID:      i.ItemID,
+		ItemName:    i.ItemName,
+		Phase:       phase,
+		Slot:        slot,
+		OfficerNote: i.Pivot.OfficerNote,
+		Date:        t,
 	}
 
 	return result

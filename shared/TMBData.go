@@ -23,11 +23,12 @@ type SlotData struct {
 }
 
 type Loot struct {
-	ItemID   int
-	ItemName string
-	Phase    int
-	Slot     int
-	Date     time.Time
+	ItemID      int
+	ItemName    string
+	Phase       int
+	Slot        int
+	OfficerNote string
+	Date        time.Time
 }
 type Wishlist struct {
 	Received     int

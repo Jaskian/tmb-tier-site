@@ -108,6 +108,29 @@ func TestConvertTMBJson(t *testing.T) {
 		}
 	})
 
+	t.Run("In P3, P2 252 items bought in-tier in Ulduar do not count towards P3 in-tier", func(t *testing.T) {
+
+		p3Date := "2023-06-24 15:04:05"
+
+		input := tmbData{character{
+			Class: "Warrior",
+			Spec:  "Fury",
+			ReceivedLoot: []loot{
+				{
+					ItemID:        45132, // 252
+					InventoryType: int(shared.Belt),
+					InstanceID:    int(shared.Ulduar),
+					Pivot:         pivot{Date: p3Date, OfficerNote: "~In-tier Upgrade~"},
+				},
+			},
+		},
+		}
+
+		got, err := convertToExportData(input)
+		assertNoError(t, err)
+		assertNotInTierInPhase(t, 3, shared.Belt, got[0])
+	})
+
 	t.Run("In P3, TOTC items affect P3 WL", func(t *testing.T) {
 		input := buildTestDataWithLoot("Warrior", "Fury", shared.Belt, shared.Totc25, 0, "")
 		got, err := convertToExportData(input)
