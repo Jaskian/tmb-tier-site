@@ -9,7 +9,7 @@ import (
 	webbuilder "github.com/jaskian/tmb-tier-site/web-builder"
 )
 
-const CURRENT_PHASE = 3
+const CURRENT_PHASE = 4
 
 var (
 	//go:embed data/character-json.json
@@ -18,6 +18,8 @@ var (
 	p1 []byte
 	//go:embed data/p2.json
 	p2 []byte
+	//go:embed data/p3.json
+	p3 []byte
 
 	importKeeper embed.FS
 )
@@ -27,6 +29,7 @@ func main() {
 	previousPhaseFiles := []tmbjsonparse.PhaseFile{
 		{Phase: 1, File: p1},
 		{Phase: 2, File: p2},
+		{Phase: 3, File: p3},
 	}
 
 	data, err := tmbjsonparse.ConvertTMBData(example, previousPhaseFiles...)

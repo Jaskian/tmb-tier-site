@@ -144,6 +144,19 @@ func TestConvertTMBJson(t *testing.T) {
 		assertInTierInPhase(t, 3, shared.Belt, got[0])
 	})
 
+	t.Run("In P4, ICC NM items affect P4 WL", func(t *testing.T) {
+		input := buildTestDataWithLoot("Warrior", "Fury", shared.Belt, shared.IccNM25, 0, "")
+		got, err := convertToExportData(input)
+		assertNoError(t, err)
+		assertInTierInPhase(t, 4, shared.Belt, got[0])
+	})
+	t.Run("In P4, ICC HC items affect P4 WL", func(t *testing.T) {
+		input := buildTestDataWithLoot("Warrior", "Fury", shared.Belt, shared.IccHC25, 0, "")
+		got, err := convertToExportData(input)
+		assertNoError(t, err)
+		assertInTierInPhase(t, 4, shared.Belt, got[0])
+	})
+
 	t.Run("Trophies are counted for TOTC25", func(t *testing.T) {
 		input := tmbData{character{
 			ReceivedLoot: []loot{
@@ -196,6 +209,7 @@ func TestConvertTMBJson(t *testing.T) {
 				loot{InstanceID: 20},
 				loot{InstanceID: 28},
 				loot{InstanceID: 32},
+				loot{InstanceID: 36},
 			},
 		},
 		}
