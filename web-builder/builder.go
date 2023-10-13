@@ -27,6 +27,7 @@ func NewSiteRenderer() (*SiteRenderer, error) {
 		"getSlotImage":       getSlotImage,
 		"getClassColor":      getClassColor,
 		"getLootStatusClass": getLootStatusClass,
+		"subtract":           subtract,
 	}).ParseFS(pageTemplates, "templates/*.gohtml")
 
 	return &SiteRenderer{t}, err
@@ -82,4 +83,8 @@ func getLootStatusClass(item shared.WishlistLoot) string {
 		return "receivedLoot"
 	}
 	return ""
+}
+
+func subtract(x int, y int) int {
+	return x - y
 }

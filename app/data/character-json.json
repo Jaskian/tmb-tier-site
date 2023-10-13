@@ -1768,39 +1768,6 @@
         "sub_archetype": "Physical",
         "received": [
             {
-                "id": 70743,
-                "item_id": 47547,
-                "parent_id": null,
-                "parent_item_id": null,
-                "expansion_id": 3,
-                "name": "Varian's Furor",
-                "weight": 0.5,
-                "quality": 4,
-                "inventory_type": 16,
-                "added_by_username": "SAMi",
-                "raid_group_name": "Main raid",
-                "raid_name": "togc 52",
-                "raid_slug": "togc-52",
-                "instance_id": 32,
-                "guild_tier": null,
-                "pivot": {
-                    "character_id": 329342,
-                    "item_id": 47547,
-                    "id": 18732002,
-                    "added_by": 256221,
-                    "type": "received",
-                    "order": 0,
-                    "note": null,
-                    "officer_note": "Votes: 0 \"Mainspec\/Need\"",
-                    "is_offspec": 0,
-                    "raid_group_id": 9974,
-                    "raid_id": 110946,
-                    "received_at": "2023-10-05 00:00:00",
-                    "created_at": "2023-10-05T19:14:08.000000Z",
-                    "updated_at": null
-                }
-            },
-            {
                 "id": 70547,
                 "item_id": 47242,
                 "parent_id": null,
@@ -1825,6 +1792,39 @@
                     "order": 0,
                     "note": null,
                     "officer_note": "Votes: 0 \"Mainspec\/Need\" \"9\"",
+                    "is_offspec": 0,
+                    "raid_group_id": 9974,
+                    "raid_id": 110946,
+                    "received_at": "2023-10-05 00:00:00",
+                    "created_at": "2023-10-05T19:14:08.000000Z",
+                    "updated_at": null
+                }
+            },
+            {
+                "id": 70743,
+                "item_id": 47547,
+                "parent_id": null,
+                "parent_item_id": null,
+                "expansion_id": 3,
+                "name": "Varian's Furor",
+                "weight": 0.5,
+                "quality": 4,
+                "inventory_type": 16,
+                "added_by_username": "SAMi",
+                "raid_group_name": "Main raid",
+                "raid_name": "togc 52",
+                "raid_slug": "togc-52",
+                "instance_id": 32,
+                "guild_tier": null,
+                "pivot": {
+                    "character_id": 329342,
+                    "item_id": 47547,
+                    "id": 18732002,
+                    "added_by": 256221,
+                    "type": "received",
+                    "order": 0,
+                    "note": null,
+                    "officer_note": "Votes: 0 \"Mainspec\/Need\"",
                     "is_offspec": 0,
                     "raid_group_id": 9974,
                     "raid_id": 110946,
@@ -1867,39 +1867,6 @@
                 }
             },
             {
-                "id": 70563,
-                "item_id": 47063,
-                "parent_id": null,
-                "parent_item_id": null,
-                "expansion_id": 3,
-                "name": "Pride of the Eredar",
-                "weight": 0.5,
-                "quality": 4,
-                "inventory_type": 16,
-                "added_by_username": "Jask",
-                "raid_group_name": "Main raid",
-                "raid_name": "Togc w47",
-                "raid_slug": "togc-w47",
-                "instance_id": 32,
-                "guild_tier": null,
-                "pivot": {
-                    "character_id": 329342,
-                    "item_id": 47063,
-                    "id": 18056269,
-                    "added_by": 197701,
-                    "type": "received",
-                    "order": 0,
-                    "note": null,
-                    "officer_note": "Votes: 0 \"OffSpec\"",
-                    "is_offspec": 1,
-                    "raid_group_id": 9974,
-                    "raid_id": 107789,
-                    "received_at": "2023-08-31 00:00:00",
-                    "created_at": "2023-08-31T19:08:04.000000Z",
-                    "updated_at": null
-                }
-            },
-            {
                 "id": 71138,
                 "item_id": 47559,
                 "parent_id": null,
@@ -1925,6 +1892,39 @@
                     "note": null,
                     "officer_note": "Votes: 0 \"Mainspec\"",
                     "is_offspec": 0,
+                    "raid_group_id": 9974,
+                    "raid_id": 107789,
+                    "received_at": "2023-08-31 00:00:00",
+                    "created_at": "2023-08-31T19:08:04.000000Z",
+                    "updated_at": null
+                }
+            },
+            {
+                "id": 70563,
+                "item_id": 47063,
+                "parent_id": null,
+                "parent_item_id": null,
+                "expansion_id": 3,
+                "name": "Pride of the Eredar",
+                "weight": 0.5,
+                "quality": 4,
+                "inventory_type": 16,
+                "added_by_username": "Jask",
+                "raid_group_name": "Main raid",
+                "raid_name": "Togc w47",
+                "raid_slug": "togc-w47",
+                "instance_id": 32,
+                "guild_tier": null,
+                "pivot": {
+                    "character_id": 329342,
+                    "item_id": 47063,
+                    "id": 18056269,
+                    "added_by": 197701,
+                    "type": "received",
+                    "order": 0,
+                    "note": null,
+                    "officer_note": "Votes: 0 \"OffSpec\"",
+                    "is_offspec": 1,
                     "raid_group_id": 9974,
                     "raid_id": 107789,
                     "received_at": "2023-08-31 00:00:00",
@@ -9957,8 +9957,8 @@
         "prios": [],
         "wishlist": [
             {
-                "id": 72276,
-                "item_id": 50012,
+                "id": 72688,
+                "item_id": 50737,
                 "parent_id": null,
                 "parent_item_id": null,
                 "expansion_id": 3,
@@ -9966,18 +9966,18 @@
                 "weight": 0.5,
                 "quality": 4,
                 "inventory_type": 13,
-                "item_source_id": 284,
-                "instance_id": 36,
-                "instance_name": "Icecrown Citadel N25",
-                "instance_order": 36,
-                "added_by_username": "KristoferJ",
+                "item_source_id": 312,
+                "instance_id": 38,
+                "instance_name": "Icecrown Citadel H25",
+                "instance_order": 38,
+                "added_by_username": "Jask",
                 "guild_tier": null,
                 "list_number": 4,
                 "pivot": {
                     "character_id": 329091,
-                    "item_id": 50012,
-                    "id": 18598592,
-                    "added_by": 259010,
+                    "item_id": 50737,
+                    "id": 19258150,
+                    "added_by": 197701,
                     "type": "wishlist",
                     "order": 1,
                     "list_number": 4,
@@ -9987,8 +9987,8 @@
                     "note": null,
                     "raid_group_id": null,
                     "raid_id": null,
-                    "created_at": "2023-10-03T18:37:00.000000Z",
-                    "updated_at": "2023-10-03T18:37:00.000000Z"
+                    "created_at": "2023-10-12T19:34:58.000000Z",
+                    "updated_at": "2023-10-12T19:34:58.000000Z"
                 }
             },
             {
@@ -14557,6 +14557,39 @@
         "sub_archetype": null,
         "received": [
             {
+                "id": 70579,
+                "item_id": 46977,
+                "parent_id": null,
+                "parent_item_id": null,
+                "expansion_id": 3,
+                "name": "Shawl of the Refreshing Winds",
+                "weight": 0.5,
+                "quality": 4,
+                "inventory_type": 16,
+                "added_by_username": "Jask",
+                "raid_group_name": "Main raid",
+                "raid_name": "ToGC w49",
+                "raid_slug": "togc-w49",
+                "instance_id": 32,
+                "guild_tier": null,
+                "pivot": {
+                    "character_id": 530739,
+                    "item_id": 46977,
+                    "id": 18205756,
+                    "added_by": 197701,
+                    "type": "received",
+                    "order": 0,
+                    "note": null,
+                    "officer_note": "Votes: 0 \"Mainspec\"",
+                    "is_offspec": 0,
+                    "raid_group_id": 9974,
+                    "raid_id": 109161,
+                    "received_at": "2023-09-15 07:58:59",
+                    "created_at": "2023-09-15T07:58:59.000000Z",
+                    "updated_at": null
+                }
+            },
+            {
                 "id": 70585,
                 "item_id": 46991,
                 "parent_id": null,
@@ -14621,39 +14654,6 @@
                     "created_at": "2023-09-15T07:58:59.000000Z",
                     "updated_at": null
                 }
-            },
-            {
-                "id": 70579,
-                "item_id": 46977,
-                "parent_id": null,
-                "parent_item_id": null,
-                "expansion_id": 3,
-                "name": "Shawl of the Refreshing Winds",
-                "weight": 0.5,
-                "quality": 4,
-                "inventory_type": 16,
-                "added_by_username": "Jask",
-                "raid_group_name": "Main raid",
-                "raid_name": "ToGC w49",
-                "raid_slug": "togc-w49",
-                "instance_id": 32,
-                "guild_tier": null,
-                "pivot": {
-                    "character_id": 530739,
-                    "item_id": 46977,
-                    "id": 18205756,
-                    "added_by": 197701,
-                    "type": "received",
-                    "order": 0,
-                    "note": null,
-                    "officer_note": "Votes: 0 \"Mainspec\"",
-                    "is_offspec": 0,
-                    "raid_group_id": 9974,
-                    "raid_id": 109161,
-                    "received_at": "2023-09-15 07:58:59",
-                    "created_at": "2023-09-15T07:58:59.000000Z",
-                    "updated_at": null
-                }
             }
         ],
         "secondary_raid_groups": [
@@ -14711,39 +14711,6 @@
         "sub_archetype": "Physical",
         "received": [
             {
-                "id": 70547,
-                "item_id": 47242,
-                "parent_id": null,
-                "parent_item_id": null,
-                "expansion_id": 3,
-                "name": "Trophy of the Crusade",
-                "weight": 0.5,
-                "quality": 4,
-                "inventory_type": 0,
-                "added_by_username": "Jask",
-                "raid_group_name": "Main raid",
-                "raid_name": "ToGC 43",
-                "raid_slug": "togc-43",
-                "instance_id": 30,
-                "guild_tier": 2,
-                "pivot": {
-                    "character_id": 440308,
-                    "item_id": 47242,
-                    "id": 17763232,
-                    "added_by": 197701,
-                    "type": "received",
-                    "order": 0,
-                    "note": null,
-                    "officer_note": "Votes: 0 \"Mainspec\"",
-                    "is_offspec": 0,
-                    "raid_group_id": 9974,
-                    "raid_id": 105249,
-                    "received_at": "2023-08-03 00:00:00",
-                    "created_at": "2023-08-03T19:51:55.000000Z",
-                    "updated_at": null
-                }
-            },
-            {
                 "id": 70587,
                 "item_id": 46967,
                 "parent_id": null,
@@ -14763,6 +14730,39 @@
                     "character_id": 440308,
                     "item_id": 46967,
                     "id": 17763231,
+                    "added_by": 197701,
+                    "type": "received",
+                    "order": 0,
+                    "note": null,
+                    "officer_note": "Votes: 0 \"Mainspec\"",
+                    "is_offspec": 0,
+                    "raid_group_id": 9974,
+                    "raid_id": 105249,
+                    "received_at": "2023-08-03 00:00:00",
+                    "created_at": "2023-08-03T19:51:55.000000Z",
+                    "updated_at": null
+                }
+            },
+            {
+                "id": 70547,
+                "item_id": 47242,
+                "parent_id": null,
+                "parent_item_id": null,
+                "expansion_id": 3,
+                "name": "Trophy of the Crusade",
+                "weight": 0.5,
+                "quality": 4,
+                "inventory_type": 0,
+                "added_by_username": "Jask",
+                "raid_group_name": "Main raid",
+                "raid_name": "ToGC 43",
+                "raid_slug": "togc-43",
+                "instance_id": 30,
+                "guild_tier": 2,
+                "pivot": {
+                    "character_id": 440308,
+                    "item_id": 47242,
+                    "id": 17763232,
                     "added_by": 197701,
                     "type": "received",
                     "order": 0,
@@ -14843,39 +14843,6 @@
                 }
             },
             {
-                "id": 70547,
-                "item_id": 47242,
-                "parent_id": null,
-                "parent_item_id": null,
-                "expansion_id": 3,
-                "name": "Trophy of the Crusade",
-                "weight": 0.5,
-                "quality": 4,
-                "inventory_type": 0,
-                "added_by_username": "Jask",
-                "raid_group_name": "Main raid",
-                "raid_name": "ToGC (W39)",
-                "raid_slug": "togc-w39",
-                "instance_id": 30,
-                "guild_tier": 2,
-                "pivot": {
-                    "character_id": 440308,
-                    "item_id": 47242,
-                    "id": 17380579,
-                    "added_by": 197701,
-                    "type": "received",
-                    "order": 0,
-                    "note": null,
-                    "officer_note": "Votes: 0 \"Mainspec\"",
-                    "is_offspec": 0,
-                    "raid_group_id": 9974,
-                    "raid_id": 102065,
-                    "received_at": "2023-07-06 00:00:00",
-                    "created_at": "2023-07-06T21:06:45.000000Z",
-                    "updated_at": null
-                }
-            },
-            {
                 "id": 70594,
                 "item_id": 47192,
                 "parent_id": null,
@@ -14895,6 +14862,39 @@
                     "character_id": 440308,
                     "item_id": 47192,
                     "id": 17380580,
+                    "added_by": 197701,
+                    "type": "received",
+                    "order": 0,
+                    "note": null,
+                    "officer_note": "Votes: 0 \"Mainspec\"",
+                    "is_offspec": 0,
+                    "raid_group_id": 9974,
+                    "raid_id": 102065,
+                    "received_at": "2023-07-06 00:00:00",
+                    "created_at": "2023-07-06T21:06:45.000000Z",
+                    "updated_at": null
+                }
+            },
+            {
+                "id": 70547,
+                "item_id": 47242,
+                "parent_id": null,
+                "parent_item_id": null,
+                "expansion_id": 3,
+                "name": "Trophy of the Crusade",
+                "weight": 0.5,
+                "quality": 4,
+                "inventory_type": 0,
+                "added_by_username": "Jask",
+                "raid_group_name": "Main raid",
+                "raid_name": "ToGC (W39)",
+                "raid_slug": "togc-w39",
+                "instance_id": 30,
+                "guild_tier": 2,
+                "pivot": {
+                    "character_id": 440308,
+                    "item_id": 47242,
+                    "id": 17380579,
                     "added_by": 197701,
                     "type": "received",
                     "order": 0,
@@ -19507,6 +19507,72 @@
         "sub_archetype": "Physical",
         "received": [
             {
+                "id": 68238,
+                "item_id": 45145,
+                "parent_id": null,
+                "parent_item_id": null,
+                "expansion_id": 3,
+                "name": "Libram of the Sacred Shield",
+                "weight": 0.5,
+                "quality": 4,
+                "inventory_type": 28,
+                "added_by_username": "Jask",
+                "raid_group_name": "Main raid",
+                "raid_name": "Ulduar 1 (W36)",
+                "raid_slug": "ulduar-1-w36",
+                "instance_id": 28,
+                "guild_tier": 4,
+                "pivot": {
+                    "character_id": 501563,
+                    "item_id": 45145,
+                    "id": 16556156,
+                    "added_by": 197701,
+                    "type": "received",
+                    "order": 0,
+                    "note": null,
+                    "officer_note": "Votes: 0 \"Mainspec\"",
+                    "is_offspec": 0,
+                    "raid_group_id": 9974,
+                    "raid_id": 99526,
+                    "received_at": "2023-06-15 00:00:00",
+                    "created_at": "2023-06-15T21:50:57.000000Z",
+                    "updated_at": null
+                }
+            },
+            {
+                "id": 68398,
+                "item_id": 45334,
+                "parent_id": null,
+                "parent_item_id": null,
+                "expansion_id": 3,
+                "name": "Unbreakable Chestguard",
+                "weight": 0.5,
+                "quality": 4,
+                "inventory_type": 5,
+                "added_by_username": "Jask",
+                "raid_group_name": "Main raid",
+                "raid_name": "Ulduar 1 (W36)",
+                "raid_slug": "ulduar-1-w36",
+                "instance_id": 28,
+                "guild_tier": 3,
+                "pivot": {
+                    "character_id": 501563,
+                    "item_id": 45334,
+                    "id": 16556153,
+                    "added_by": 197701,
+                    "type": "received",
+                    "order": 0,
+                    "note": null,
+                    "officer_note": "Votes: 0 \"Mainspec\"",
+                    "is_offspec": 0,
+                    "raid_group_id": 9974,
+                    "raid_id": 99526,
+                    "received_at": "2023-06-15 00:00:00",
+                    "created_at": "2023-06-15T21:50:57.000000Z",
+                    "updated_at": null
+                }
+            },
+            {
                 "id": 68642,
                 "item_id": 45641,
                 "parent_id": null,
@@ -19637,72 +19703,6 @@
                     "created_at": "2023-06-15T21:50:57.000000Z",
                     "updated_at": null
                 }
-            },
-            {
-                "id": 68238,
-                "item_id": 45145,
-                "parent_id": null,
-                "parent_item_id": null,
-                "expansion_id": 3,
-                "name": "Libram of the Sacred Shield",
-                "weight": 0.5,
-                "quality": 4,
-                "inventory_type": 28,
-                "added_by_username": "Jask",
-                "raid_group_name": "Main raid",
-                "raid_name": "Ulduar 1 (W36)",
-                "raid_slug": "ulduar-1-w36",
-                "instance_id": 28,
-                "guild_tier": 4,
-                "pivot": {
-                    "character_id": 501563,
-                    "item_id": 45145,
-                    "id": 16556156,
-                    "added_by": 197701,
-                    "type": "received",
-                    "order": 0,
-                    "note": null,
-                    "officer_note": "Votes: 0 \"Mainspec\"",
-                    "is_offspec": 0,
-                    "raid_group_id": 9974,
-                    "raid_id": 99526,
-                    "received_at": "2023-06-15 00:00:00",
-                    "created_at": "2023-06-15T21:50:57.000000Z",
-                    "updated_at": null
-                }
-            },
-            {
-                "id": 68398,
-                "item_id": 45334,
-                "parent_id": null,
-                "parent_item_id": null,
-                "expansion_id": 3,
-                "name": "Unbreakable Chestguard",
-                "weight": 0.5,
-                "quality": 4,
-                "inventory_type": 5,
-                "added_by_username": "Jask",
-                "raid_group_name": "Main raid",
-                "raid_name": "Ulduar 1 (W36)",
-                "raid_slug": "ulduar-1-w36",
-                "instance_id": 28,
-                "guild_tier": 3,
-                "pivot": {
-                    "character_id": 501563,
-                    "item_id": 45334,
-                    "id": 16556153,
-                    "added_by": 197701,
-                    "type": "received",
-                    "order": 0,
-                    "note": null,
-                    "officer_note": "Votes: 0 \"Mainspec\"",
-                    "is_offspec": 0,
-                    "raid_group_id": 9974,
-                    "raid_id": 99526,
-                    "received_at": "2023-06-15 00:00:00",
-                    "created_at": "2023-06-15T21:50:57.000000Z",
-                    "updated_at": null
-                }
             }
         ],
         "secondary_raid_groups": [
@@ -19781,7 +19781,7 @@
                     "id": 18416865,
                     "added_by": 197701,
                     "type": "received",
-                    "order": 0,
+                    "order": 1,
                     "note": null,
                     "officer_note": "Votes: 0 \"Mainspec\"",
                     "is_offspec": 0,
@@ -19789,7 +19789,7 @@
                     "raid_id": 110295,
                     "received_at": "2023-09-28 00:00:00",
                     "created_at": "2023-09-28T18:54:03.000000Z",
-                    "updated_at": null
+                    "updated_at": "2023-10-12T19:29:07.000000Z"
                 }
             },
             {
@@ -19814,7 +19814,7 @@
                     "id": 18056271,
                     "added_by": 197701,
                     "type": "received",
-                    "order": 0,
+                    "order": 2,
                     "note": null,
                     "officer_note": "Votes: 0 \"Mainspec\"",
                     "is_offspec": 0,
@@ -19822,7 +19822,7 @@
                     "raid_id": 107789,
                     "received_at": "2023-08-31 00:00:00",
                     "created_at": "2023-08-31T19:08:04.000000Z",
-                    "updated_at": null
+                    "updated_at": "2023-10-12T19:29:07.000000Z"
                 }
             },
             {
@@ -19847,7 +19847,7 @@
                     "id": 17988944,
                     "added_by": 256221,
                     "type": "received",
-                    "order": 0,
+                    "order": 3,
                     "note": null,
                     "officer_note": "Votes: 0 \"Mainspec\/Need\"",
                     "is_offspec": 0,
@@ -19855,7 +19855,7 @@
                     "raid_id": 107225,
                     "received_at": "2023-08-24 00:00:00",
                     "created_at": "2023-08-24T19:25:45.000000Z",
-                    "updated_at": null
+                    "updated_at": "2023-10-12T19:29:07.000000Z"
                 }
             },
             {
@@ -19880,7 +19880,7 @@
                     "id": 17918839,
                     "added_by": 197701,
                     "type": "received",
-                    "order": 0,
+                    "order": 4,
                     "note": null,
                     "officer_note": "Votes: 0 \"Mainspec\"",
                     "is_offspec": 0,
@@ -19888,7 +19888,7 @@
                     "raid_id": 106565,
                     "received_at": "2023-08-17 00:00:00",
                     "created_at": "2023-08-17T19:58:25.000000Z",
-                    "updated_at": null
+                    "updated_at": "2023-10-12T19:29:07.000000Z"
                 }
             },
             {
@@ -19913,7 +19913,7 @@
                     "id": 17679042,
                     "added_by": 256221,
                     "type": "received",
-                    "order": 0,
+                    "order": 5,
                     "note": null,
                     "officer_note": "Votes: 0 \"Mainspec\/Need\"",
                     "is_offspec": 0,
@@ -19921,7 +19921,7 @@
                     "raid_id": 104542,
                     "received_at": "2023-07-27 00:00:00",
                     "created_at": "2023-07-27T20:35:43.000000Z",
-                    "updated_at": null
+                    "updated_at": "2023-10-12T19:29:07.000000Z"
                 }
             },
             {
@@ -19946,7 +19946,7 @@
                     "id": 17679041,
                     "added_by": 256221,
                     "type": "received",
-                    "order": 0,
+                    "order": 6,
                     "note": null,
                     "officer_note": "Votes: 0 \"Mainspec\/Need\"",
                     "is_offspec": 0,
@@ -19954,7 +19954,7 @@
                     "raid_id": 104542,
                     "received_at": "2023-07-27 00:00:00",
                     "created_at": "2023-07-27T20:35:43.000000Z",
-                    "updated_at": null
+                    "updated_at": "2023-10-12T19:29:07.000000Z"
                 }
             },
             {
@@ -19979,7 +19979,7 @@
                     "id": 17679040,
                     "added_by": 256221,
                     "type": "received",
-                    "order": 0,
+                    "order": 7,
                     "note": null,
                     "officer_note": "Votes: 0 \"Mainspec\/Need\"",
                     "is_offspec": 0,
@@ -19987,7 +19987,7 @@
                     "raid_id": 104542,
                     "received_at": "2023-07-27 00:00:00",
                     "created_at": "2023-07-27T20:35:43.000000Z",
-                    "updated_at": null
+                    "updated_at": "2023-10-12T19:29:07.000000Z"
                 }
             },
             {
@@ -20012,7 +20012,7 @@
                     "id": 17308838,
                     "added_by": 256221,
                     "type": "received",
-                    "order": 0,
+                    "order": 8,
                     "note": null,
                     "officer_note": "Votes: 0 \"In tier Upgrade\"",
                     "is_offspec": 0,
@@ -20020,7 +20020,7 @@
                     "raid_id": 101502,
                     "received_at": "2023-07-02 00:00:00",
                     "created_at": "2023-07-02T19:58:53.000000Z",
-                    "updated_at": null
+                    "updated_at": "2023-10-12T19:29:07.000000Z"
                 }
             },
             {
@@ -20045,7 +20045,7 @@
                     "id": 17132135,
                     "added_by": 197701,
                     "type": "received",
-                    "order": 0,
+                    "order": 9,
                     "note": null,
                     "officer_note": "Votes: 0 \"OffSpec\"",
                     "is_offspec": 1,
@@ -20053,7 +20053,7 @@
                     "raid_id": 100515,
                     "received_at": "2023-06-25 00:00:00",
                     "created_at": "2023-06-25T21:10:14.000000Z",
-                    "updated_at": null
+                    "updated_at": "2023-10-12T19:29:07.000000Z"
                 }
             },
             {
@@ -20078,7 +20078,7 @@
                     "id": 17132134,
                     "added_by": 197701,
                     "type": "received",
-                    "order": 0,
+                    "order": 10,
                     "note": null,
                     "officer_note": "Votes: 0 \"Mainspec\"",
                     "is_offspec": 0,
@@ -20086,7 +20086,7 @@
                     "raid_id": 100515,
                     "received_at": "2023-06-25 00:00:00",
                     "created_at": "2023-06-25T21:10:14.000000Z",
-                    "updated_at": null
+                    "updated_at": "2023-10-12T19:29:07.000000Z"
                 }
             },
             {
@@ -20111,7 +20111,7 @@
                     "id": 16556170,
                     "added_by": 197701,
                     "type": "received",
-                    "order": 1,
+                    "order": 11,
                     "note": null,
                     "officer_note": "Votes: 0 \"Mainspec\"",
                     "is_offspec": 0,
@@ -20119,7 +20119,7 @@
                     "raid_id": 99526,
                     "received_at": "2023-06-15 00:00:00",
                     "created_at": "2023-06-15T21:50:57.000000Z",
-                    "updated_at": "2023-06-25T09:40:56.000000Z"
+                    "updated_at": "2023-10-12T19:29:07.000000Z"
                 }
             },
             {
@@ -20144,7 +20144,7 @@
                     "id": 15916962,
                     "added_by": 256221,
                     "type": "received",
-                    "order": 2,
+                    "order": 12,
                     "note": null,
                     "officer_note": "Votes: 0 \"Mainspec\/Need\"",
                     "is_offspec": 0,
@@ -20152,7 +20152,7 @@
                     "raid_id": 95313,
                     "received_at": "2023-05-04 20:33:56",
                     "created_at": "2023-05-04T20:33:56.000000Z",
-                    "updated_at": "2023-06-25T09:40:56.000000Z"
+                    "updated_at": "2023-10-12T19:29:07.000000Z"
                 }
             },
             {
@@ -20177,7 +20177,7 @@
                     "id": 15760102,
                     "added_by": 256221,
                     "type": "received",
-                    "order": 3,
+                    "order": 13,
                     "note": null,
                     "officer_note": "Votes: 0 \"Mainspec\/Need\"",
                     "is_offspec": 0,
@@ -20185,7 +20185,7 @@
                     "raid_id": 93680,
                     "received_at": "2023-04-20 20:38:02",
                     "created_at": "2023-04-20T20:38:02.000000Z",
-                    "updated_at": "2023-06-25T09:40:56.000000Z"
+                    "updated_at": "2023-10-12T19:29:07.000000Z"
                 }
             },
             {
@@ -20210,7 +20210,7 @@
                     "id": 15697974,
                     "added_by": 254581,
                     "type": "received",
-                    "order": 4,
+                    "order": 14,
                     "note": null,
                     "officer_note": "Votes: 0 \"Off-Spec\"",
                     "is_offspec": 1,
@@ -20218,7 +20218,7 @@
                     "raid_id": 93090,
                     "received_at": "2023-04-16 00:00:00",
                     "created_at": "2023-04-16T19:01:56.000000Z",
-                    "updated_at": "2023-06-25T09:40:56.000000Z"
+                    "updated_at": "2023-10-12T19:29:07.000000Z"
                 }
             },
             {
@@ -20243,7 +20243,7 @@
                     "id": 15697973,
                     "added_by": 254581,
                     "type": "received",
-                    "order": 5,
+                    "order": 15,
                     "note": null,
                     "officer_note": "Votes: 0 \"Mainspec\/Need\"",
                     "is_offspec": 0,
@@ -20251,7 +20251,7 @@
                     "raid_id": 93090,
                     "received_at": "2023-04-16 00:00:00",
                     "created_at": "2023-04-16T19:01:56.000000Z",
-                    "updated_at": "2023-06-25T09:40:56.000000Z"
+                    "updated_at": "2023-10-12T19:29:07.000000Z"
                 }
             },
             {
@@ -20276,7 +20276,7 @@
                     "id": 15483035,
                     "added_by": 197701,
                     "type": "received",
-                    "order": 6,
+                    "order": 16,
                     "note": null,
                     "officer_note": "Votes: 0 \"Mainspec\"",
                     "is_offspec": 0,
@@ -20284,7 +20284,7 @@
                     "raid_id": 90973,
                     "received_at": "2023-03-30 00:00:00",
                     "created_at": "2023-03-30T20:49:41.000000Z",
-                    "updated_at": "2023-06-25T09:40:56.000000Z"
+                    "updated_at": "2023-10-12T19:29:07.000000Z"
                 }
             },
             {
@@ -20309,7 +20309,7 @@
                     "id": 15483036,
                     "added_by": 197701,
                     "type": "received",
-                    "order": 7,
+                    "order": 17,
                     "note": null,
                     "officer_note": "Votes: 0 \"Mainspec\"",
                     "is_offspec": 0,
@@ -20317,7 +20317,7 @@
                     "raid_id": 90973,
                     "received_at": "2023-03-30 00:00:00",
                     "created_at": "2023-03-30T20:49:41.000000Z",
-                    "updated_at": "2023-06-25T09:40:56.000000Z"
+                    "updated_at": "2023-10-12T19:29:07.000000Z"
                 }
             },
             {
@@ -20342,7 +20342,7 @@
                     "id": 15257934,
                     "added_by": 256221,
                     "type": "received",
-                    "order": 8,
+                    "order": 18,
                     "note": null,
                     "officer_note": "Votes: 0 \"Mainspec\/Need\"",
                     "is_offspec": 0,
@@ -20350,7 +20350,7 @@
                     "raid_id": 88852,
                     "received_at": "2023-03-16 22:15:13",
                     "created_at": "2023-03-16T22:15:13.000000Z",
-                    "updated_at": "2023-06-25T09:40:56.000000Z"
+                    "updated_at": "2023-10-12T19:29:07.000000Z"
                 }
             },
             {
@@ -20375,7 +20375,7 @@
                     "id": 15128632,
                     "added_by": 197701,
                     "type": "received",
-                    "order": 9,
+                    "order": 19,
                     "note": null,
                     "officer_note": "Votes: 0 \"OffSpec\"",
                     "is_offspec": 1,
@@ -20383,7 +20383,7 @@
                     "raid_id": 87745,
                     "received_at": "2023-03-09 00:00:00",
                     "created_at": "2023-03-09T22:02:12.000000Z",
-                    "updated_at": "2023-06-25T09:40:56.000000Z"
+                    "updated_at": "2023-10-12T19:29:07.000000Z"
                 }
             },
             {
@@ -20408,7 +20408,7 @@
                     "id": 14573342,
                     "added_by": 197701,
                     "type": "received",
-                    "order": 10,
+                    "order": 20,
                     "note": null,
                     "officer_note": "Votes: 0 \"Mainspec\"",
                     "is_offspec": 0,
@@ -20416,7 +20416,7 @@
                     "raid_id": 82959,
                     "received_at": "2023-02-12 00:00:00",
                     "created_at": "2023-02-12T22:40:12.000000Z",
-                    "updated_at": "2023-06-25T09:40:56.000000Z"
+                    "updated_at": "2023-10-12T19:29:07.000000Z"
                 }
             },
             {
@@ -20441,7 +20441,7 @@
                     "id": 14380844,
                     "added_by": 197701,
                     "type": "received",
-                    "order": 11,
+                    "order": 21,
                     "note": null,
                     "officer_note": "Votes: 0 \"Mainspec\"",
                     "is_offspec": 0,
@@ -20449,7 +20449,7 @@
                     "raid_id": 81376,
                     "received_at": "2023-02-05 00:00:00",
                     "created_at": "2023-02-05T21:47:45.000000Z",
-                    "updated_at": "2023-06-25T09:40:56.000000Z"
+                    "updated_at": "2023-10-12T19:29:07.000000Z"
                 }
             },
             {
@@ -20474,7 +20474,7 @@
                     "id": 14036284,
                     "added_by": 197701,
                     "type": "received",
-                    "order": 12,
+                    "order": 22,
                     "note": null,
                     "officer_note": "Votes: 0 \"Mainspec\"",
                     "is_offspec": 0,
@@ -20482,7 +20482,7 @@
                     "raid_id": 79038,
                     "received_at": "2023-01-26 00:00:00",
                     "created_at": "2023-01-26T22:08:29.000000Z",
-                    "updated_at": "2023-06-25T09:40:56.000000Z"
+                    "updated_at": "2023-10-12T19:29:07.000000Z"
                 }
             },
             {
@@ -20507,7 +20507,7 @@
                     "id": 14036283,
                     "added_by": 197701,
                     "type": "received",
-                    "order": 13,
+                    "order": 23,
                     "note": null,
                     "officer_note": "Votes: 0 \"Mainspec\"",
                     "is_offspec": 0,
@@ -20515,7 +20515,7 @@
                     "raid_id": 79038,
                     "received_at": "2023-01-26 00:00:00",
                     "created_at": "2023-01-26T22:08:29.000000Z",
-                    "updated_at": "2023-06-25T09:40:56.000000Z"
+                    "updated_at": "2023-10-12T19:29:07.000000Z"
                 }
             },
             {
@@ -20540,7 +20540,7 @@
                     "id": 14036285,
                     "added_by": 197701,
                     "type": "received",
-                    "order": 14,
+                    "order": 24,
                     "note": null,
                     "officer_note": "Votes: 0 \"Mainspec\"",
                     "is_offspec": 0,
@@ -20548,7 +20548,7 @@
                     "raid_id": 79038,
                     "received_at": "2023-01-26 00:00:00",
                     "created_at": "2023-01-26T22:08:29.000000Z",
-                    "updated_at": "2023-06-25T09:40:56.000000Z"
+                    "updated_at": "2023-10-12T19:29:07.000000Z"
                 }
             },
             {
@@ -20573,7 +20573,7 @@
                     "id": 11256784,
                     "added_by": 256221,
                     "type": "received",
-                    "order": 15,
+                    "order": 25,
                     "note": null,
                     "officer_note": "Votes: 0 \"Mainspec\/Need\"",
                     "is_offspec": 0,
@@ -20581,7 +20581,7 @@
                     "raid_id": 72770,
                     "received_at": "2022-12-15 00:00:00",
                     "created_at": "2022-12-15T21:45:06.000000Z",
-                    "updated_at": "2023-06-25T09:40:56.000000Z"
+                    "updated_at": "2023-10-12T19:29:07.000000Z"
                 }
             },
             {
@@ -20606,7 +20606,7 @@
                     "id": 10966522,
                     "added_by": 197701,
                     "type": "received",
-                    "order": 16,
+                    "order": 26,
                     "note": null,
                     "officer_note": "Votes: 0 \"Off-Spec\"",
                     "is_offspec": 1,
@@ -20614,7 +20614,7 @@
                     "raid_id": 70735,
                     "received_at": "2022-12-01 00:00:00",
                     "created_at": "2022-12-01T22:48:29.000000Z",
-                    "updated_at": "2023-06-25T09:40:56.000000Z"
+                    "updated_at": "2023-10-12T19:29:07.000000Z"
                 }
             },
             {
@@ -20639,7 +20639,7 @@
                     "id": 10791106,
                     "added_by": 197701,
                     "type": "received",
-                    "order": 17,
+                    "order": 27,
                     "note": null,
                     "officer_note": "Votes: 0 \"Off-Spec\"",
                     "is_offspec": 1,
@@ -20647,7 +20647,7 @@
                     "raid_id": 69586,
                     "received_at": "2022-11-24 00:00:00",
                     "created_at": "2022-11-24T21:48:02.000000Z",
-                    "updated_at": "2023-06-25T09:40:56.000000Z"
+                    "updated_at": "2023-10-12T19:29:07.000000Z"
                 }
             },
             {
@@ -20672,7 +20672,7 @@
                     "id": 10592791,
                     "added_by": 197701,
                     "type": "received",
-                    "order": 18,
+                    "order": 28,
                     "note": null,
                     "officer_note": "Votes: 0 \"Mainspec\"",
                     "is_offspec": 0,
@@ -20680,7 +20680,7 @@
                     "raid_id": 68337,
                     "received_at": "2022-11-17 00:00:00",
                     "created_at": "2022-11-17T21:57:26.000000Z",
-                    "updated_at": "2023-06-25T09:40:56.000000Z"
+                    "updated_at": "2023-10-12T19:29:07.000000Z"
                 }
             },
             {
@@ -20705,7 +20705,7 @@
                     "id": 10592790,
                     "added_by": 197701,
                     "type": "received",
-                    "order": 19,
+                    "order": 29,
                     "note": null,
                     "officer_note": "Votes: 0 \"Mainspec\"",
                     "is_offspec": 0,
@@ -20713,7 +20713,7 @@
                     "raid_id": 68337,
                     "received_at": "2022-11-17 00:00:00",
                     "created_at": "2022-11-17T21:57:26.000000Z",
-                    "updated_at": "2023-06-25T09:40:56.000000Z"
+                    "updated_at": "2023-10-12T19:29:07.000000Z"
                 }
             },
             {
@@ -20738,7 +20738,7 @@
                     "id": 10354878,
                     "added_by": 256221,
                     "type": "received",
-                    "order": 20,
+                    "order": 30,
                     "note": null,
                     "officer_note": null,
                     "is_offspec": 0,
@@ -20746,7 +20746,7 @@
                     "raid_id": 67055,
                     "received_at": "2022-11-10 00:00:00",
                     "created_at": "2022-11-10T22:24:03.000000Z",
-                    "updated_at": "2023-06-25T09:40:56.000000Z"
+                    "updated_at": "2023-10-12T19:29:07.000000Z"
                 }
             },
             {
@@ -20771,7 +20771,7 @@
                     "id": 10079935,
                     "added_by": 256221,
                     "type": "received",
-                    "order": 21,
+                    "order": 31,
                     "note": null,
                     "officer_note": null,
                     "is_offspec": 0,
@@ -20779,7 +20779,7 @@
                     "raid_id": 65735,
                     "received_at": "2022-11-03 00:00:00",
                     "created_at": "2022-11-03T22:46:29.000000Z",
-                    "updated_at": "2023-06-25T09:40:56.000000Z"
+                    "updated_at": "2023-10-12T19:29:07.000000Z"
                 }
             },
             {
@@ -20804,7 +20804,7 @@
                     "id": 10079910,
                     "added_by": 256221,
                     "type": "received",
-                    "order": 22,
+                    "order": 32,
                     "note": null,
                     "officer_note": null,
                     "is_offspec": 0,
@@ -20812,7 +20812,7 @@
                     "raid_id": 65735,
                     "received_at": "2022-11-03 00:00:00",
                     "created_at": "2022-11-03T22:46:29.000000Z",
-                    "updated_at": "2023-06-25T09:40:56.000000Z"
+                    "updated_at": "2023-10-12T19:29:07.000000Z"
                 }
             },
             {
@@ -20837,7 +20837,7 @@
                     "id": 10079924,
                     "added_by": 256221,
                     "type": "received",
-                    "order": 23,
+                    "order": 33,
                     "note": null,
                     "officer_note": null,
                     "is_offspec": 0,
@@ -20845,7 +20845,7 @@
                     "raid_id": 65735,
                     "received_at": "2022-11-03 00:00:00",
                     "created_at": "2022-11-03T22:46:29.000000Z",
-                    "updated_at": "2023-06-25T09:40:56.000000Z"
+                    "updated_at": "2023-10-12T19:29:07.000000Z"
                 }
             },
             {
@@ -20870,7 +20870,7 @@
                     "id": 10079902,
                     "added_by": 256221,
                     "type": "received",
-                    "order": 24,
+                    "order": 34,
                     "note": null,
                     "officer_note": null,
                     "is_offspec": 0,
@@ -20878,7 +20878,7 @@
                     "raid_id": 65735,
                     "received_at": "2022-11-03 00:00:00",
                     "created_at": "2022-11-03T22:46:29.000000Z",
-                    "updated_at": "2023-06-25T09:40:56.000000Z"
+                    "updated_at": "2023-10-12T19:29:07.000000Z"
                 }
             },
             {
@@ -20903,7 +20903,7 @@
                     "id": 10079914,
                     "added_by": 256221,
                     "type": "received",
-                    "order": 25,
+                    "order": 35,
                     "note": null,
                     "officer_note": null,
                     "is_offspec": 0,
@@ -20911,7 +20911,7 @@
                     "raid_id": 65735,
                     "received_at": "2022-11-03 00:00:00",
                     "created_at": "2022-11-03T22:46:29.000000Z",
-                    "updated_at": "2023-06-25T09:40:56.000000Z"
+                    "updated_at": "2023-10-12T19:29:07.000000Z"
                 }
             },
             {
@@ -20936,7 +20936,7 @@
                     "id": 9749509,
                     "added_by": 197701,
                     "type": "received",
-                    "order": 26,
+                    "order": 36,
                     "note": null,
                     "officer_note": null,
                     "is_offspec": 0,
@@ -20944,7 +20944,7 @@
                     "raid_id": 64367,
                     "received_at": "2022-10-27 00:00:00",
                     "created_at": "2022-10-27T21:12:41.000000Z",
-                    "updated_at": "2023-06-25T09:40:56.000000Z"
+                    "updated_at": "2023-10-12T19:29:07.000000Z"
                 }
             },
             {
@@ -20969,7 +20969,7 @@
                     "id": 9363218,
                     "added_by": 197701,
                     "type": "received",
-                    "order": 27,
+                    "order": 37,
                     "note": null,
                     "officer_note": null,
                     "is_offspec": 0,
@@ -20977,7 +20977,7 @@
                     "raid_id": 63043,
                     "received_at": "2022-10-20 00:00:00",
                     "created_at": "2022-10-21T08:22:41.000000Z",
-                    "updated_at": "2023-06-25T09:40:56.000000Z"
+                    "updated_at": "2023-10-12T19:29:07.000000Z"
                 }
             },
             {
@@ -21002,7 +21002,7 @@
                     "id": 9363204,
                     "added_by": 197701,
                     "type": "received",
-                    "order": 28,
+                    "order": 38,
                     "note": null,
                     "officer_note": null,
                     "is_offspec": 0,
@@ -21010,7 +21010,7 @@
                     "raid_id": 63043,
                     "received_at": "2022-10-20 00:00:00",
                     "created_at": "2022-10-21T08:22:41.000000Z",
-                    "updated_at": "2023-06-25T09:40:56.000000Z"
+                    "updated_at": "2023-10-12T19:29:07.000000Z"
                 }
             },
             {
@@ -21035,7 +21035,7 @@
                     "id": 9362929,
                     "added_by": 197701,
                     "type": "received",
-                    "order": 29,
+                    "order": 39,
                     "note": null,
                     "officer_note": null,
                     "is_offspec": 0,
@@ -21043,7 +21043,7 @@
                     "raid_id": 63040,
                     "received_at": "2022-10-09 00:00:00",
                     "created_at": "2022-10-21T08:17:28.000000Z",
-                    "updated_at": "2023-06-25T09:40:56.000000Z"
+                    "updated_at": "2023-10-12T19:29:07.000000Z"
                 }
             },
             {
@@ -21068,7 +21068,7 @@
                     "id": 9362940,
                     "added_by": 197701,
                     "type": "received",
-                    "order": 30,
+                    "order": 40,
                     "note": null,
                     "officer_note": null,
                     "is_offspec": 0,
@@ -21076,13 +21076,119 @@
                     "raid_id": 63040,
                     "received_at": "2022-10-09 00:00:00",
                     "created_at": "2022-10-21T08:17:28.000000Z",
-                    "updated_at": "2023-06-25T09:40:56.000000Z"
+                    "updated_at": "2023-10-12T19:29:07.000000Z"
                 }
             }
         ],
         "secondary_raid_groups": [],
         "prios": [],
-        "wishlist": []
+        "wishlist": [
+            {
+                "id": 72688,
+                "item_id": 50737,
+                "parent_id": null,
+                "parent_item_id": null,
+                "expansion_id": 3,
+                "name": "Havoc's Call, Blade of Lordaeron Kings",
+                "weight": 0.5,
+                "quality": 4,
+                "inventory_type": 13,
+                "item_source_id": 312,
+                "instance_id": 38,
+                "instance_name": "Icecrown Citadel H25",
+                "instance_order": 38,
+                "added_by_username": "Skelletor",
+                "guild_tier": null,
+                "list_number": 4,
+                "pivot": {
+                    "character_id": 328891,
+                    "item_id": 50737,
+                    "id": 19257695,
+                    "added_by": 258840,
+                    "type": "wishlist",
+                    "order": 1,
+                    "list_number": 4,
+                    "is_offspec": 0,
+                    "is_received": 0,
+                    "received_at": null,
+                    "note": null,
+                    "raid_group_id": null,
+                    "raid_id": null,
+                    "created_at": "2023-10-12T19:29:07.000000Z",
+                    "updated_at": "2023-10-12T19:29:07.000000Z"
+                }
+            },
+            {
+                "id": 72286,
+                "item_id": 50363,
+                "parent_id": null,
+                "parent_item_id": null,
+                "expansion_id": 3,
+                "name": "Deathbringer's Will",
+                "weight": 0.5,
+                "quality": 4,
+                "inventory_type": 12,
+                "item_source_id": 304,
+                "instance_id": 38,
+                "instance_name": "Icecrown Citadel H25",
+                "instance_order": 38,
+                "added_by_username": "Skelletor",
+                "guild_tier": null,
+                "list_number": 4,
+                "pivot": {
+                    "character_id": 328891,
+                    "item_id": 50363,
+                    "id": 19257696,
+                    "added_by": 258840,
+                    "type": "wishlist",
+                    "order": 2,
+                    "list_number": 4,
+                    "is_offspec": 0,
+                    "is_received": 0,
+                    "received_at": null,
+                    "note": null,
+                    "raid_group_id": null,
+                    "raid_id": null,
+                    "created_at": "2023-10-12T19:29:07.000000Z",
+                    "updated_at": "2023-10-12T19:29:07.000000Z"
+                }
+            },
+            {
+                "id": 72317,
+                "item_id": 50670,
+                "parent_id": null,
+                "parent_item_id": null,
+                "expansion_id": 3,
+                "name": "Toskk's Maximized Wristguards",
+                "weight": 0.5,
+                "quality": 4,
+                "inventory_type": 9,
+                "item_source_id": 304,
+                "instance_id": 38,
+                "instance_name": "Icecrown Citadel H25",
+                "instance_order": 38,
+                "added_by_username": "Skelletor",
+                "guild_tier": null,
+                "list_number": 4,
+                "pivot": {
+                    "character_id": 328891,
+                    "item_id": 50670,
+                    "id": 19257697,
+                    "added_by": 258840,
+                    "type": "wishlist",
+                    "order": 3,
+                    "list_number": 4,
+                    "is_offspec": 0,
+                    "is_received": 0,
+                    "received_at": null,
+                    "note": null,
+                    "raid_group_id": null,
+                    "raid_id": null,
+                    "created_at": "2023-10-12T19:29:07.000000Z",
+                    "updated_at": "2023-10-12T19:29:07.000000Z"
+                }
+            }
+        ]
     },
     {
         "id": 329330,
@@ -22707,39 +22813,6 @@
                     "created_at": "2022-10-21T08:17:28.000000Z",
                     "updated_at": "2023-10-09T17:05:21.000000Z"
                 }
-            },
-            {
-                "id": 72534,
-                "item_id": 50365,
-                "parent_id": null,
-                "parent_item_id": null,
-                "expansion_id": 3,
-                "name": "Phylactery of the Nameless Lich",
-                "weight": 0.5,
-                "quality": 4,
-                "inventory_type": 12,
-                "added_by_username": "moXon460",
-                "raid_group_name": null,
-                "raid_name": null,
-                "raid_slug": null,
-                "instance_id": 38,
-                "guild_tier": null,
-                "pivot": {
-                    "character_id": 329330,
-                    "item_id": 50365,
-                    "id": 19004597,
-                    "added_by": 259176,
-                    "type": "received",
-                    "order": 49,
-                    "note": null,
-                    "officer_note": null,
-                    "is_offspec": 0,
-                    "raid_group_id": null,
-                    "raid_id": null,
-                    "received_at": "2023-10-09 17:05:21",
-                    "created_at": "2023-10-09T17:05:21.000000Z",
-                    "updated_at": "2023-10-09T17:05:21.000000Z"
-                }
             }
         ],
         "secondary_raid_groups": [
@@ -23002,6 +23075,39 @@
                 }
             },
             {
+                "id": 70548,
+                "item_id": 47095,
+                "parent_id": null,
+                "parent_item_id": null,
+                "expansion_id": 3,
+                "name": "Cloak of Displacement",
+                "weight": 0.5,
+                "quality": 4,
+                "inventory_type": 16,
+                "added_by_username": "SAMi",
+                "raid_group_name": "Main raid",
+                "raid_name": "ToGC 1 + Ulduar (w40)",
+                "raid_slug": "togc-1-ulduar-w40",
+                "instance_id": 32,
+                "guild_tier": null,
+                "pivot": {
+                    "character_id": 490654,
+                    "item_id": 47095,
+                    "id": 17488775,
+                    "added_by": 256221,
+                    "type": "received",
+                    "order": 0,
+                    "note": null,
+                    "officer_note": "Votes: 0 \"Mainspec\/Need\"",
+                    "is_offspec": 0,
+                    "raid_group_id": 9974,
+                    "raid_id": 102932,
+                    "received_at": "2023-07-13 21:07:25",
+                    "created_at": "2023-07-13T21:07:25.000000Z",
+                    "updated_at": null
+                }
+            },
+            {
                 "id": 70547,
                 "item_id": 47242,
                 "parent_id": null,
@@ -23054,39 +23160,6 @@
                     "character_id": 490654,
                     "item_id": 45620,
                     "id": 17488776,
-                    "added_by": 256221,
-                    "type": "received",
-                    "order": 0,
-                    "note": null,
-                    "officer_note": "Votes: 0 \"Mainspec\/Need\"",
-                    "is_offspec": 0,
-                    "raid_group_id": 9974,
-                    "raid_id": 102932,
-                    "received_at": "2023-07-13 21:07:25",
-                    "created_at": "2023-07-13T21:07:25.000000Z",
-                    "updated_at": null
-                }
-            },
-            {
-                "id": 70548,
-                "item_id": 47095,
-                "parent_id": null,
-                "parent_item_id": null,
-                "expansion_id": 3,
-                "name": "Cloak of Displacement",
-                "weight": 0.5,
-                "quality": 4,
-                "inventory_type": 16,
-                "added_by_username": "SAMi",
-                "raid_group_name": "Main raid",
-                "raid_name": "ToGC 1 + Ulduar (w40)",
-                "raid_slug": "togc-1-ulduar-w40",
-                "instance_id": 32,
-                "guild_tier": null,
-                "pivot": {
-                    "character_id": 490654,
-                    "item_id": 47095,
-                    "id": 17488775,
                     "added_by": 256221,
                     "type": "received",
                     "order": 0,
@@ -28755,39 +28828,6 @@
                 }
             },
             {
-                "id": 70555,
-                "item_id": 47099,
-                "parent_id": null,
-                "parent_item_id": null,
-                "expansion_id": 3,
-                "name": "Boots of Tremoring Earth",
-                "weight": 0.5,
-                "quality": 4,
-                "inventory_type": 8,
-                "added_by_username": "Jask",
-                "raid_group_name": "Main raid",
-                "raid_name": "ToGC (W39)",
-                "raid_slug": "togc-w39",
-                "instance_id": 32,
-                "guild_tier": null,
-                "pivot": {
-                    "character_id": 348173,
-                    "item_id": 47099,
-                    "id": 17380584,
-                    "added_by": 197701,
-                    "type": "received",
-                    "order": 0,
-                    "note": null,
-                    "officer_note": "Votes: 0 \"Mainspec\"",
-                    "is_offspec": 0,
-                    "raid_group_id": 9974,
-                    "raid_id": 102065,
-                    "received_at": "2023-07-06 00:00:00",
-                    "created_at": "2023-07-06T21:06:45.000000Z",
-                    "updated_at": null
-                }
-            },
-            {
                 "id": 70547,
                 "item_id": 47242,
                 "parent_id": null,
@@ -28840,6 +28880,39 @@
                     "character_id": 348173,
                     "item_id": 47242,
                     "id": 17380585,
+                    "added_by": 197701,
+                    "type": "received",
+                    "order": 0,
+                    "note": null,
+                    "officer_note": "Votes: 0 \"Mainspec\"",
+                    "is_offspec": 0,
+                    "raid_group_id": 9974,
+                    "raid_id": 102065,
+                    "received_at": "2023-07-06 00:00:00",
+                    "created_at": "2023-07-06T21:06:45.000000Z",
+                    "updated_at": null
+                }
+            },
+            {
+                "id": 70555,
+                "item_id": 47099,
+                "parent_id": null,
+                "parent_item_id": null,
+                "expansion_id": 3,
+                "name": "Boots of Tremoring Earth",
+                "weight": 0.5,
+                "quality": 4,
+                "inventory_type": 8,
+                "added_by_username": "Jask",
+                "raid_group_name": "Main raid",
+                "raid_name": "ToGC (W39)",
+                "raid_slug": "togc-w39",
+                "instance_id": 32,
+                "guild_tier": null,
+                "pivot": {
+                    "character_id": 348173,
+                    "item_id": 47099,
+                    "id": 17380584,
                     "added_by": 197701,
                     "type": "received",
                     "order": 0,
@@ -30450,6 +30523,39 @@
         "sub_archetype": "Physical",
         "received": [
             {
+                "id": 68655,
+                "item_id": 45654,
+                "parent_id": null,
+                "parent_item_id": null,
+                "expansion_id": 3,
+                "name": "Legplates of the Wayward Protector",
+                "weight": 0.5,
+                "quality": 4,
+                "inventory_type": 0,
+                "added_by_username": "solaris",
+                "raid_group_name": "Main raid",
+                "raid_name": "Ulduar 1 (w31)",
+                "raid_slug": "ulduar-1-w31",
+                "instance_id": 28,
+                "guild_tier": 3,
+                "pivot": {
+                    "character_id": 490653,
+                    "item_id": 45654,
+                    "id": 15994279,
+                    "added_by": 254581,
+                    "type": "received",
+                    "order": 0,
+                    "note": null,
+                    "officer_note": "Votes: 0 \"Mainspec\/Need\"",
+                    "is_offspec": 0,
+                    "raid_group_id": 9974,
+                    "raid_id": 96072,
+                    "received_at": "2023-05-11 00:00:00",
+                    "created_at": "2023-05-11T21:35:02.000000Z",
+                    "updated_at": null
+                }
+            },
+            {
                 "id": 68308,
                 "item_id": 45239,
                 "parent_id": null,
@@ -30535,39 +30641,6 @@
                     "character_id": 490653,
                     "item_id": 45263,
                     "id": 15994277,
-                    "added_by": 254581,
-                    "type": "received",
-                    "order": 0,
-                    "note": null,
-                    "officer_note": "Votes: 0 \"Mainspec\/Need\"",
-                    "is_offspec": 0,
-                    "raid_group_id": 9974,
-                    "raid_id": 96072,
-                    "received_at": "2023-05-11 00:00:00",
-                    "created_at": "2023-05-11T21:35:02.000000Z",
-                    "updated_at": null
-                }
-            },
-            {
-                "id": 68655,
-                "item_id": 45654,
-                "parent_id": null,
-                "parent_item_id": null,
-                "expansion_id": 3,
-                "name": "Legplates of the Wayward Protector",
-                "weight": 0.5,
-                "quality": 4,
-                "inventory_type": 0,
-                "added_by_username": "solaris",
-                "raid_group_name": "Main raid",
-                "raid_name": "Ulduar 1 (w31)",
-                "raid_slug": "ulduar-1-w31",
-                "instance_id": 28,
-                "guild_tier": 3,
-                "pivot": {
-                    "character_id": 490653,
-                    "item_id": 45654,
-                    "id": 15994279,
                     "added_by": 254581,
                     "type": "received",
                     "order": 0,
@@ -42315,39 +42388,6 @@
                 }
             },
             {
-                "id": 70550,
-                "item_id": 47097,
-                "parent_id": null,
-                "parent_item_id": null,
-                "expansion_id": 3,
-                "name": "Boots of the Mourning Widow",
-                "weight": 0.5,
-                "quality": 4,
-                "inventory_type": 8,
-                "added_by_username": "SAMi",
-                "raid_group_name": "Main raid",
-                "raid_name": "ToGC w44",
-                "raid_slug": "togc-w44",
-                "instance_id": 32,
-                "guild_tier": null,
-                "pivot": {
-                    "character_id": 401707,
-                    "item_id": 47097,
-                    "id": 17841275,
-                    "added_by": 256221,
-                    "type": "received",
-                    "order": 0,
-                    "note": null,
-                    "officer_note": "Votes: 0 \"Mainspec\/Need\"",
-                    "is_offspec": 0,
-                    "raid_group_id": 9974,
-                    "raid_id": 105906,
-                    "received_at": "2023-08-10 00:00:00",
-                    "created_at": "2023-08-10T19:24:43.000000Z",
-                    "updated_at": null
-                }
-            },
-            {
                 "id": 70583,
                 "item_id": 46989,
                 "parent_id": null,
@@ -42405,6 +42445,39 @@
                     "order": 0,
                     "note": null,
                     "officer_note": "Votes: 0 \"Off-Spec\"",
+                    "is_offspec": 0,
+                    "raid_group_id": 9974,
+                    "raid_id": 105906,
+                    "received_at": "2023-08-10 00:00:00",
+                    "created_at": "2023-08-10T19:24:43.000000Z",
+                    "updated_at": null
+                }
+            },
+            {
+                "id": 70550,
+                "item_id": 47097,
+                "parent_id": null,
+                "parent_item_id": null,
+                "expansion_id": 3,
+                "name": "Boots of the Mourning Widow",
+                "weight": 0.5,
+                "quality": 4,
+                "inventory_type": 8,
+                "added_by_username": "SAMi",
+                "raid_group_name": "Main raid",
+                "raid_name": "ToGC w44",
+                "raid_slug": "togc-w44",
+                "instance_id": 32,
+                "guild_tier": null,
+                "pivot": {
+                    "character_id": 401707,
+                    "item_id": 47097,
+                    "id": 17841275,
+                    "added_by": 256221,
+                    "type": "received",
+                    "order": 0,
+                    "note": null,
+                    "officer_note": "Votes: 0 \"Mainspec\/Need\"",
                     "is_offspec": 0,
                     "raid_group_id": 9974,
                     "raid_id": 105906,
@@ -42480,39 +42553,6 @@
                 }
             },
             {
-                "id": 70579,
-                "item_id": 46977,
-                "parent_id": null,
-                "parent_item_id": null,
-                "expansion_id": 3,
-                "name": "Shawl of the Refreshing Winds",
-                "weight": 0.5,
-                "quality": 4,
-                "inventory_type": 16,
-                "added_by_username": "SAMi",
-                "raid_group_name": "Main raid",
-                "raid_name": "ToGC 1 + Ulduar (w40)",
-                "raid_slug": "togc-1-ulduar-w40",
-                "instance_id": 32,
-                "guild_tier": null,
-                "pivot": {
-                    "character_id": 401707,
-                    "item_id": 46977,
-                    "id": 17488757,
-                    "added_by": 256221,
-                    "type": "received",
-                    "order": 0,
-                    "note": null,
-                    "officer_note": "Votes: 0 \"Mainspec\/Need\"",
-                    "is_offspec": 0,
-                    "raid_group_id": 9974,
-                    "raid_id": 102932,
-                    "received_at": "2023-07-13 21:07:25",
-                    "created_at": "2023-07-13T21:07:25.000000Z",
-                    "updated_at": null
-                }
-            },
-            {
                 "id": 70566,
                 "item_id": 47066,
                 "parent_id": null,
@@ -42546,25 +42586,25 @@
                 }
             },
             {
-                "id": 69148,
-                "item_id": 45535,
+                "id": 70579,
+                "item_id": 46977,
                 "parent_id": null,
                 "parent_item_id": null,
                 "expansion_id": 3,
-                "name": "Show of Faith",
+                "name": "Shawl of the Refreshing Winds",
                 "weight": 0.5,
                 "quality": 4,
-                "inventory_type": 12,
+                "inventory_type": 16,
                 "added_by_username": "SAMi",
                 "raid_group_name": "Main raid",
-                "raid_name": "Ulduar 1 (w38)",
-                "raid_slug": "ulduar-1-w38",
-                "instance_id": 28,
-                "guild_tier": 1,
+                "raid_name": "ToGC 1 + Ulduar (w40)",
+                "raid_slug": "togc-1-ulduar-w40",
+                "instance_id": 32,
+                "guild_tier": null,
                 "pivot": {
                     "character_id": 401707,
-                    "item_id": 45535,
-                    "id": 17308837,
+                    "item_id": 46977,
+                    "id": 17488757,
                     "added_by": 256221,
                     "type": "received",
                     "order": 0,
@@ -42572,9 +42612,9 @@
                     "officer_note": "Votes: 0 \"Mainspec\/Need\"",
                     "is_offspec": 0,
                     "raid_group_id": 9974,
-                    "raid_id": 101502,
-                    "received_at": "2023-07-02 00:00:00",
-                    "created_at": "2023-07-02T19:58:53.000000Z",
+                    "raid_id": 102932,
+                    "received_at": "2023-07-13 21:07:25",
+                    "created_at": "2023-07-13T21:07:25.000000Z",
                     "updated_at": null
                 }
             },
@@ -42598,6 +42638,39 @@
                     "character_id": 401707,
                     "item_id": 45665,
                     "id": 17308836,
+                    "added_by": 256221,
+                    "type": "received",
+                    "order": 0,
+                    "note": null,
+                    "officer_note": "Votes: 0 \"Mainspec\/Need\"",
+                    "is_offspec": 0,
+                    "raid_group_id": 9974,
+                    "raid_id": 101502,
+                    "received_at": "2023-07-02 00:00:00",
+                    "created_at": "2023-07-02T19:58:53.000000Z",
+                    "updated_at": null
+                }
+            },
+            {
+                "id": 69148,
+                "item_id": 45535,
+                "parent_id": null,
+                "parent_item_id": null,
+                "expansion_id": 3,
+                "name": "Show of Faith",
+                "weight": 0.5,
+                "quality": 4,
+                "inventory_type": 12,
+                "added_by_username": "SAMi",
+                "raid_group_name": "Main raid",
+                "raid_name": "Ulduar 1 (w38)",
+                "raid_slug": "ulduar-1-w38",
+                "instance_id": 28,
+                "guild_tier": 1,
+                "pivot": {
+                    "character_id": 401707,
+                    "item_id": 45535,
+                    "id": 17308837,
                     "added_by": 256221,
                     "type": "received",
                     "order": 0,
@@ -47401,6 +47474,72 @@
         "sub_archetype": null,
         "received": [
             {
+                "id": 68550,
+                "item_id": 45508,
+                "parent_id": null,
+                "parent_item_id": null,
+                "expansion_id": 3,
+                "name": "Belt of the Darkspeaker",
+                "weight": 0.5,
+                "quality": 4,
+                "inventory_type": 6,
+                "added_by_username": "SAMi",
+                "raid_group_name": "Main raid",
+                "raid_name": "Ulduar 1",
+                "raid_slug": "ulduar-1",
+                "instance_id": 28,
+                "guild_tier": 4,
+                "pivot": {
+                    "character_id": 490652,
+                    "item_id": 45508,
+                    "id": 16159044,
+                    "added_by": 256221,
+                    "type": "received",
+                    "order": 0,
+                    "note": null,
+                    "officer_note": "Votes: 0 \"Off-Spec\"",
+                    "is_offspec": 0,
+                    "raid_group_id": 9974,
+                    "raid_id": 97624,
+                    "received_at": "2023-05-25 00:00:00",
+                    "created_at": "2023-05-25T21:31:37.000000Z",
+                    "updated_at": null
+                }
+            },
+            {
+                "id": 68340,
+                "item_id": 45271,
+                "parent_id": null,
+                "parent_item_id": null,
+                "expansion_id": 3,
+                "name": "Ironmender",
+                "weight": 0.5,
+                "quality": 4,
+                "inventory_type": 23,
+                "added_by_username": "SAMi",
+                "raid_group_name": "Main raid",
+                "raid_name": "Ulduar 1",
+                "raid_slug": "ulduar-1",
+                "instance_id": 28,
+                "guild_tier": 1,
+                "pivot": {
+                    "character_id": 490652,
+                    "item_id": 45271,
+                    "id": 16159041,
+                    "added_by": 256221,
+                    "type": "received",
+                    "order": 0,
+                    "note": null,
+                    "officer_note": "Votes: 0 \"Off-Spec\"",
+                    "is_offspec": 0,
+                    "raid_group_id": 9974,
+                    "raid_id": 97624,
+                    "received_at": "2023-05-25 00:00:00",
+                    "created_at": "2023-05-25T21:31:37.000000Z",
+                    "updated_at": null
+                }
+            },
+            {
                 "id": 69151,
                 "item_id": 45620,
                 "parent_id": null,
@@ -47500,68 +47639,68 @@
                 }
             },
             {
-                "id": 68550,
-                "item_id": 45508,
+                "id": 71191,
+                "item_id": 45488,
                 "parent_id": null,
                 "parent_item_id": null,
                 "expansion_id": 3,
-                "name": "Belt of the Darkspeaker",
+                "name": "Leggings of the Enslaved Idol",
                 "weight": 0.5,
                 "quality": 4,
-                "inventory_type": 6,
-                "added_by_username": "SAMi",
+                "inventory_type": 7,
+                "added_by_username": "solaris",
                 "raid_group_name": "Main raid",
-                "raid_name": "Ulduar 1",
-                "raid_slug": "ulduar-1",
+                "raid_name": "Ulduar 1 (w31)",
+                "raid_slug": "ulduar-1-w31",
                 "instance_id": 28,
-                "guild_tier": 4,
+                "guild_tier": 2,
                 "pivot": {
                     "character_id": 490652,
-                    "item_id": 45508,
-                    "id": 16159044,
-                    "added_by": 256221,
+                    "item_id": 45488,
+                    "id": 15994292,
+                    "added_by": 254581,
                     "type": "received",
                     "order": 0,
                     "note": null,
-                    "officer_note": "Votes: 0 \"Off-Spec\"",
+                    "officer_note": "Votes: 0 \"In tier Upgrade\"",
                     "is_offspec": 0,
                     "raid_group_id": 9974,
-                    "raid_id": 97624,
-                    "received_at": "2023-05-25 00:00:00",
-                    "created_at": "2023-05-25T21:31:37.000000Z",
+                    "raid_id": 96072,
+                    "received_at": "2023-05-11 00:00:00",
+                    "created_at": "2023-05-11T21:35:02.000000Z",
                     "updated_at": null
                 }
             },
             {
-                "id": 68340,
-                "item_id": 45271,
+                "id": 68303,
+                "item_id": 45234,
                 "parent_id": null,
                 "parent_item_id": null,
                 "expansion_id": 3,
-                "name": "Ironmender",
+                "name": "Rapture",
                 "weight": 0.5,
                 "quality": 4,
-                "inventory_type": 23,
-                "added_by_username": "SAMi",
+                "inventory_type": 17,
+                "added_by_username": "solaris",
                 "raid_group_name": "Main raid",
-                "raid_name": "Ulduar 1",
-                "raid_slug": "ulduar-1",
+                "raid_name": "Ulduar 1 (w31)",
+                "raid_slug": "ulduar-1-w31",
                 "instance_id": 28,
-                "guild_tier": 1,
+                "guild_tier": 3,
                 "pivot": {
                     "character_id": 490652,
-                    "item_id": 45271,
-                    "id": 16159041,
-                    "added_by": 256221,
+                    "item_id": 45234,
+                    "id": 15994289,
+                    "added_by": 254581,
                     "type": "received",
                     "order": 0,
                     "note": null,
-                    "officer_note": "Votes: 0 \"Off-Spec\"",
+                    "officer_note": "Votes: 0 \"Mainspec\/Need\"",
                     "is_offspec": 0,
                     "raid_group_id": 9974,
-                    "raid_id": 97624,
-                    "received_at": "2023-05-25 00:00:00",
-                    "created_at": "2023-05-25T21:31:37.000000Z",
+                    "raid_id": 96072,
+                    "received_at": "2023-05-11 00:00:00",
+                    "created_at": "2023-05-11T21:35:02.000000Z",
                     "updated_at": null
                 }
             },
@@ -47717,72 +47856,6 @@
                     "character_id": 490652,
                     "item_id": 45443,
                     "id": 15994287,
-                    "added_by": 254581,
-                    "type": "received",
-                    "order": 0,
-                    "note": null,
-                    "officer_note": "Votes: 0 \"Mainspec\/Need\"",
-                    "is_offspec": 0,
-                    "raid_group_id": 9974,
-                    "raid_id": 96072,
-                    "received_at": "2023-05-11 00:00:00",
-                    "created_at": "2023-05-11T21:35:02.000000Z",
-                    "updated_at": null
-                }
-            },
-            {
-                "id": 71191,
-                "item_id": 45488,
-                "parent_id": null,
-                "parent_item_id": null,
-                "expansion_id": 3,
-                "name": "Leggings of the Enslaved Idol",
-                "weight": 0.5,
-                "quality": 4,
-                "inventory_type": 7,
-                "added_by_username": "solaris",
-                "raid_group_name": "Main raid",
-                "raid_name": "Ulduar 1 (w31)",
-                "raid_slug": "ulduar-1-w31",
-                "instance_id": 28,
-                "guild_tier": 2,
-                "pivot": {
-                    "character_id": 490652,
-                    "item_id": 45488,
-                    "id": 15994292,
-                    "added_by": 254581,
-                    "type": "received",
-                    "order": 0,
-                    "note": null,
-                    "officer_note": "Votes: 0 \"In tier Upgrade\"",
-                    "is_offspec": 0,
-                    "raid_group_id": 9974,
-                    "raid_id": 96072,
-                    "received_at": "2023-05-11 00:00:00",
-                    "created_at": "2023-05-11T21:35:02.000000Z",
-                    "updated_at": null
-                }
-            },
-            {
-                "id": 68303,
-                "item_id": 45234,
-                "parent_id": null,
-                "parent_item_id": null,
-                "expansion_id": 3,
-                "name": "Rapture",
-                "weight": 0.5,
-                "quality": 4,
-                "inventory_type": 17,
-                "added_by_username": "solaris",
-                "raid_group_name": "Main raid",
-                "raid_name": "Ulduar 1 (w31)",
-                "raid_slug": "ulduar-1-w31",
-                "instance_id": 28,
-                "guild_tier": 3,
-                "pivot": {
-                    "character_id": 490652,
-                    "item_id": 45234,
-                    "id": 15994289,
                     "added_by": 254581,
                     "type": "received",
                     "order": 0,
@@ -49511,39 +49584,6 @@
         "sub_archetype": "Physical",
         "received": [
             {
-                "id": 70541,
-                "item_id": 47110,
-                "parent_id": null,
-                "parent_item_id": null,
-                "expansion_id": 3,
-                "name": "The Executioner's Malice",
-                "weight": 0.5,
-                "quality": 4,
-                "inventory_type": 2,
-                "added_by_username": "SAMi",
-                "raid_group_name": "Main raid",
-                "raid_name": "ToGC 53",
-                "raid_slug": "togc-53",
-                "instance_id": 32,
-                "guild_tier": null,
-                "pivot": {
-                    "character_id": 442533,
-                    "item_id": 47110,
-                    "id": 19256515,
-                    "added_by": 256221,
-                    "type": "received",
-                    "order": 0,
-                    "note": null,
-                    "officer_note": "Votes: 0 \"Mainspec\/Need\"",
-                    "is_offspec": 0,
-                    "raid_group_id": 9974,
-                    "raid_id": 111563,
-                    "received_at": "2023-10-12 00:00:00",
-                    "created_at": "2023-10-12T19:21:21.000000Z",
-                    "updated_at": null
-                }
-            },
-            {
                 "id": 70602,
                 "item_id": 47153,
                 "parent_id": null,
@@ -49563,6 +49603,39 @@
                     "character_id": 442533,
                     "item_id": 47153,
                     "id": 19256516,
+                    "added_by": 256221,
+                    "type": "received",
+                    "order": 0,
+                    "note": null,
+                    "officer_note": "Votes: 0 \"Mainspec\/Need\"",
+                    "is_offspec": 0,
+                    "raid_group_id": 9974,
+                    "raid_id": 111563,
+                    "received_at": "2023-10-12 00:00:00",
+                    "created_at": "2023-10-12T19:21:21.000000Z",
+                    "updated_at": null
+                }
+            },
+            {
+                "id": 70541,
+                "item_id": 47110,
+                "parent_id": null,
+                "parent_item_id": null,
+                "expansion_id": 3,
+                "name": "The Executioner's Malice",
+                "weight": 0.5,
+                "quality": 4,
+                "inventory_type": 2,
+                "added_by_username": "SAMi",
+                "raid_group_name": "Main raid",
+                "raid_name": "ToGC 53",
+                "raid_slug": "togc-53",
+                "instance_id": 32,
+                "guild_tier": null,
+                "pivot": {
+                    "character_id": 442533,
+                    "item_id": 47110,
+                    "id": 19256515,
                     "added_by": 256221,
                     "type": "received",
                     "order": 0,
@@ -56357,39 +56430,6 @@
                 }
             },
             {
-                "id": 68319,
-                "item_id": 45250,
-                "parent_id": null,
-                "parent_item_id": null,
-                "expansion_id": 3,
-                "name": "Crazed Construct Ring",
-                "weight": 0.5,
-                "quality": 4,
-                "inventory_type": 11,
-                "added_by_username": "Jask",
-                "raid_group_name": "Main raid",
-                "raid_name": "Ulduar 1 (W18)",
-                "raid_slug": "ulduar-1-w18",
-                "instance_id": 28,
-                "guild_tier": 1,
-                "pivot": {
-                    "character_id": 384428,
-                    "item_id": 45250,
-                    "id": 14305265,
-                    "added_by": 197701,
-                    "type": "received",
-                    "order": 0,
-                    "note": null,
-                    "officer_note": "Votes: 0 \"Mainspec\"",
-                    "is_offspec": 0,
-                    "raid_group_id": 9974,
-                    "raid_id": 80873,
-                    "received_at": "2023-02-02 00:00:00",
-                    "created_at": "2023-02-02T22:14:50.000000Z",
-                    "updated_at": null
-                }
-            },
-            {
                 "id": 68299,
                 "item_id": 45227,
                 "parent_id": null,
@@ -56409,6 +56449,39 @@
                     "character_id": 384428,
                     "item_id": 45227,
                     "id": 14305266,
+                    "added_by": 197701,
+                    "type": "received",
+                    "order": 0,
+                    "note": null,
+                    "officer_note": "Votes: 0 \"Mainspec\"",
+                    "is_offspec": 0,
+                    "raid_group_id": 9974,
+                    "raid_id": 80873,
+                    "received_at": "2023-02-02 00:00:00",
+                    "created_at": "2023-02-02T22:14:50.000000Z",
+                    "updated_at": null
+                }
+            },
+            {
+                "id": 68319,
+                "item_id": 45250,
+                "parent_id": null,
+                "parent_item_id": null,
+                "expansion_id": 3,
+                "name": "Crazed Construct Ring",
+                "weight": 0.5,
+                "quality": 4,
+                "inventory_type": 11,
+                "added_by_username": "Jask",
+                "raid_group_name": "Main raid",
+                "raid_name": "Ulduar 1 (W18)",
+                "raid_slug": "ulduar-1-w18",
+                "instance_id": 28,
+                "guild_tier": 1,
+                "pivot": {
+                    "character_id": 384428,
+                    "item_id": 45250,
+                    "id": 14305265,
                     "added_by": 197701,
                     "type": "received",
                     "order": 0,
@@ -62058,39 +62131,6 @@
         "sub_archetype": "Physical",
         "received": [
             {
-                "id": 70734,
-                "item_id": 47557,
-                "parent_id": null,
-                "parent_item_id": null,
-                "expansion_id": 3,
-                "name": "Regalia of the Grand Conqueror",
-                "weight": 0.5,
-                "quality": 4,
-                "inventory_type": 0,
-                "added_by_username": "Jask",
-                "raid_group_name": "Main raid",
-                "raid_name": "ToGC 43",
-                "raid_slug": "togc-43",
-                "instance_id": 32,
-                "guild_tier": null,
-                "pivot": {
-                    "character_id": 507608,
-                    "item_id": 47557,
-                    "id": 17763243,
-                    "added_by": 197701,
-                    "type": "received",
-                    "order": 0,
-                    "note": null,
-                    "officer_note": "Votes: 0 \"Mainspec\"",
-                    "is_offspec": 0,
-                    "raid_group_id": 9974,
-                    "raid_id": 105249,
-                    "received_at": "2023-08-03 00:00:00",
-                    "created_at": "2023-08-03T19:51:55.000000Z",
-                    "updated_at": null
-                }
-            },
-            {
                 "id": 70612,
                 "item_id": 47239,
                 "parent_id": null,
@@ -62110,6 +62150,39 @@
                     "character_id": 507608,
                     "item_id": 47239,
                     "id": 17763242,
+                    "added_by": 197701,
+                    "type": "received",
+                    "order": 0,
+                    "note": null,
+                    "officer_note": "Votes: 0 \"Mainspec\"",
+                    "is_offspec": 0,
+                    "raid_group_id": 9974,
+                    "raid_id": 105249,
+                    "received_at": "2023-08-03 00:00:00",
+                    "created_at": "2023-08-03T19:51:55.000000Z",
+                    "updated_at": null
+                }
+            },
+            {
+                "id": 70734,
+                "item_id": 47557,
+                "parent_id": null,
+                "parent_item_id": null,
+                "expansion_id": 3,
+                "name": "Regalia of the Grand Conqueror",
+                "weight": 0.5,
+                "quality": 4,
+                "inventory_type": 0,
+                "added_by_username": "Jask",
+                "raid_group_name": "Main raid",
+                "raid_name": "ToGC 43",
+                "raid_slug": "togc-43",
+                "instance_id": 32,
+                "guild_tier": null,
+                "pivot": {
+                    "character_id": 507608,
+                    "item_id": 47557,
+                    "id": 17763243,
                     "added_by": 197701,
                     "type": "received",
                     "order": 0,
@@ -62186,6 +62259,39 @@
                     "raid_id": 102065,
                     "received_at": "2023-07-06 00:00:00",
                     "created_at": "2023-07-06T21:06:45.000000Z",
+                    "updated_at": null
+                }
+            },
+            {
+                "id": 68332,
+                "item_id": 45263,
+                "parent_id": null,
+                "parent_item_id": null,
+                "expansion_id": 3,
+                "name": "Wrathstone",
+                "weight": 0.5,
+                "quality": 4,
+                "inventory_type": 12,
+                "added_by_username": "SAMi",
+                "raid_group_name": "Main raid",
+                "raid_name": "Ulduar 1 (w38)",
+                "raid_slug": "ulduar-1-w38",
+                "instance_id": 28,
+                "guild_tier": 2,
+                "pivot": {
+                    "character_id": 507608,
+                    "item_id": 45263,
+                    "id": 17308828,
+                    "added_by": 256221,
+                    "type": "received",
+                    "order": 0,
+                    "note": null,
+                    "officer_note": "Votes: 0 \"Free\"",
+                    "is_offspec": 0,
+                    "raid_group_id": 9974,
+                    "raid_id": 101502,
+                    "received_at": "2023-07-02 00:00:00",
+                    "created_at": "2023-07-02T19:58:53.000000Z",
                     "updated_at": null
                 }
             },
@@ -62280,39 +62386,6 @@
                     "order": 0,
                     "note": null,
                     "officer_note": "Votes: 0 \"Off-Spec\"",
-                    "is_offspec": 0,
-                    "raid_group_id": 9974,
-                    "raid_id": 101502,
-                    "received_at": "2023-07-02 00:00:00",
-                    "created_at": "2023-07-02T19:58:53.000000Z",
-                    "updated_at": null
-                }
-            },
-            {
-                "id": 68332,
-                "item_id": 45263,
-                "parent_id": null,
-                "parent_item_id": null,
-                "expansion_id": 3,
-                "name": "Wrathstone",
-                "weight": 0.5,
-                "quality": 4,
-                "inventory_type": 12,
-                "added_by_username": "SAMi",
-                "raid_group_name": "Main raid",
-                "raid_name": "Ulduar 1 (w38)",
-                "raid_slug": "ulduar-1-w38",
-                "instance_id": 28,
-                "guild_tier": 2,
-                "pivot": {
-                    "character_id": 507608,
-                    "item_id": 45263,
-                    "id": 17308828,
-                    "added_by": 256221,
-                    "type": "received",
-                    "order": 0,
-                    "note": null,
-                    "officer_note": "Votes: 0 \"Free\"",
                     "is_offspec": 0,
                     "raid_group_id": 9974,
                     "raid_id": 101502,
@@ -62565,39 +62638,6 @@
                 }
             },
             {
-                "id": 70581,
-                "item_id": 46973,
-                "parent_id": null,
-                "parent_item_id": null,
-                "expansion_id": 3,
-                "name": "Cord of the Tenebrous Mist",
-                "weight": 0.5,
-                "quality": 4,
-                "inventory_type": 6,
-                "added_by_username": "SAMi",
-                "raid_group_name": "Main raid",
-                "raid_name": "ToGC w44",
-                "raid_slug": "togc-w44",
-                "instance_id": 32,
-                "guild_tier": null,
-                "pivot": {
-                    "character_id": 434304,
-                    "item_id": 46973,
-                    "id": 17841268,
-                    "added_by": 256221,
-                    "type": "received",
-                    "order": 0,
-                    "note": null,
-                    "officer_note": "Votes: 0 \"Mainspec\/Need\" \"WISHLIST\"",
-                    "is_offspec": 0,
-                    "raid_group_id": 9974,
-                    "raid_id": 105906,
-                    "received_at": "2023-08-10 00:00:00",
-                    "created_at": "2023-08-10T19:24:43.000000Z",
-                    "updated_at": null
-                }
-            },
-            {
                 "id": 70607,
                 "item_id": 47237,
                 "parent_id": null,
@@ -62622,6 +62662,39 @@
                     "order": 0,
                     "note": null,
                     "officer_note": "Votes: 0 \"Mainspec\/Need\"",
+                    "is_offspec": 0,
+                    "raid_group_id": 9974,
+                    "raid_id": 105906,
+                    "received_at": "2023-08-10 00:00:00",
+                    "created_at": "2023-08-10T19:24:43.000000Z",
+                    "updated_at": null
+                }
+            },
+            {
+                "id": 70581,
+                "item_id": 46973,
+                "parent_id": null,
+                "parent_item_id": null,
+                "expansion_id": 3,
+                "name": "Cord of the Tenebrous Mist",
+                "weight": 0.5,
+                "quality": 4,
+                "inventory_type": 6,
+                "added_by_username": "SAMi",
+                "raid_group_name": "Main raid",
+                "raid_name": "ToGC w44",
+                "raid_slug": "togc-w44",
+                "instance_id": 32,
+                "guild_tier": null,
+                "pivot": {
+                    "character_id": 434304,
+                    "item_id": 46973,
+                    "id": 17841268,
+                    "added_by": 256221,
+                    "type": "received",
+                    "order": 0,
+                    "note": null,
+                    "officer_note": "Votes: 0 \"Mainspec\/Need\" \"WISHLIST\"",
                     "is_offspec": 0,
                     "raid_group_id": 9974,
                     "raid_id": 105906,
@@ -66476,6 +66549,105 @@
                     "received_at": "2023-06-25 16:04:16",
                     "created_at": "2023-06-25T16:04:16.000000Z",
                     "updated_at": "2023-06-25T16:04:16.000000Z"
+                }
+            },
+            {
+                "id": 71963,
+                "item_id": 52026,
+                "parent_id": null,
+                "parent_item_id": null,
+                "expansion_id": 3,
+                "name": "Protector's Mark of Sanctification",
+                "weight": 0.5,
+                "quality": 4,
+                "inventory_type": 0,
+                "added_by_username": "Jask",
+                "raid_group_name": null,
+                "raid_name": null,
+                "raid_slug": null,
+                "instance_id": 35,
+                "guild_tier": null,
+                "pivot": {
+                    "character_id": 507284,
+                    "item_id": 52026,
+                    "id": 19316788,
+                    "added_by": 197701,
+                    "type": "received",
+                    "order": 4,
+                    "note": null,
+                    "officer_note": null,
+                    "is_offspec": 0,
+                    "raid_group_id": null,
+                    "raid_id": null,
+                    "received_at": "2023-10-13 16:33:32",
+                    "created_at": "2023-10-13T16:33:32.000000Z",
+                    "updated_at": "2023-10-13T16:33:32.000000Z"
+                }
+            },
+            {
+                "id": 71963,
+                "item_id": 52026,
+                "parent_id": null,
+                "parent_item_id": null,
+                "expansion_id": 3,
+                "name": "Protector's Mark of Sanctification",
+                "weight": 0.5,
+                "quality": 4,
+                "inventory_type": 0,
+                "added_by_username": "Jask",
+                "raid_group_name": null,
+                "raid_name": null,
+                "raid_slug": null,
+                "instance_id": 35,
+                "guild_tier": null,
+                "pivot": {
+                    "character_id": 507284,
+                    "item_id": 52026,
+                    "id": 19316789,
+                    "added_by": 197701,
+                    "type": "received",
+                    "order": 5,
+                    "note": null,
+                    "officer_note": null,
+                    "is_offspec": 0,
+                    "raid_group_id": null,
+                    "raid_id": null,
+                    "received_at": "2023-10-13 16:33:32",
+                    "created_at": "2023-10-13T16:33:32.000000Z",
+                    "updated_at": "2023-10-13T16:33:32.000000Z"
+                }
+            },
+            {
+                "id": 71966,
+                "item_id": 52029,
+                "parent_id": null,
+                "parent_item_id": null,
+                "expansion_id": 3,
+                "name": "Protector's Mark of Sanctification",
+                "weight": 0.5,
+                "quality": 4,
+                "inventory_type": 0,
+                "added_by_username": "Jask",
+                "raid_group_name": null,
+                "raid_name": null,
+                "raid_slug": null,
+                "instance_id": 38,
+                "guild_tier": null,
+                "pivot": {
+                    "character_id": 507284,
+                    "item_id": 52029,
+                    "id": 19316790,
+                    "added_by": 197701,
+                    "type": "received",
+                    "order": 6,
+                    "note": null,
+                    "officer_note": null,
+                    "is_offspec": 0,
+                    "raid_group_id": null,
+                    "raid_id": null,
+                    "received_at": "2023-10-13 16:33:32",
+                    "created_at": "2023-10-13T16:33:32.000000Z",
+                    "updated_at": "2023-10-13T16:33:32.000000Z"
                 }
             }
         ],

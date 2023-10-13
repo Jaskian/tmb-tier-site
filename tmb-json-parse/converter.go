@@ -178,4 +178,15 @@ func populateKeyItems(c *shared.Character) {
 			c.KeyItems.Trophies++
 		}
 	}
+
+	for _, i := range c.Phases[4].Slots[0].Items {
+		if i.ItemID == 52025 || i.ItemID == 52026 || i.ItemID == 52027 {
+			c.KeyItems.IccNormalTokens++
+		}
+		if i.ItemID == 52028 || i.ItemID == 52029 || i.ItemID == 52030 {
+			c.KeyItems.IccHeroicTokens++
+		}
+	}
+
+	c.KeyItems.IccTokenInTier = c.KeyItems.IccNormalTokens - c.KeyItems.IccHeroicTokens
 }

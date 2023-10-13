@@ -12,6 +12,7 @@ const (
 	Ulduar         = 28
 	Totc10         = 30
 	Totc25         = 32
+	Icc10          = 35
 	IccNM25        = 36
 	IccHC25        = 38
 )
@@ -24,6 +25,7 @@ var PhaseMappingInstance = map[int]int{
 	UlduarPatterns: 2,
 	Totc10:         3,
 	Totc25:         3,
+	Icc10:          4,
 	IccNM25:        4,
 	IccHC25:        4,
 }

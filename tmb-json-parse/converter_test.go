@@ -180,6 +180,72 @@ func TestConvertTMBJson(t *testing.T) {
 
 	})
 
+	t.Run("NM Tokens are counted for ICC", func(t *testing.T) {
+		input := tmbData{character{
+			ReceivedLoot: []loot{
+				{
+					ItemID:     52025,
+					InstanceID: int(shared.IccNM25),
+					Pivot:      pivot{Offspec: 0},
+				},
+				{
+					ItemID:     52026,
+					InstanceID: int(shared.IccHC25),
+					Pivot:      pivot{Offspec: 0},
+				},
+				{
+					ItemID:     52027,
+					InstanceID: int(shared.IccNM25),
+					Pivot:      pivot{Offspec: 0},
+				},
+			},
+		},
+		}
+
+		export, err := convertToExportData(input)
+		assertNoError(t, err)
+
+		want := 3
+		got := export[0].KeyItems.IccNormalTokens
+		if got != want {
+			t.Errorf("Expected %d, got %d", want, got)
+		}
+
+	})
+
+	t.Run("HC Tokens are counted for ICC", func(t *testing.T) {
+		input := tmbData{character{
+			ReceivedLoot: []loot{
+				{
+					ItemID:     52028,
+					InstanceID: int(shared.IccHC25),
+					Pivot:      pivot{Offspec: 0},
+				},
+				{
+					ItemID:     52029,
+					InstanceID: int(shared.IccHC25),
+					Pivot:      pivot{Offspec: 0},
+				},
+				{
+					ItemID:     52030,
+					InstanceID: int(shared.IccHC25),
+					Pivot:      pivot{Offspec: 0},
+				},
+			},
+		},
+		}
+
+		export, err := convertToExportData(input)
+		assertNoError(t, err)
+
+		want := 3
+		got := export[0].KeyItems.IccHeroicTokens
+		if got != want {
+			t.Errorf("Expected %d, got %d", want, got)
+		}
+
+	})
+
 	t.Run("Offspec items excluded", func(t *testing.T) {
 		input := buildTestDataWithLoot("Warrior", "Fury", shared.Belt, shared.Ulduar, 1, "")
 

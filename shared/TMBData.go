@@ -41,5 +41,8 @@ type WishlistLoot struct {
 }
 
 type KeyItems struct {
-	Trophies int
+	Trophies        int
+	IccNormalTokens int
+	IccHeroicTokens int
+	IccTokenInTier  int
 }

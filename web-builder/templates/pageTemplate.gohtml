@@ -76,6 +76,7 @@
                 <li><a href="p1.html">Phase 1</a></li>
                 <li><a href="p2.html">Phase 2</a></li>
                 <li><a href="p3.html">Phase 3</a></li>
+                <li><a href="p4.html">Phase 4</a></li>
             </ul>
         </div>
     </nav>
@@ -84,9 +85,15 @@
             <thead>
                 <tr>
                     <th width="100px">Player</th>
+                    {{if gt $.Phase 1}}
+                    <th width="50px">Last WL</th>
+                    {{end}}
                     <th width="50px">Wishlist</th>
                     {{if eq $.Phase 3}}
                     <th width="32px"><img src="https://wow.zamimg.com/images/wow/icons/large/inv_misc_trophy_argent.jpg" /></th>
+                    {{end}}
+                    {{if eq $.Phase 4}}
+                    <th width="32px"><img src="https://wow.zamimg.com/images/wow/icons/large/ability_paladin_shieldofthetemplar.jpg" /></th>
                     {{end}}
                     {{range $.Slots}}
                     <th width="32px"><img src="{{ getSlotImage . }}" /></th>
@@ -101,9 +108,23 @@
                         <p style="color:{{getClassColor .Class}}">{{.Name}}</p>
                         <p class="spec">{{.Spec}}</p>
                     </td>
+                    {{if gt $.Phase 1}}
+                    <td class="tooltipContainer">
+                        {{$ppd := getPhaseData $character (subtract $.Phase 1)}}
+                        {{if $ppd.Wishlist.Total}}
+                        <sl style="font-weight: lighter;">{{$ppd.Wishlist.Received}} / {{$ppd.Wishlist.Total}}</sl>
+                        <div class="tooltip">
+                            {{- range $ppd.Wishlist.WishlistLoot}}
+                            <a href="https://www.wowhead.com/wotlk/item={{.ItemID}}" class="{{getLootStatusClass .}}"
+                                data-wowhead="item={{.ItemID}}&domain=wotlk">{{.ItemName}}</a><br />
+                            {{end}}
+                        </div>
+                        {{end}}
+                    </td>
+                    {{end}}
                     <td class="tooltipContainer">
                         {{if $pd.Wishlist.Total}}
-                        <sl>{{$pd.Wishlist.Received}} / {{$pd.Wishlist.Total}}</sl>
+                        <sl style="font-weight: bolder;">{{$pd.Wishlist.Received}} / {{$pd.Wishlist.Total}}</sl>
                         <div class="tooltip">
                             {{- range $pd.Wishlist.WishlistLoot}}
                             <a href="https://www.wowhead.com/wotlk/item={{.ItemID}}" class="{{getLootStatusClass .}}"
@@ -116,6 +137,13 @@
                     <td>
                         {{if $character.KeyItems.Trophies}}
                         <sl>{{$character.KeyItems.Trophies}}</sl>            
+                        {{end}}        
+                    </td>
+                    {{end}}
+                    {{if eq $.Phase 4}}
+                    <td>
+                        {{if $character.KeyItems.IccTokenInTier}}
+                        <sl>{{$character.KeyItems.IccTokenInTier}}</sl>            
                         {{end}}        
                     </td>
                     {{end}}
