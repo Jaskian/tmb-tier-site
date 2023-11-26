@@ -41,8 +41,11 @@ func calculateInTier(c character, slot int, phase int, slotItems []shared.Loot, 
 			if c.Class == shared.Warrior && c.Spec == "Fury" {
 				slotData.InTier = len(slotItems) >= 2
 			}
-		} else if slot == int(shared.Ring) || slot == int(shared.Trinket) {
-			// gotta have 2 rings/trinkets to be eligible
+		} else if slot == int(shared.Trinket) {
+			// gotta have 2 trinkets to be eligible
+			slotData.InTier = len(slotItems) > 1
+		} else if slot == int(shared.Ring) && phase != 4 {
+			// gotta have 2 rings to be eligible, unless it's p4
 			slotData.InTier = len(slotItems) > 1
 		}
 	}

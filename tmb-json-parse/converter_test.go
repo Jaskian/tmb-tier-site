@@ -157,6 +157,13 @@ func TestConvertTMBJson(t *testing.T) {
 		assertInTierInPhase(t, 4, shared.Belt, got[0])
 	})
 
+	t.Run("In P4, you only need 1 ring for in-tier", func(t *testing.T) {
+		input := buildTestDataWithLoot("Warrior", "Fury", shared.Ring, shared.IccHC25, 0, "")
+		got, err := convertToExportData(input)
+		assertNoError(t, err)
+		assertInTierInPhase(t, 4, shared.Ring, got[0])
+	})
+
 	t.Run("Trophies are counted for TOTC25", func(t *testing.T) {
 		input := tmbData{character{
 			ReceivedLoot: []loot{
